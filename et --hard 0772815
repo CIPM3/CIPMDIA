@@ -1,0 +1,116 @@
+[33mf2a117c[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: commit: yo
+[33m0772815[m HEAD@{1}: merge origin/main: Fast-forward
+[33mbeb5bd1[m HEAD@{2}: commit: cambios
+[33m4458def[m HEAD@{3}: commit: sumit
+[33mee8344b[m HEAD@{4}: commit: changes
+[33m254c2ad[m HEAD@{5}: merge origin/main: Fast-forward
+[33m9c60f90[m HEAD@{6}: merge origin/main: Fast-forward
+[33me84ecba[m HEAD@{7}: commit: isuserpremium
+[33mcbceb85[m HEAD@{8}: merge origin/main: Fast-forward
+[33m2cdb84d[m HEAD@{9}: merge origin/main: Fast-forward
+[33md133bff[m HEAD@{10}: merge origin/main: Fast-forward
+[33m426c72b[m HEAD@{11}: commit: toefl speaking
+[33m33913cd[m HEAD@{12}: commit: funcionalidad toefl speaking
+[33mfcde687[m HEAD@{13}: commit: toefl speaking
+[33mfc80c0e[m HEAD@{14}: merge origin/main: Fast-forward
+[33m32d4839[m HEAD@{15}: merge origin/main: Fast-forward
+[33m2909912[m HEAD@{16}: commit: cambios
+[33md2109f1[m HEAD@{17}: commit: bug fixes
+[33m9759deb[m HEAD@{18}: commit: implementacion audio
+[33m4445ce6[m HEAD@{19}: merge origin/main: Fast-forward
+[33m5049acb[m HEAD@{20}: merge origin/main: Fast-forward
+[33ma664203[m HEAD@{21}: commit: cambios
+[33m792c749[m HEAD@{22}: commit: cambios
+[33md368256[m HEAD@{23}: merge origin/main: Fast-forward
+[33m75f2707[m HEAD@{24}: merge origin/main: Fast-forward
+[33m994e5a5[m HEAD@{25}: merge origin/main: Fast-forward
+[33me07cc6e[m HEAD@{26}: merge origin/main: Fast-forward
+[33m4a81911[m HEAD@{27}: merge origin/main: Fast-forward
+[33m6b8b78f[m HEAD@{28}: merge origin/main: Fast-forward
+[33mfa48d6b[m HEAD@{29}: merge origin/main: Fast-forward
+[33m6120249[m HEAD@{30}: commit: comente fuera los metodos de lplan y test
+[33mffd2367[m HEAD@{31}: merge origin/main: Fast-forward
+[33mdcebd06[m HEAD@{32}: merge origin/main: Fast-forward
+[33m5485780[m HEAD@{33}: merge origin/main: Fast-forward
+[33mf611add[m HEAD@{34}: merge origin/main: Fast-forward
+[33m2e884de[m HEAD@{35}: merge origin/main: Fast-forward
+[33m7666671[m HEAD@{36}: merge origin/main: Fast-forward
+[33m1011c4a[m HEAD@{37}: merge origin/main: Fast-forward
+[33m6966eea[m HEAD@{38}: merge origin/main: Fast-forward
+[33m5dba4e3[m HEAD@{39}: merge origin/main: Fast-forward
+[33md8ffd34[m HEAD@{40}: merge origin/main: Fast-forward
+[33m2288ff9[m HEAD@{41}: merge origin/main: Fast-forward
+[33mc0ead54[m HEAD@{42}: merge origin/main: Fast-forward
+[33m93769b7[m HEAD@{43}: merge origin/main: Fast-forward
+[33m97d20f0[m HEAD@{44}: merge origin/main: Fast-forward
+[33m77ba523[m HEAD@{45}: merge origin/main: Fast-forward
+[33mec0589f[m HEAD@{46}: merge origin/main: Fast-forward
+[33m566e7d4[m HEAD@{47}: merge origin/main: Fast-forward
+[33mebf8bb0[m HEAD@{48}: merge origin/main: Fast-forward
+[33maef84a4[m HEAD@{49}: merge origin/main: Fast-forward
+[33md348dde[m HEAD@{50}: merge origin/main: Fast-forward
+[33mc5cb094[m HEAD@{51}: merge origin/main: Fast-forward
+[33m6281d0d[m HEAD@{52}: merge origin/main: Fast-forward
+[33m4607eaa[m HEAD@{53}: merge origin/main: Fast-forward
+[33mdb2309f[m HEAD@{54}: merge origin/main: Fast-forward
+[33mbe88a54[m HEAD@{55}: merge origin/main: Fast-forward
+[33mea99439[m HEAD@{56}: merge origin/main: Fast-forward
+[33m693e308[m HEAD@{57}: merge origin/main: Fast-forward
+[33m6d72c8a[m HEAD@{58}: merge origin/main: Fast-forward
+[33m9121a57[m HEAD@{59}: merge origin/main: Fast-forward
+[33mdf17c1a[m HEAD@{60}: merge origin/main: Fast-forward
+[33m493ad3c[m HEAD@{61}: pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+[33ma51555c[m HEAD@{62}: commit: k
+[33mf715ae2[m HEAD@{63}: merge origin/main: Fast-forward
+[33mf345838[m HEAD@{64}: commit: cambios
+[33m1ce7939[m HEAD@{65}: commit: cam
+[33maf190c9[m HEAD@{66}: merge origin/main: Fast-forward
+[33m6392b56[m HEAD@{67}: merge origin/main: Fast-forward
+[33mf55ac19[m HEAD@{68}: commit: cambios
+[33m66a20b4[m HEAD@{69}: commit: changes
+[33ma77aac8[m HEAD@{70}: merge origin/main: Fast-forward
+[33m3973360[m HEAD@{71}: merge origin/main: Fast-forward
+[33mb5635ff[m HEAD@{72}: merge origin/main: Fast-forward
+[33m996ab1c[m HEAD@{73}: commit: camb
+[33m083687c[m HEAD@{74}: merge origin/main: Fast-forward
+[33m85c4b60[m HEAD@{75}: merge origin/main: Fast-forward
+[33m18164c8[m HEAD@{76}: commit: git
+[33m6fbaeaa[m HEAD@{77}: merge origin/main: Fast-forward
+[33m119abcd[m HEAD@{78}: merge origin/main: Fast-forward
+[33m1f9377c[m HEAD@{79}: merge origin/main: Fast-forward
+[33md630541[m HEAD@{80}: merge origin/main: Fast-forward
+[33m5c01bbf[m HEAD@{81}: merge origin/main: Fast-forward
+[33md346337[m HEAD@{82}: merge origin/main: Fast-forward
+[33m6797a2f[m HEAD@{83}: pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+[33m29ea974[m HEAD@{84}: commit: cambios
+[33me78c11a[m HEAD@{85}: merge origin/main: Fast-forward
+[33m0757634[m HEAD@{86}: merge origin/main: Fast-forward
+[33m328db2e[m HEAD@{87}: merge origin/main: Fast-forward
+[33mfb6aa20[m HEAD@{88}: commit: cambios
+[33m327f159[m HEAD@{89}: commit: cambios
+[33m53355aa[m HEAD@{90}: commit: cambios
+[33m3a7e35b[m HEAD@{91}: merge origin/main: Fast-forward
+[33md970b2e[m HEAD@{92}: merge origin/main: Fast-forward
+[33ma91a0d5[m HEAD@{93}: commit: update
+[33m451d0eb[m HEAD@{94}: merge origin/main: Fast-forward
+[33m2e9716f[m HEAD@{95}: merge origin/main: Fast-forward
+[33mc0a1760[m HEAD@{96}: commit: camb
+[33m40c5b5b[m HEAD@{97}: merge origin/main: Fast-forward
+[33m2972a2f[m HEAD@{98}: commit: cambios
+[33m4aa5987[m HEAD@{99}: commit: cambios
+[33mc2373c5[m HEAD@{100}: commit: cambios
+[33m611ba6e[m HEAD@{101}: merge origin/main: Fast-forward
+[33mc5cc53c[m HEAD@{102}: merge origin/main: Fast-forward
+[33m6ca3471[m HEAD@{103}: commit: k
+[33m9a2a757[m HEAD@{104}: pull --ff --recurse-submodules --progress origin: Merge made by the 'ort' strategy.
+[33mfeb0e5a[m HEAD@{105}: commit: k
+[33ma2d88e9[m HEAD@{106}: merge origin/main: Fast-forward
+[33me3b8dc6[m HEAD@{107}: merge origin/main: Fast-forward
+[33mdc8f898[m HEAD@{108}: merge origin/main: Fast-forward
+[33m8465b38[m HEAD@{109}: commit: debugging
+[33m590e10a[m HEAD@{110}: merge origin/main: Fast-forward
+[33m23089be[m HEAD@{111}: merge origin/main: Fast-forward
+[33mbed28c2[m HEAD@{112}: merge origin/main: Fast-forward
+[33mf1929f7[m HEAD@{113}: merge origin/main: Fast-forward
+[33m533ebe1[m HEAD@{114}: merge origin/main: Fast-forward
+[33md480997[m HEAD@{115}: commit: cambios

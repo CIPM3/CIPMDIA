@@ -67,7 +67,6 @@ public class vocabgen {
     fiftytohundred fi = new fiftytohundred();
 
     public void fiftohun() {
-
         int r = (int) (Math.random() * 4);
         switch (r) {
             case 0:

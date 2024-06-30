@@ -38,7 +38,7 @@ public class Nobles {
     String vn2[] = {"tienes ", "obtienes ", "ves ", "necesitas ", "sabes ", "encuentras ", "tomas ", "quieres ", "incluyes ",
            "agradeces ", "agregas ", "eliges ", "desarrollas ", "recuerdas ", "traes ", "proteges ",
            "evitas ", "describes ", "prefieres ", "descubres ", "esperas ", "pierdes ", "oyes ", "representas ",
-           "olvidas ", "aceptas ", "comparas ", "imaginas ", "reconoces ", "reemplazas ", "pides prestado ", "examinas ",
+           "olvidas ", "aceptas ", "compartes ", "imaginas ", "reconoces ", "reemplazas ", "pides prestado ", "examinas ",
            "debes ", "incorporas ", "organizas "
     };
 
@@ -439,7 +439,7 @@ public class Nobles {
     String ps1imp[] = {"tenía ", "obtenía ", "veía ", "necesitaba ", "sabia ", "encontraba ", "tomaba ", "quería ", "incluía ",
            "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "trajaba ", "protegía ",
            "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
-           "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplacaba ", "pedía prestado ", "examinaba ",
+           "olvidaba ", "aceptaba ", "compartia ", "imaginaba ", "reconocía ", "reemplacaba ", "pedía prestado ", "examinaba ",
            "debía ", "incorporaba ", "organizaba "
     };
 
@@ -447,7 +447,7 @@ public class Nobles {
     String ps2pre[] = {"tuviste ", "obtuviste ", "viste ", "necesitaste ", "supiste ", "encontraste ", "tomaste ", "quiciste ", "incluiste ",
            "agradeciste ", "agregaste ", "elegiste ", "desarrollaste ", "recordaste ", "trajiste ", "protegiste ",
            "evitaste ", "describiste ", "preferiste ", "descubriste ", "esperaste ", "perdiste ", "oiste ", "representaste ",
-           "olvidaste ", "aceptaste ", "comparaste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
+           "olvidaste ", "aceptaste ", "compartiste ", "imaginaste ", "reconociste ", "reemplazaste ", "pediste prestado ", "examinaste ",
            "debiste ", "incorporaste ", "organizaste "
     };
 
@@ -455,7 +455,7 @@ public class Nobles {
     String ps2imp[] = {"tenías ", "obtenías ", "veías ", "necesitabas ", "sabías ", "encontrabas ", "tomabas ", "querías ", "incluías ",
            "agradecías ", "agregabas ", "elegías ", "desarrollabas ", "recordabas ", "traías ", "protegías ",
            "evitabas ", "describías ", "preferías ", "descubrías ", "esperabas ", "perdías ", "oías ", "representabas ",
-           "olvidabas ", "aceptabas ", "comparabas ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
+           "olvidabas ", "aceptabas ", "compartías ", "imaginabas ", "reconocías ", "reemplazabas ", "pedías prestado ", "examinabas ",
            "debías ", "incorporabas ", "organizabas "
     };
 
@@ -471,7 +471,7 @@ public class Nobles {
     String ps3imp[] = {"tenía ", "obtenía ", "veía ", "necesitaba ", "sabía ", "encontraba ", "tomaba ", "quería ", "incluía ",
            "agradecía ", "agregaba ", "elegía ", "desarrollaba ", "recordaba ", "traía ", "protegía ",
            "evitaba ", "describía ", "prefería ", "descubría ", "esperaba ", "perdía ", "oía ", "representaba ",
-           "olvidaba ", "aceptaba ", "comparaba ", "imaginaba ", "reconocía ", "reemplazaba ", "pedía prestado ", "examinaba ",
+           "olvidaba ", "aceptaba ", "compartía ", "imaginaba ", "reconocía ", "reemplazaba ", "pedía prestado ", "examinaba ",
            "debía ", "incorporaba ", "organziaba "
     };
 
@@ -488,7 +488,7 @@ public class Nobles {
     String vn4imp[] = {"tenían ", "obtenían ", "veían ", "necesitaban ", "sabían ", "encontraban ", "tomaban ", "querían ", "incluían ",
            "agradecían ", "agregaban ", "elegían ", "desarrollaban ", "recordaban ", "traían ", "protegían ",
            "evitaban ", "describían ", "preferían ", "descubrían ", "esperaban ", "perdían ", "oían ", "representaban ",
-           "olvidaban ", "aceptaban ", "comparaban ", "imaginaban ", "reconocían ", "reemplazaban ", "pedían prestado ", "examinaban ",
+           "olvidaban ", "aceptaban ", "compartían ", "imaginaban ", "reconocían ", "reemplazaban ", "pedían prestado ", "examinaban ",
            "debían ", "incorporaban ", "organizaban "
     };
 
@@ -496,7 +496,7 @@ public class Nobles {
     String vn5p[] = {"tuvimos ", "obtuvimos ", "vimos ", "necesitamos ", "supimos ", "encontramos ", "tomamos ", "quicimos ", "incluimos ",
            "agradecimos ", "agregamos ", "eligimos ", "desarrollamos ", "recordamos ", "trajimos ", "protegimos ",
            "evitamos ", "describimos ", "preferimos ", "descubrimos ", "esperamos ", "perdimos ", "oimos ", "representamos ",
-           "olvidamos ", "aceptamos ", "comparamos ", "imaginamos ", "reconocimos ", "reemplazamos ", "pedimos prestado ", "examinamos ",
+           "olvidamos ", "aceptamos ", "compartímos ", "imaginamos ", "reconocimos ", "reemplazamos ", "pedimos prestado ", "examinamos ",
            "debimos ", "incorporamos ", "organizamos "
     };
 
@@ -523,7 +523,7 @@ public class Nobles {
     String vnbcs[] = {"teniendo ", "obteniendo ", "viendo ", "necesitando ", "sabiendo ", "encontrando ", "tomando ", "queriendo ", "incluyendo ",
            "agradeciendo ", "agregando ", "eligiendo ", "desarrollando ", "recordando ", "trayendo ", "protegiendo ",
            "evadiendo ", "describiendo ", "prefiriendo ", "descubriendo ", "esperando ", "perdiendo ", "escuchando ", "representando ",
-           "olvidando ", "aceptando ", "comparando ", "imaginando ", "reconociendo ", "reemplazando ", "pidiendo prestado ", "examinando ",
+           "olvidando ", "aceptando ", "compartiendo ", "imaginando ", "reconociendo ", "reemplazando ", "pidiendo prestado ", "examinando ",
            "debiendo ", "incorporando ", "organizando "};
 
 

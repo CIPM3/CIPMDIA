@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Estructura2023"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
+
     <LinearLayout
         android:id="@+id/btn_opc2"
         android:layout_width="match_parent"
@@ -35,12 +35,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="85dp"
-        >
+        android:layout_marginBottom="85dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <!--Header-->
             <LinearLayout
                 android:id="@+id/header"
@@ -81,9 +82,7 @@
                         android:text="Present Simple"
                         android:textColor="@color/black"
                         android:textSize="22dp"
-                        android:textStyle="bold"
-
-                        />
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <!--Spinner-->
@@ -101,42 +100,40 @@
                         android:background="@drawable/ic_grupo_select"
                         android:gravity="end"
                         android:spinnerMode="dialog"
-                        android:theme="@style/MySpinnerStyle"
-                        />
+                        android:theme="@style/MySpinnerStyle" />
                 </LinearLayout>
 
             </LinearLayout>
 
             <!--Video View-->
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="198dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:paddingHorizontal="30dp">
 
-
-                <com.google.android.exoplayer2.ui.StyledPlayerView
-                    android:id="@+id/video_player_view"
+                <LinearLayout
+                    android:id="@+id/vf"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    />
+                    android:background="@drawable/ic_grupo_videobox"
+                    android:onClick="showV"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
 
-                <LinearLayout
-                    android:id="@+id/btn_full_screen"
-                    android:layout_margin="10dp"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_alignParentBottom="false"
-                    android:layout_alignParentEnd="true"
-                    android:rotation="90"
-                    android:background="@drawable/verticalvideo"
-                    android:orientation="vertical"
-                    android:padding="20dp"
-                    android:backgroundTint="@color/white"
-                    />
-            </RelativeLayout>
+                </LinearLayout>
+
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/fragmentContainerView5"
+                    android:name="com.leal.cipm_testing.VideoPlayer"
+                    android:layout_width="81dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:layout="@layout/fragment_video_player" />
+
+            </LinearLayout>
 
             <!--Texto Spinner2-->
             <LinearLayout
@@ -149,6 +146,7 @@
 
                 <!--Spinner 2-->
                 <LinearLayout
+                    android:id="@+id/activaSegundoSpinner"
                     android:onClick="activaSpinner2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -157,6 +155,7 @@
                     android:gravity="center_vertical">
                     <!--texto-->
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="10">
@@ -173,6 +172,7 @@
 
                     <!--Spinner 2-->
                     <LinearLayout
+                        android:id="@+id/spinner2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="3"
@@ -184,8 +184,7 @@
                             android:layout_height="20dp"
                             android:background="@drawable/ic_grupo_select"
                             android:spinnerMode="dialog"
-                            android:theme="@style/MySpinnerStyle"
-                            />
+                            android:theme="@style/MySpinnerStyle" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -196,13 +195,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:paddingHorizontal="30dp"
-                />
+                android:paddingHorizontal="30dp" />
 
             <!--Btns Dificultades-->
-
-
             <LinearLayout
+                android:id="@+id/palabraClabe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -215,8 +212,7 @@
                     android:textColor="@color/black"
                     android:textSize="15dp"
                     android:layout_marginTop="35dp"
-                     android:layout_marginStart="35dp"
-                />
+                    android:layout_marginStart="35dp" />
 
                 <TextView
                     android:id="@+id/textextra"
@@ -225,13 +221,9 @@
                     android:gravity="center"
                     android:text="Palabra Clave"
                     android:layout_marginTop="35dp"
-                     android:textColor="@color/black"
-                    android:textSize="15dp"
-
-                />
+                    android:textColor="@color/black"
+                    android:textSize="15dp" />
             </LinearLayout>
-
-
 
             <!--Spanish Sentences-->
             <LinearLayout
@@ -239,9 +231,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone"
-                >
+                android:paddingHorizontal="30dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -251,7 +241,7 @@
                     <TextView
                         android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:text="Como dirias? :"
+                        android:text="Como dirías? :"
                         android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
@@ -259,8 +249,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    >
+                    android:layout_weight="1">
 
                     <TextView
                         android:id="@+id/spanishsentence"
@@ -270,7 +259,69 @@
                         android:textColor="@color/black"
                         android:textSize="15dp" />
                 </LinearLayout>
+            </LinearLayout>
 
+            <!-- New layout for the buttons -->
+            <LinearLayout
+                android:id="@+id/button_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <!-- Answer buttons -->
+                <Button
+                    android:id="@+id/answer_button_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer 1"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/borde_azul"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/answer_button_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer 2"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/borde_azul"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/answer_button_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer 3"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/borde_azul"
+                    android:textColor="@color/black"/>
+
+                <Button
+                    android:id="@+id/answer_button_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Answer 4"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="16sp"
+                    android:background="@drawable/borde_azul"
+                    android:textColor="@color/black"/>
+
+                <!-- Continue button -->
+                <!--<Button
+                    android:id="@+id/continue_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cambiar de Dificultad"
+                    android:textSize="16sp"
+                    android:onClick="dificulty1Activation"
+                    android:background="@drawable/borde_azul"
+                    android:textColor="@color/black" />-->
             </LinearLayout>
 
             <!--Input Eng-->
@@ -283,8 +334,7 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp"
                 android:paddingVertical="5dp"
-                android:visibility="gone"
-                >
+                android:visibility="gone">
 
                 <EditText
                     android:id="@+id/answerinput1"
@@ -297,8 +347,7 @@
                     android:paddingLeft="10dp"
                     android:textColorHint="@color/black"
                     android:textSize="15dp"
-                    android:layout_weight="1"
-                    />
+                    android:layout_weight="1" />
                 <!--Validacion-->
                 <LinearLayout
                     android:id="@+id/opclay"
@@ -307,18 +356,16 @@
                     android:layout_weight="5"
                     android:padding="5dp"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    >
+                    android:orientation="horizontal">
+
                     <LinearLayout
                         android:id="@+id/respdecir"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:background="@drawable/ic_microfono"
-                        android:visibility="visible"
                         android:onClick="speakdecir"
                         android:orientation="horizontal"
-                        android:layout_marginRight="5dp"
-                        >
+                        android:layout_marginRight="5dp">
                     </LinearLayout>
 
                     <LinearLayout
@@ -326,7 +373,7 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:layout_gravity="center"
-                        android:visibility="gone"
+
                         android:background="@drawable/ic_controlar"
                         android:orientation="horizontal">
 
@@ -342,8 +389,7 @@
                 android:orientation="horizontal"
                 android:paddingHorizontal="30dp"
                 android:visibility="gone"
-                android:gravity="center"
-                >
+                android:gravity="center">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -352,30 +398,28 @@
                     android:text="Respuesta correcta es:"
                     android:textColor="@color/black"
                     android:textSize="14dp"
-                    android:paddingLeft="10dp"
-                    />
+                    android:paddingLeft="10dp" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_weight="5"
-                    >
+                    android:layout_weight="5">
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
                         android:gravity="center"
-                        android:layout_weight="5"
-                        >
+                        android:layout_weight="5">
+
                         <TextView
                             android:id="@+id/txteng"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="eng"
                             android:textColor="@color/azul"
-                            android:textSize="14dp"
-                            />
+                            android:textSize="14dp" />
 
                         <TextView
                             android:id="@+id/txteng2"
@@ -384,8 +428,7 @@
                             android:layout_height="wrap_content"
                             android:text="eng"
                             android:textColor="@color/azul"
-                            android:textSize="14dp"
-                            />
+                            android:textSize="14dp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -398,14 +441,13 @@
                         android:background="@drawable/ic_volumen"
                         android:orientation="horizontal"
                         android:onClick="speakans"
-                        android:visibility="visible"
-                        >
+                        android:visibility="visible">
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
 
             <LinearLayout
-                android:id= "@+id/averageresponsetime"
+                android:id="@+id/averageresponsetime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
@@ -422,7 +464,7 @@
 
                 <!-- Second TextView -->
                 <TextView
-                    android:id= "@+id/actualtimetext"
+                    android:id="@+id/actualtimetext"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -432,8 +474,6 @@
                     android:paddingLeft="39dp" />
             </LinearLayout>
 
-
-
             <!--btn check o intentar-->
             <LinearLayout
                 android:id="@+id/btn_cont_lay"
@@ -441,16 +481,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:paddingHorizontal="30dp"
-                android:visibility="gone"
-                >
+                android:visibility="gone">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginTop="20dp"
                     android:background="@drawable/borde_azul"
                     android:gravity="center"
-                    android:onClick="practice"
-                    >
+                    android:onClick="practice">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -463,16 +502,31 @@
             </LinearLayout>
 
             <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:scrollbars="none">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="19dp"
                     android:orientation="horizontal"
+
                     android:paddingHorizontal="30dp">
+
+                    <Button
+                        android:id="@+id/dif0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_flash_animation"
+                        android:onClick="showOptions"
+                        android:text="Principiante"
+                        android:textColor="@color/azul"
+                        android:textSize="14sp"
+                        android:padding="2dp" />
 
                     <Button
                         android:id="@+id/dif1"
@@ -483,44 +537,78 @@
                         android:onClick="dificulty1Activation"
                         android:text="Basico"
                         android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        android:padding="2dp"
-                        />
+                        android:textSize="14sp"
+                        android:padding="2dp" />
+
+                    <Button
+                        android:id="@+id/dif1Speaking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/button_flash_animation"
+                        android:onClick="dificulty1Activation"
+                        android:text="Speaking"
+                        android:textColor="@color/azul"
+                        android:textSize="14sp"
+                        android:padding="2dp" />
 
                     <Button
                         android:id="@+id/dif2"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/borde_azul"
                         android:onClick="dificulty2Activation"
                         android:text="Normal"
                         android:textColor="@color/azul"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <Button
                         android:id="@+id/dif3"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/borde_azul"
                         android:onClick="dificulty3Activation"
                         android:text="Intermedio"
                         android:textColor="@color/azul"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
                     <Button
                         android:id="@+id/dif4"
-                        android:layout_width="150dp"
-                        android:layout_height="match_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="10dp"
                         android:background="@drawable/borde_azul"
                         android:text="Avanzado"
                         android:textColor="@color/azul"
-                        android:textSize="14dp"
-                        android:onClick="dificulty4Activation"
-                        />
+                        android:textSize="14sp"
+                        android:onClick="dificulty4Activation" />
+
                 </LinearLayout>
             </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:id="@+id/noseLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/noseBtn"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/borde_azul"
+                    android:text="No Se"
+                    android:textColor="@color/azul"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+
             <LinearLayout
                 android:id="@+id/btn_lay"
                 android:layout_width="match_parent"
@@ -530,29 +618,29 @@
                 android:orientation="vertical"
                 android:layout_marginBottom="5dp"
                 android:visibility="gone"
+
                 >
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:background="@drawable/borde_azul"
                     android:gravity="center"
-                    android:onClick="checkanswer"
-                    >
+                    android:onClick="checkanswer">
+
                     <TextView
                         android:id="@+id/btncheck"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Chequea tu respuesta"
                         android:textColor="@color/azul"
-                        android:textSize="16dp"
-                        />
+                        android:textSize="16dp" />
+
                 </LinearLayout>
             </LinearLayout>
-
-
         </LinearLayout>
-
     </ScrollView>
+
     <!--BTNS OPC-->
     <LinearLayout
         android:id="@+id/btn_opc"
@@ -569,7 +657,7 @@
             android:name="com.leal.cipm_testing.BottomNav"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_bottom_nav"
-            />
+            tools:layout="@layout/fragment_bottom_nav" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

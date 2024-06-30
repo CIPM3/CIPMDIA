@@ -1888,6 +1888,12 @@ public class Intrans {
            "make ","pull ","put ","run ","see ","stand ","take ",
            "throw ","turn "
     };
+    String PhrasalVerb3[]={
+            "breaks ","brings ","calls ","comes ","cuts ","does ","falls ",
+            "gets ","gives ","goes ","has ","keeps ","lets ","looks ",
+            "makes ","pulls ","puts ","runs ","sees ","stands ","takes ",
+            "throws ","turns "
+    };
 
     String PhrasalVerbEng[][]={
             {
@@ -3965,19 +3971,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + gen.vibesp[rand];
-                        eng1 = "I " + "mustn't " + gen.vib[rand];
+                        eng1 = "I " + "must not  " + gen.vib[rand];
                         sp2 = "tú " + "no debés " + gen.vibesp[rand];
-                        eng2 = "you " + "mustn't " + gen.vib[rand];
+                        eng2 = "you " + "must not  " + gen.vib[rand];
                         sp3 = "él " + "no debe " + gen.vibesp[rand];
-                        eng3 = "he " + "mustn't " + gen.vib3esp[rand];
+                        eng3 = "he " + "must not  " + gen.vib3esp[rand];
                         sp4 = "ella " + "no debe " + gen.vibesp[rand];
-                        eng4 = "she " + "mustn't " + gen.vib3esp[rand];
+                        eng4 = "she " + "must not  " + gen.vib3esp[rand];
                         sp5 = "eso " + "no debe " + gen.vibesp[rand];
-                        eng5 = "it " + "mustn't " + gen.vib3esp[rand];
+                        eng5 = "it " + "must not  " + gen.vib3esp[rand];
                         sp6 = "ellos " + "no deben " + gen.vibesp[rand];
-                        eng6 = "they " + "mustn't " + gen.vib[rand];
+                        eng6 = "they " + "must not  " + gen.vib[rand];
                         sp7 = "nosotros " + "no debemos " + gen.vibesp[rand];
-                        eng7 = "we " + "mustn't " + gen.vib[rand];
+                        eng7 = "we " + "must not  " + gen.vib[rand];
                         break;
                 }
             }
@@ -4020,25 +4026,25 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no debo estar " + gen.vib3contesp[rand];
                         eng1 = "I must not be " + gen.vib3cont[rand];
-                        eng12 = "I mustn't be " + gen.vib3cont[rand];
+                        eng12 = "I must not  be " + gen.vib3cont[rand];
                         sp2 = "tú no debes estar " + gen.vib3contesp[rand];
                         eng2 = "you must not be " + gen.vib3cont[rand];
-                        eng22 = "you mustn't be " + gen.vib3cont[rand];
+                        eng22 = "you must not  be " + gen.vib3cont[rand];
                         sp3 = "él no debe estar " + gen.vib3contesp[rand];
                         eng3 = "he must not be " + gen.vib3cont[rand];
-                        eng32 = "he mustn't be " + gen.vib3cont[rand];
+                        eng32 = "he must not  be " + gen.vib3cont[rand];
                         sp4 = "ella no debe estar " + gen.vib3contesp[rand];
                         eng4 = "she must not be " + gen.vib3cont[rand];
-                        eng42 = "she mustn't be " + gen.vib3cont[rand];
+                        eng42 = "she must not  be " + gen.vib3cont[rand];
                         sp5 = "eso no debe estar " + gen.vib3contesp[rand];
                         eng5 = "it must not be " + gen.vib3cont[rand];
-                        eng52 = "it mustn't be " + gen.vib3cont[rand];
+                        eng52 = "it must not  be " + gen.vib3cont[rand];
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand];
                         eng6 = "they must not be " + gen.vib3cont[rand];
-                        eng62 = "they mustn't be " + gen.vib3cont[rand];
+                        eng62 = "they must not  be " + gen.vib3cont[rand];
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand];
                         eng7 = "we must not be " + gen.vib3cont[rand];
-                        eng72 = "we mustn't be " + gen.vib3cont[rand];
+                        eng72 = "we must not  be " + gen.vib3cont[rand];
                         break;
                 }
             }
@@ -4136,14 +4142,14 @@ public class Intrans {
                         eng2 = "you " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng22 = "you " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         sp3 = "él " + PhrasalVerbEsp3[0][rPv1];
-                        eng3 = "he " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
-                        eng32 = "he " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng3 = "he " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
+                        eng32 = "he " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
                         sp4 = "ella " + PhrasalVerbEsp3[0][rPv1];
-                        eng4 = "she " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
-                        eng42 = "she " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng4 = "she " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
+                        eng42 = "she " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
                         sp5 = "eso " + PhrasalVerbEsp3[0][rPv1];
-                        eng5 = "it " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
-                        eng52 = "it " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
+                        eng5 = "it " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
+                        eng52 = "it " + PhrasalVerb3[0] + PhrasalVerbEng[0][rPv1];
                         sp6 = "ellos " + PhrasalVerbEsp4[0][rPv1];
                         eng6 = "they " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
                         eng62 = "they " + PhrasalVerb[0] + PhrasalVerbEng[0][rPv1];
@@ -5992,19 +5998,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + gen.vibesp[rand] + arrayEsp;
-                        eng1 = "I " + "mustn't " + gen.vib[rand] + arrayEng;
+                        eng1 = "I " + "must not  " + gen.vib[rand] + arrayEng;
                         sp2 = "tú " + "no debés " + gen.vibesp[rand] + arrayEsp;
-                        eng2 = "you " + "mustn't " + gen.vib[rand] + arrayEng;
+                        eng2 = "you " + "must not  " + gen.vib[rand] + arrayEng;
                         sp3 = "él " + "no debe " + gen.vibesp[rand] + arrayEsp;
-                        eng3 = "he " + "mustn't " + gen.vib3esp[rand] + arrayEng;
+                        eng3 = "he " + "must not  " + gen.vib3esp[rand] + arrayEng;
                         sp4 = "ella " + "no debe " + gen.vibesp[rand] + arrayEsp;
-                        eng4 = "she " + "mustn't " + gen.vib3esp[rand] + arrayEng;
+                        eng4 = "she " + "must not  " + gen.vib3esp[rand] + arrayEng;
                         sp5 = "eso " + "no debe " + gen.vibesp[rand] + arrayEsp;
-                        eng5 = "it " + "mustn't " + gen.vib3esp[rand] + arrayEng;
+                        eng5 = "it " + "must not  " + gen.vib3esp[rand] + arrayEng;
                         sp6 = "ellos " + "no deben " + gen.vibesp[rand] + arrayEsp;
-                        eng6 = "they " + "mustn't " + gen.vib[rand] + arrayEng;
+                        eng6 = "they " + "must not  " + gen.vib[rand] + arrayEng;
                         sp7 = "nosotros " + "no debemos " + gen.vibesp[rand] + arrayEsp;
-                        eng7 = "we " + "mustn't " + gen.vib[rand] + arrayEng;
+                        eng7 = "we " + "must not  " + gen.vib[rand] + arrayEng;
                         break;
                 }
             }
@@ -6047,25 +6053,25 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no debo estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng1 = "I must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng12 = "I mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng12 = "I must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp2 = "tú no debes estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng2 = "you must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng22 = "you mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng22 = "you must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp3 = "él no debe estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng3 = "he must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng32 = "he mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng32 = "he must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp4 = "ella no debe estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng4 = "she must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng42 = "she mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng42 = "she must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp5 = "eso no debe estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng5 = "it must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng52 = "it mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng52 = "it must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng6 = "they must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng62 = "they mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng62 = "they must not  be " + gen.vib3cont[rand] + arrayEng;
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand] + arrayEsp;
                         eng7 = "we must not be " + gen.vib3cont[rand] + arrayEng;
-                        eng72 = "we mustn't be " + gen.vib3cont[rand] + arrayEng;
+                        eng72 = "we must not  be " + gen.vib3cont[rand] + arrayEng;
                         break;
                 }
             }
@@ -8050,19 +8056,19 @@ public class Intrans {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng1 = "I " + "mustn't " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng1 = "I " + "must not  " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp2 = "tú " + "no debés " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng2 = "you " + "mustn't " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng2 = "you " + "must not  " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp3 = "él " + "no debe " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng3 = "he " + "mustn't " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
+                        eng3 = "he " + "must not  " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella " + "no debe " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng4 = "she " + "mustn't " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
+                        eng4 = "she " + "must not  " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso " + "no debe " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng5 = "it " + "mustn't " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
+                        eng5 = "it " + "must not  " + gen.vib3esp[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos " + "no deben " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng6 = "they " + "mustn't " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng6 = "they " + "must not  " + gen.vib[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros " + "no debemos " + gen.vibesp[rand] + arrayEsp + advfrequ[radv];
-                        eng7 = "we " + "mustn't " + gen.vib[rand] + arrayEng + frequadv[radv];
+                        eng7 = "we " + "must not  " + gen.vib[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -8105,25 +8111,25 @@ public class Intrans {
                     case 1:
                         sp1 = "yo no debo estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng1 = "I must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng12 = "I mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng12 = "I must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp2 = "tú no debes estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng2 = "you must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng22 = "you mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng22 = "you must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp3 = "él no debe estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng3 = "he must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng32 = "he mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng32 = "he must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp4 = "ella no debe estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng4 = "she must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng42 = "she mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng42 = "she must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp5 = "eso no debe estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng5 = "it must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng52 = "it mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng52 = "it must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp6 = "ellos no deben estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng6 = "they must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng62 = "they mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng62 = "they must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         sp7 = "nosotros no debemos estar " + gen.vib3contesp[rand] + arrayEsp + advfrequ[radv];
                         eng7 = "we must not be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
-                        eng72 = "we mustn't be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
+                        eng72 = "we must not  be " + gen.vib3cont[rand] + arrayEng + frequadv[radv];
                         break;
                 }
             }

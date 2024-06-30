@@ -5147,7 +5147,7 @@ public class NewVerbClass {
     };
     String[] getEnglishVerbs = {"Tired ", "Sick ", "Better ",
             "Worse ", "Angry ", "Excited ", "Hot ", "Scared ", "Late ",
-            "Lost ", "Ready ", "Dirty ", "Clean ", "Wet ", "Dry ", "Aged ",
+            "Lost ", "Ready ", "Dirty ", "Clean ", "Wet ", "Dry ", "old ",
             "Busy ", "Calm ", "Happy ", "Sad ", "Bored ", "Ashamed ", "Frustrated ",
             "Impatient ", "Jealous ", "Motivated ", "Calm ", "Surprised ", "Tense ",
             "Uncomfortable ", "Worried ", "Exhausted "};
@@ -6296,7 +6296,6 @@ public class NewVerbClass {
                               spBody="me pongo "+spanishMaleSingular;
                               break;
                       }
-
                       break;
 
                   case "Tú ":
@@ -6388,7 +6387,7 @@ public class NewVerbClass {
               gene = pronoun+engBody+englishAdj;
           }else {
               int getr = (int)(Math.random()* getSpanish1.length);
-              switch (pronombre){
+              switch (pronombre) {
                   case "Yo ":
                      gens= "yo "+getSpanish1[getr];
                      gene="I get "+getEnglishVerbs[getr];
@@ -6432,7 +6431,99 @@ public class NewVerbClass {
 
     }
 
-    String gens3;
+    VerbLists v = new VerbLists();
+    public void GenIntReflx2(){
+        int p = (int) (Math.random()* subjectsSpanish.length);
+        String pronombre = subjectsSpanish[p];
+              int getr = (int)(Math.random()* getSpanish1.length);
+              switch (pronombre) {
+                  case "Yo ":
+                     gens= "yo "+getSpanish1[getr];
+                     gene="I get "+getEnglishVerbs[getr];
+                      break;
+
+                  case "Tú ":
+                      gens="tú "+getSpanish2[getr];
+                      gene="you get "+getEnglishVerbs[getr];
+                      break;
+
+                  case "Él ":
+                      gens ="él "+ getSpanish3[getr];
+                      gene = "he gets "+getEnglishVerbs[getr];
+                      gene2= "she gets "+getEnglishVerbs[getr];
+                      break;
+
+                  case "Ella ":
+                      gens= "ella "+  getSpanish3[getr];
+                      gene =  "she gets "+getEnglishVerbs[getr];
+                      gene2=  "he gets "+getEnglishVerbs[getr];
+                      break;
+
+                  case "Nosotros ":
+                      gens="nosotros "+getSpanish4[getr];
+                      gene =  "we get "+getEnglishVerbs[getr];
+                      break;
+
+                  case "Ellos ":
+                      gens= "ellos "+  getSpanish5[getr];
+                      gene =  "they get "+getEnglishVerbs[getr];
+                      break;
+
+
+              }
+
+
+
+
+
+
+
+    }
+    public void GenIntReflx1(){
+        int p = (int)(Math.random()* subjectsEnglish.length);
+        int v = (int) (Math.random()* reflexiveVerbsSpanishSecondPerson.length);
+        String pronoun = subjectsEnglish[p];
+        switch (pronoun){
+            case "I ":
+                gens = reflexiveVerbsSpanish1[v];
+                gene = "I "+ reflexiveVerbs[v] + "myself";
+
+                break;
+
+            case"You ":
+                gens = reflexiveVerbsSpanishSecondPerson[v];
+                gene = "you "+ reflexiveVerbs[v] + "yourself";
+                break;
+
+            case "He ":
+                gens =reflexiveVerbsSpanishThirdPersonSingular[v]+"a si mismo";
+                gene = "he "+ reflexiveVerbsThirdPersonSingular[v] + "himself";
+
+                break;
+
+            case "She ":
+                gens =  reflexiveVerbsSpanishThirdPersonSingular[v]+"a si misma";
+                gene = "she "+ reflexiveVerbsThirdPersonSingular[v] + "herself";
+                break;
+
+            case "We ":
+                gens =  reflexiveVerbsSpanishPlural4[v];
+                gene = "we "+ reflexiveVerbs[v] + "ourselves";
+                break;
+
+            case "They ":
+                gens = reflexiveVerbsSpanishThirdPersonPlural[v];
+                gene = "they "+ reflexiveVerbs[v] + "themselves";
+                break;
+        }
+
+
+    }
+
+
+
+
+    String gens3,gene3;
     public void GenSupposedTo(boolean isPast){
         int pronounRand= (int)(Math.random()*subjectsEnglish.length);
         int verbrand= (int)(Math.random()*verbs.length);
@@ -6603,6 +6694,95 @@ public class NewVerbClass {
             case "They ":
                 gene = subjectsEnglish[5]+pvppVerbs[verbRand]+ objectPronouns6[pp];
                 gens = subjectsSpanish[5]+objectPronouns6Sp[pp]+thirdPersonPluralPvppSpanish [verbRand];
+                if (objectPronouns6[pp].equals("him ")){
+                    gene2 = subjectsEnglish[5]+pvppVerbs[verbRand]+ "it ";
+                }else if (objectPronouns6[pp].equals("it ")){
+                    gene2 = subjectsEnglish[5]+pvppVerbs[verbRand]+"him ";
+                }else {
+                    gene2= ".";
+                }
+                break;
+        }
+    }
+    public void GenIntPorObj(){
+        int pronounRand= (int)(Math.random()*subjectsEnglish.length);
+        int verbRand= (int)(Math.random()*pvppVerbsThirdPerson.length);
+        String pronoun= subjectsEnglish[pronounRand];
+        int pp= (int)(Math.random()*objectPronouns1.length);
+        int pp3= (int)(Math.random()*objectPronouns3.length);
+        int ppnos=(int)(Math.random()*objectPronouns5.length);
+
+        switch (pronoun){
+            case "I ":
+                gene = subjectsEnglish[0]+pvppVerbs[verbRand]+ objectPronouns1[pp];
+                gens =objectPronouns1Sp[pp]+ firstPersonSingularPvppSpanish[verbRand];
+                if (objectPronouns1[pp].equals("him ")){
+                    gene2 = subjectsEnglish[0]+pvppVerbs[verbRand]+ "it ";
+                }else if (objectPronouns1[pp].equals("it ")){
+                    gene2 = subjectsEnglish[0]+pvppVerbs[verbRand]+"him ";
+                }else {
+                    gene2= ".";
+                }
+                break;
+
+            case "You ":
+                gene = subjectsEnglish[1]+pvppVerbs[verbRand]+ objectPronouns2[pp];
+                gens = objectPronouns2Sp[pp]+secondPersonSingularPvppSpanish[verbRand];
+                if (objectPronouns2[pp].equals("him ")){
+                    gene2 = subjectsEnglish[1]+pvppVerbs[verbRand]+ "it ";
+                } else if (objectPronouns2[pp].equals("it ")){
+                    gene2 = subjectsEnglish[1]+pvppVerbs[verbRand]+"him ";
+                }else {
+                    gene2= ".";
+                }
+                break;
+
+            case "He ":
+                gene= subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+ objectPronouns3[pp3];
+                gene3= subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+ objectPronouns3[pp3];
+                gens = objectPronouns3Sp[pp3]+thirdPersonSingularPvppSpanish[verbRand];
+                if (objectPronouns3[pp3].equals("it ")){
+                    gene2 = subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+"him ";
+                    gene3 = subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+"him ";
+                }else if (objectPronouns3[pp3].equals("him ")){
+                    gene2 = subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+"it ";
+                    gene3 = subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+"it ";
+                }else {
+                    gene2= ".";
+                }
+                break;
+
+            case "She ":
+                gene= subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+ objectPronouns4[pp3];
+                gene3= subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+ objectPronouns4[pp3];
+                gens = objectPronouns4Sp[pp3]+thirdPersonSingularPvppSpanish[verbRand];
+                if (objectPronouns4[pp3].equals("him ")){
+                    gene2 = subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+ "it ";
+                    gene3 = subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+ "it ";
+                }else if (objectPronouns4[pp3].equals("it ")){
+                    gene2 = subjectsEnglish[3]+pvppVerbsThirdPerson[verbRand]+"him ";
+                    gene3 = subjectsEnglish[2]+pvppVerbsThirdPerson[verbRand]+"him ";
+                }else {
+                    gene2= ".";
+                }
+
+                break;
+
+            case "We ":
+                gens= objectPronouns5sp[ppnos]+firstPersonPluralPvppSpanish[verbRand];
+                gene =subjectsEnglish[4]+ pvppVerbs[verbRand]+ objectPronouns5[ppnos];
+                if (objectPronouns5[ppnos].equals("him ")){
+                    gene2 = subjectsEnglish[4]+pvppVerbs[verbRand]+ "it ";
+                }else if (objectPronouns5[ppnos].equals("it ")){
+                    gene2 = subjectsEnglish[4]+pvppVerbs[verbRand]+"him ";
+                }else {
+                    gene2= ".";
+                }
+                break;
+
+            case "They ":
+                gene = subjectsEnglish[5]+pvppVerbs[verbRand]+ objectPronouns6[pp];
+                gens = objectPronouns6Sp[pp]+thirdPersonPluralPvppSpanish [verbRand];
                 if (objectPronouns6[pp].equals("him ")){
                     gene2 = subjectsEnglish[5]+pvppVerbs[verbRand]+ "it ";
                 }else if (objectPronouns6[pp].equals("it ")){
@@ -6909,6 +7089,7 @@ public class NewVerbClass {
                 break;
         }
     }
+
     public void GenPresSimp(int pronounRand,int verbRand,int ob2,String pronoun){
 
         switch (pronoun){
@@ -8248,6 +8429,52 @@ public class NewVerbClass {
                 break;
         }
     }
+    public void GenIntPorSujeto(){
+        int pronounRand= (int)(Math.random()*subjectsEnglish.length);
+        int verbRand= (int)(Math.random()*verbs.length);
+        int objRand=(int)(Math.random()*verbObjects.length);
+        int ob2= (int)(Math.random()*verbObjects[objRand].length);
+        String pronoun= subjectsEnglish[pronounRand];
+
+        switch (pronoun){
+            case "I ":
+                gene= subjectsEnglish[0]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gene2= ".";
+                gens = verbsSpanishFirstPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                break;
+
+            case "You ":
+                gene= subjectsEnglish[1]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gene2= ".";
+                gens =verbsSpanishSecondPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                break;
+
+            case "He ":
+                gene= subjectsEnglish[2]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
+                gene2= subjectsEnglish[3]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
+                gens = verbsSpanishThirdPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                break;
+
+            case "She ":
+                gene= subjectsEnglish[3]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
+                gene2= subjectsEnglish[2]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
+                gens = verbsSpanishThirdPerson[verbRand]+verbObjectsSpanish[verbRand][ob2];
+                break;
+
+            case "We ":
+                gens= verbsSpanishFirstPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                gene = subjectsEnglish[4]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gene2= ".";
+                break;
+
+            case "They ":
+                gene = subjectsEnglish[5]+verbs[verbRand]+verbObjects[verbRand][ob2];
+                gene2= ".";
+                gens = verbsSpanishThirdPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                break;
+        }
+    }
+
     public void GenPresSimp(String pronounparm, int verbpos){
         int objRand=(int)(Math.random()*verbObjects.length);
         int verbRand= (int)(Math.random()*verbs.length);
@@ -8286,7 +8513,6 @@ public class NewVerbClass {
                 break;
         }
     }
-
     public void genVerbAndObject(String object,String objeto){
         int r = (int)(Math.random()*verbsSpanishThirdPerson.length);
         int ob2= (int)(Math.random()*verbObjects[r].length);

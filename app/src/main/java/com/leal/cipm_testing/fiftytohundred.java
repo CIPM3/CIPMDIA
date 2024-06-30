@@ -91,7 +91,6 @@ public class fiftytohundred {
         j++;
 
     }
-
     // adjetivos y sustantivos
     public void adjpro() {
         int n = (int) (Math.random() * nouns.length);
@@ -99,7 +98,6 @@ public class fiftytohundred {
         gens = adj[a] + sust[n];
         gene = adjeng[a] + nouns[n];
     }
-
     // adv+pronombre+verbtrans
     public void adprotran() {
         int p = (int) (Math.random() * pronombres.length);
@@ -207,7 +205,6 @@ public class fiftytohundred {
 
 
     }
-
     // peposiciones y pronombres de objeto
     public void prpproob() {
         int i = (int) (Math.random() * prp.length);
@@ -216,7 +213,6 @@ public class fiftytohundred {
         gene = prp[i] + obj[ii];
 
     }
-
     //intrans
     public void intransvplacead() {
         int p = (int) (Math.random() * pronombres.length);

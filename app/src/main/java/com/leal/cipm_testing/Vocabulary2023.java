@@ -3,15 +3,16 @@ package com.leal.cipm_testing;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
@@ -21,8 +22,6 @@ import android.text.SpannableString;
 import android.text.style.UnderlineSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.OrientationEventListener;
-import android.view.Surface;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
@@ -34,11 +33,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.exoplayer2.ExoPlayer;
-import com.google.android.exoplayer2.MediaItem;
-import com.google.android.exoplayer2.Player;
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -52,24 +46,27 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.leal.cipm_testing.databinding.ActivityNewVocabRecyclerViewBinding;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
-public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInteractionListener, PlayerProvider {
+public class Vocabulary2023 extends AppCompatActivity {
 
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    LinearLayout vf;
+
     LinearLayout opclay;
     LinearLayout resplay;
-    MediaItem mediaItem;
 
     LinearLayout answer_lay, micro;
     LinearLayout spanish_lay;
@@ -98,6 +95,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     DocumentReference docref ;
     VocabModeloPersistencia vmp = new VocabModeloPersistencia();
     String[] ArrayWithElementRemoved;
+    LinearLayout optionsLayout,keyWordsLayout;
     int PositionOfElementsLeft=0;
     public static final int REC_CODE_SPEECH_INPUT = 100;
     boolean v;
@@ -109,6 +107,8 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     TextView nosetv;
     TextView palabraclavees,palabraclave;
     int condicionparapasar;
+    Button option1Btn,option2Btn,option3Btn,option4Btn,continueOptionBtn;
+
     FirebaseUser user;
     Timer timer;
     TimerTask timerTask;
@@ -126,25 +126,12 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     double five,six,seven,eight,nine,ten;
     int score=0;
     NewMethods newMeth = new NewMethods();
-
-    private StyledPlayerView playerView;
-    private SimpleExoPlayer player;
-    private boolean playWhenReady = true;
-    private int currentWindow = 0;
-    private long playbackPosition = 0;
-    private boolean isFullScreen = false;
-    private boolean hasOrientationChanged = false;
-    private OrientationEventListener orientationEventListener;
-
+    int noSeCounter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vocabulary2023);
 
-        // Instanciación correcta de SimpleExoPlayer
-        player = new SimpleExoPlayer.Builder(this).build();
-
-        loadRewardedAd();
         textspin1 = findViewById(R.id.textspin1);
         spin = findViewById(R.id.spinuno);
         micro= findViewById(R.id.respdecir);
@@ -157,7 +144,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         tdr.setVisibility(View.GONE);
         tdrnumero = findViewById(R.id.TRPNumber);
         tdrnumero.setVisibility(View.GONE);
-
+        optionsLayout=findViewById(R.id.button_layout);
         sptx = findViewById(R.id.spanishsentence);
         engtx = findViewById(R.id.txteng);
         answerinp = findViewById(R.id.answerinput1);
@@ -170,6 +157,10 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         spa_sent = findViewById(R.id.spa_sent);
         spa_sent.setVisibility(View.GONE);
 
+        option1Btn= findViewById(R.id.answer_button_1);
+        option2Btn= findViewById(R.id.answer_button_2);
+        option3Btn= findViewById(R.id.answer_button_3);
+        option4Btn= findViewById(R.id.answer_button_4);
         resplay = findViewById(R.id.resplay);
         answer_lay = findViewById(R.id.answer_lay);
         spanish_lay = findViewById(R.id.spanish_lay);
@@ -179,7 +170,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         btn_cont_lay = findViewById(R.id.btn_cont_lay);
 
         btn_emp_lay_nose = findViewById(R.id.btn_emp_lay_nose);
-
+        keyWordsLayout=findViewById(R.id.palabraClabeTxtsLay);
         totalTxt= findViewById(R.id.totalTxtV);
         totalTxt.setVisibility(View.GONE);
 
@@ -204,51 +195,19 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         eight=0;
         nine=0;
         ten=0;
-
-        // Configura OrientationEventListener
-        orientationEventListener = new OrientationEventListener(this) {
-            @Override
-            public void onOrientationChanged(int orientation) {
-                if (orientation == ORIENTATION_UNKNOWN) {
-                    return;
-                }
-
-                // Determina la orientación
-                int rotation = getWindowManager().getDefaultDisplay().getRotation();
-
-                if((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270)){
-                    toggleFullScreen();
-                }
-
-                if ((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)) {
-                    // Modo Portrait
-                    if(hasOrientationChanged){
-                        toggleFullScreen();
-                    }else{
-                        hasOrientationChanged = true;
-                    }
-                }
-            }
-        };
-
-        // Habilita OrientationEventListener
-        if (orientationEventListener.canDetectOrientation()) {
-            orientationEventListener.enable();
-
-        } else {
-            orientationEventListener.disable();
-        }
+        noSeCounter=0;
 
 
-        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
-        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
 
 
         prefs = new Prefs(Vocabulary2023.this);
+        if(prefs.getPremium()==0){
+            loadRewardedAd();
+        }
         condicionparapasar=0;
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.video_player_view, video_player)
+                .replace(R.id.fragmentContainerView5, video_player)
                 .commit();
 
         Bundle args = new Bundle();
@@ -259,86 +218,14 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
         escribirEnelInputTextResultadodeUtterance();
         PremiumControler();
 
+
+
+
+
     }
 
         boolean lessonPlan;
     //DB FUNC
-    // Método para cambiar el modo de pantalla completa
-    private void toggleFullScreen() {
-        if (!isFullScreen) {
-            if (player != null) {
-                // Guardar la posición actual del video
-                playbackPosition = player.getCurrentPosition();
-                playWhenReady = player.getPlayWhenReady();
-
-                // Guardar la posición de reproducción en Prefs
-                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
-                prefs.setLong("playbackPosition", playbackPosition);
-                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
-            }
-
-            openFullScreenDialog();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            isFullScreen = true;
-        } else {
-            // Salir del modo pantalla completa
-            closeFullScreenDialog();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            isFullScreen = false;
-
-            if (player != null) {
-                // Restaurar el estado de reproducción del video
-                player.seekTo(playbackPosition);
-                player.setPlayWhenReady(playWhenReady);
-            }
-        }
-    }
-    private void openFullScreenDialog() {
-        if (player != null) {
-            playbackPosition = player.getCurrentPosition();
-            playWhenReady = player.getPlayWhenReady();
-
-            // Pausar el video antes de abrir la pantalla completa
-            video_player.player.stop();
-        }
-        video_player.player.stop();
-
-        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
-        // Pasar la posición y estado de reproducción al fragmento si es necesario
-        Bundle args = new Bundle();
-        args.putLong("position", playbackPosition);
-        args.putBoolean("playWhenReady", playWhenReady);
-        fullScreenFragment.setArguments(args);
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(android.R.id.content, fullScreenFragment)
-                .addToBackStack(null)
-                .commit();
-    }
-    private void closeFullScreenDialog() {
-        getSupportFragmentManager().popBackStack();
-        // Restaura el estado del reproductor si es necesario
-        if (player != null) {
-            playbackPosition = player.getCurrentPosition();
-            playWhenReady = player.getPlayWhenReady();
-
-            // Pausar el video antes de abrir la pantalla completa
-            video_player.player.play();
-        }
-
-    }
-
-    @Override
-    public void onFragmentDismissed(long playbackPosition, boolean playWhenReady) {
-        player.play();
-    }
-
-    @Override
-    public Player getSharedPlayer() {
-        return player;
-    }
-
-
     private void PremiumControler() {
 
         // info que recive del plan de estudios chooser
@@ -547,6 +434,7 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
             //USUARIO BASICO
         } else if (prefs.getPremium()==0){
             if(isFromLesson){
+                prefs.setHasSeenAd(true);
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(Vocabulary2023.this, android.R.layout.simple_list_item_1,classFromLesson);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spin.setAdapter(adapter);
@@ -581,47 +469,32 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     }
 
     //EVALUA QUE FUE SELECCIONADO
-    public void spinnerSelected1() {
+    public void spinnerSelected1(){
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
-        prefs.setSelection(selection); // Guarda la selección en Prefs
-
-        if (video_player != null) {
-            video_player.updateFragmentStateStructure(selection);
-        }
-
-        if (selection.equals("Tutorial")) {
-            spa_sent.setText("Seleccione una estructura y rango para continuar con la practica");
-            btn_emp_lay.setVisibility(View.GONE);
-            txt_exp.setVisibility(View.VISIBLE);
-            ocultartodo();
-        } else {
-            btn_emp_lay.setVisibility(View.VISIBLE);
-            videoPlayer();
-        }
-    }
-    public void spinnerSelected1(String selectionp){
-        selection = selectionp;
-        textspin1.setText(selection);
-        prefs.setSelection(selection);
         if(video_player != null) {
             video_player.updateFragmentStateStructure(selection);
 
         }
-        if(selection.equals("Tutorial")){
-            spa_sent.setText("Seleccione una estructura y rango para continuar con la practica");
-            btn_emp_lay.setVisibility(View.GONE);
-            txt_exp.setVisibility(View.VISIBLE);
-            ocultartodo();
-        }else {
-            btn_emp_lay.setVisibility(View.VISIBLE);
+
+
             videoPlayer();
+
+    }
+    public void spinnerSelected1(String selectionp){
+        selection = selectionp;
+        textspin1.setText(selection);
+        if(video_player != null) {
+            video_player.updateFragmentStateStructure(selection);
+
         }
+
+        videoPlayer();
     }
     //ACTIVA LA INTERFAZ PARA EL VIDEO
     public void videoPlayer(){
        // spa_sent.setText("Lee la frase y escribela en ingles");
-        btn_emp_lay.setVisibility(View.VISIBLE);
+
         ocultarlay();
     }
 
@@ -651,19 +524,19 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
     double prom;
     NewNounClass nounClassObject = new NewNounClass();
 
+    String wrongAnswer1,wrongAnswer2,wrongAnswer3,methName;
 
     public void practice(View v) {
-     //   limpans();
 
 
 
         tdr.setVisibility(View.GONE);
         tdrnumero.setVisibility(View.GONE );
-
         btn_emp_lay.setVisibility(View.GONE);
         spanish_lay.setVisibility(View.VISIBLE);
         input_lay.setVisibility(View.VISIBLE);
-        btn_check_lay.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.VISIBLE);
         if(isFromLesson){
             btn_emp_lay_nose.setVisibility(View.VISIBLE);
         }
@@ -676,14 +549,13 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
 
         }
 
-        btn_cont_lay.setVisibility(View.GONE);
+
         answer_lay.setVisibility(View.GONE);
         resplay.setVisibility(View.GONE);
         answerinp.setBackgroundColor(Color.WHITE);
         opclay.setBackgroundColor(Color.WHITE);
 
         if(!prefs.getHasSeenAd() && !isFromLesson && prefs.getPremium()==0){
-            dialogueShowRewardedAd2("Ver Anuncio para Continuar ","Cipm Premium ", "Ver anuncio");
         }else if(!selection.equals("Tutorial")){
             mostrarlay();
             switch (selection) {
@@ -1092,12 +964,166 @@ public class Vocabulary2023 extends AppCompatActivity implements OnFragmentInter
             }
         }
     }
+    String rightAnswer,spRightAnswer;
+    vocabgen vocabGenObject= new vocabgen();
+    boolean quieroPracticarSpeaking;
+    public void practice() {
+
+        keyWordsLayout.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.GONE);
+        tdr.setVisibility(View.GONE);
+        tdrnumero.setVisibility(View.GONE );
+        btn_emp_lay.setVisibility(View.GONE);
+        //spanish_lay.setVisibility(View.VISIBLE);
+       // input_lay.setVisibility(View.VISIBLE);
+       // btn_check_lay.setVisibility(View.VISIBLE);
+        if(isFromLesson){
+            btn_emp_lay_nose.setVisibility(View.GONE);
+        }
+
+       // micro.setVisibility(View.VISIBLE);
+
+
+
+        if(!prefs.getHasSeenAd() && !isFromLesson && prefs.getPremium()==0){
+            dialogueShowRewardedAd2("Ver Anuncio para Continuar ","Ver anuncio ", "Cipm Premium");
+        }else if(!selection.equals("Tutorial")){
+                vocabgen cero = new vocabgen();
+
+            switch (selection) {
+                case "Function Words":
+                    nounClassObject.genPreps();
+                     wrongAnswer1= nounClassObject.gene;
+                    nounClassObject.genPreps();
+                     wrongAnswer2= nounClassObject.gene;
+                    nounClassObject.genPreps();
+                     wrongAnswer3=nounClassObject.gene;
+                     methName = "genPreps";
+                    setTextToButtonsHandleOnClick(nounClassObject,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                    break;
+                case "0 to 50":
+                    int rv = (int)(Math.random()*2);
+                    switch (rv){
+                        case 0:
+                            newMeth.genCeroToFifty();
+                            wrongAnswer1= newMeth.globalAnswer;
+                            newMeth.genCeroToFifty();
+                            wrongAnswer2= newMeth.globalAnswer;
+                            newMeth.genCeroToFifty();
+                            wrongAnswer3= newMeth.globalAnswer;
+                            methName = "genCeroToFifty";
+                            setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                            break;
+
+                        case 1:
+                            cero.gencerotofifty();
+                            wrongAnswer1= cero.gene;
+                            cero.gencerotofifty();
+                            wrongAnswer2= cero.gene;
+                            cero.gencerotofifty();
+                            wrongAnswer3= cero.gene;
+                            cero.gencerotofifty();
+                            rightAnswer= cero.gene;
+                            spRightAnswer=cero.gens;
+                            setTextToButtonsHandleOnClick(spRightAnswer,rightAnswer,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                            break;
+                    }
+
+                    break;
+                case "50 to 100":
+                    vocabGenObject.fiftohun();
+                    wrongAnswer2= vocabGenObject.gene;
+                    vocabGenObject.fiftohun();
+                    wrongAnswer3= vocabGenObject.gene;
+                    vocabGenObject.fiftohun();
+                    wrongAnswer1= vocabGenObject.gene;
+                    vocabGenObject.fiftohun();
+                    rightAnswer= vocabGenObject.gene;
+                    spRightAnswer= vocabGenObject.gens;;
+                    setTextToButtonsHandleOnClick(spRightAnswer,rightAnswer,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+
+                    break;
+                case "100 to 150":
+                    newMeth.gen100to150();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen100to150();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen100to150();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen100to150";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                    break;
+                case "150 to 200":
+                    newMeth.gen150to200();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen150to200();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen150to200();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen150to200";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                      break;
+                case "200 to 250":
+                    newMeth.gen200to250();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen200to250();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen200to250();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen200to250";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                     break;
+                case "250 to 300":
+                    newMeth.gen250to300();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen250to300();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen250to300();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen250to300";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                   break;
+                case "300 to 350":
+                    newMeth.gen300to350();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen300to350();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen300to350();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen300to350";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                  break;
+                case "350 to 400":
+                    newMeth.gen350to400();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen350to400();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen350to400();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen350to400";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                    break;
+                case "400 to 500":
+                    newMeth.gen400to500();
+                    wrongAnswer1= newMeth.globalAnswer;
+                    newMeth.gen400to500();
+                    wrongAnswer2= newMeth.globalAnswer;
+                    newMeth.gen400to500();
+                    wrongAnswer3= newMeth.globalAnswer;
+                    methName = "gen400to500";
+                    setTextToButtonsHandleOnClick(newMeth,methName,wrongAnswer1,wrongAnswer2,wrongAnswer3);
+                     break;
+
+            }
+        }
+    }
+
 
 
 
     String te2;
     int wrongcounter;
-    boolean isinbasics;
+
     public void checkanswer(View vista) {
         v = false;
         String t = engtx.getText().toString().trim();
@@ -1337,71 +1363,78 @@ if(isfromtest){
 
         }
          answerinputfinal= t2;
-
+                    
     }
-    public void checkanswer() {
-        //ICONOS
-        Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+    public void checkanswer(int nose) {
 
-        //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
-        answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
-        opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
-        answerinp.setVisibility(View.VISIBLE);
+        if(nose>5){
+            dialogueMasFacil("Te Gustaría algo mas fácil? o ver un tutorial para usar esta actividad","Algo más fácil","ver Tutorial");
 
 
-        //LAYOUT QUE MUESTRA ICONOS
-        resplay.setVisibility(View.VISIBLE);
-        resplay.setBackground(incorrectIcon);
-        //LAYOUT DE RESPUESTA
-        answer_lay.setVisibility(View.VISIBLE);
-        btncheck.setText("Checa Tu Respuesta ");
+        }else {
+            //ICONOS
+            Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+            //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
+            answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            answerinp.setVisibility(View.VISIBLE);
 
-        btn_cont_lay.setVisibility(View.VISIBLE);
-        //if you say stop it returns part of the flow control system
-        ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                if (i == TextToSpeech.SUCCESS) {
-                    ttr.setLanguage(Locale.ENGLISH);
-                    ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                        @Override
-                        public void onStart(String s) {
+
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(incorrectIcon);
+            //LAYOUT DE RESPUESTA
+            answer_lay.setVisibility(View.VISIBLE);
+            btncheck.setText("Checa Tu Respuesta ");
+
+            btn_cont_lay.setVisibility(View.VISIBLE);
+            //if you say stop it returns part of the flow control system
+            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if (i == TextToSpeech.SUCCESS) {
+                        ttr.setLanguage(Locale.ENGLISH);
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                            }
+                        });
+                        ttr.speak("answer is incorrect the answer is: "+engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
+                        engtx.setTextColor(Color.BLUE);
+                        engtx.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String textFromTxteng = engtx.getText().toString();
+                                resplay.setVisibility(View.GONE);
+                                answerinp.setBackgroundColor(Color.WHITE);
+                                opclay.setBackgroundColor(Color.WHITE);
+                                answer_lay.setVisibility(View.GONE);
+                                answerinp.setText(textFromTxteng);
+                            }
+                        });
+                        if(personalizedPlan){
+                            //reset counter?
+                            condicionparapasar=0;
                         }
 
-                        @Override
-                        public void onDone(String utteranceId) {
 
-                        }
 
-                        @Override
-                        public void onError(String s) {
-                        }
-                    });
-                    ttr.speak("answer is incorrect the answer is: "+engtx.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "one");
-                    engtx.setTextColor(Color.BLUE);
-                    engtx.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View view) {
-                            String textFromTxteng = engtx.getText().toString();
-                            resplay.setVisibility(View.GONE);
-                            answerinp.setBackgroundColor(Color.WHITE);
-                            opclay.setBackgroundColor(Color.WHITE);
-                            answer_lay.setVisibility(View.GONE);
-                            answerinp.setText(textFromTxteng);
-                        }
-                    });
-                    if(personalizedPlan){
-                        //reset counter?
-                        condicionparapasar=0;
+
                     }
-
-
-
-
                 }
-            }
-        });
+            });
 //PASAR DE PREGUNTA
+
+        }
 
 
     }
@@ -1507,10 +1540,10 @@ if(isfromtest){
                     intent.putExtra("class",placeHolder);
                     startActivity(intent);
                 }else if(prefs.getPremium()==0){
-                    Toast.makeText(this,"enttra",Toast.LENGTH_SHORT).show();
                     dialogueShowRewardedAd("Ver anuncio para desbloquear siguiente clase","Ver","Cipm Premium");
 
                 }
+
 
             }
         }
@@ -1576,17 +1609,12 @@ if(isfromtest){
     }
     public void hablar(View view){
         iniciarentradavoz();
+        btn_emp_lay_nose.setVisibility(View.GONE);
         answerinp.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.VISIBLE);
 
     }
-    public void ocultartodo(){
-        spanish_lay.setVisibility(View.GONE);
-        input_lay.setVisibility(View.GONE);
-        btn_emp_lay.setVisibility(View.GONE);
-        btn_check_lay.setVisibility(View.GONE);
-        btn_cont_lay.setVisibility(View.GONE);
-        answer_lay.setVisibility(View.GONE);
-    }
+
     public void ocultarlay(){
         spanish_lay.setVisibility(View.GONE);
         input_lay.setVisibility(View.GONE);
@@ -1594,12 +1622,15 @@ if(isfromtest){
         btn_check_lay.setVisibility(View.GONE);
         btn_cont_lay.setVisibility(View.GONE);
         answer_lay.setVisibility(View.GONE);
+        optionsLayout.setVisibility(View.GONE);
+
     }
     public void mostrarlay(){
         spanish_lay.setVisibility(View.VISIBLE);
         input_lay.setVisibility(View.VISIBLE);
         btn_emp_lay.setVisibility(View.GONE);
-        btn_check_lay.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_emp_lay_nose.setVisibility(View.VISIBLE);
     }
     int counter=0;
     String genstest,genetest,gene2test;
@@ -1763,13 +1794,11 @@ if(isfromtest){
         }
 
     }
+
     public void nose(View vista){
 
 
-        if(isFromLesson){
-            Toast.makeText(this, "Necesitas ayuda?- da click en servicio al cliente", Toast.LENGTH_SHORT).show();
-            checkanswer();
-        }else if (isfromtest){
+      if (isfromtest){
             if(nosetv.getText().toString().trim().equalsIgnoreCase("ir a elegir plan")){
                 Toast.makeText(this, "ve a elegir plan función solo para usuario premium", Toast.LENGTH_SHORT).show();
 
@@ -1796,6 +1825,10 @@ if(isfromtest){
 
             }
             wrongcounter++;
+        }else {
+            noSeCounter++;
+            checkanswer(noSeCounter);
+
         }
 
 
@@ -2229,7 +2262,7 @@ if(isfromtest){
         GradientDrawable drawable2 = new GradientDrawable();
         drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
         drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
-        drawable2.setColor(Color.GRAY); // Set the background color
+        drawable2.setColor(Color.YELLOW); // Set the background color
         button2.setText(buttonno);
         button2.setTextColor(Color.BLACK);
         button2.setBackground(drawable2);
@@ -2295,7 +2328,7 @@ if(isfromtest){
         GradientDrawable drawable2 = new GradientDrawable();
         drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
         drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
-        drawable2.setColor(Color.GRAY); // Set the background color
+        drawable2.setColor(Color.YELLOW); // Set the background color
         button2.setText(buttonno);
         button2.setTextColor(Color.BLACK);
         button2.setBackground(drawable2);
@@ -2322,65 +2355,152 @@ if(isfromtest){
         dialog.show();
 
     }
+    public void  dialogueShowRewardedAd3(String text, String buttonyes, String buttonno){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (player != null) {
-            player.setPlayWhenReady(playWhenReady);
-            player.seekTo(currentWindow, playbackPosition);
-        }
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd3();
+
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.YELLOW); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(Vocabulary2023.this,Premium2023.class);
+                startActivity(intento);
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+
+    }
+    public void dialogueMasFacil(String text, String buttonYes, String buttonNo) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+        // Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonYes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ensure this runs on the UI thread
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                        hideViewsBelowSpanishLay();
+                    }
+                });
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.YELLOW); // Set the background color
+        button2.setText(buttonNo);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ensure this runs on the UI thread
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        gotoURl("https://adrianlealcaldera.com/tutfuncwords.mp4");
+                    }
+                });
+            }
+        });
+
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
     }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        if (player != null) {
-            playWhenReady = player.getPlayWhenReady();
-            playbackPosition = player.getCurrentPosition();
-            currentWindow = player.getCurrentWindowIndex();
-            player.release();
-            player = null;
-        }
-    }
-
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        if (player != null) {
-            outState.putBoolean("playWhenReady", player.getPlayWhenReady());
-            outState.putInt("currentWindow", player.getCurrentWindowIndex());
-            outState.putLong("playbackPosition", player.getCurrentPosition());
-        }
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
-        super.onRestoreInstanceState(savedInstanceState);
-        if (savedInstanceState != null) {
-            playWhenReady = savedInstanceState.getBoolean("playWhenReady");
-            currentWindow = savedInstanceState.getInt("currentWindow");
-            playbackPosition = savedInstanceState.getLong("playbackPosition");
-        }
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        if (player != null) {
-            playWhenReady = player.getPlayWhenReady();
-            playbackPosition = player.getCurrentPosition();
-            currentWindow = player.getCurrentWindowIndex();
-            player.release();
-            player = null;
-        }
-    }
 
     String[] placeHolder = new String[]{"Default value"};
 
     private RewardedAd mRewardedAd;
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
+
+
+        //ca-app-pub-3940256099942544/5224354917 test ad
+      //  ca-app-pub-9126282069959189/3406127387 real ad
         RewardedAd.load(this, "ca-app-pub-9126282069959189/3406127387", adRequest,
                 new RewardedAdLoadCallback() {
                     @Override
@@ -2463,16 +2583,457 @@ if(isfromtest){
             Log.d("TAG", "The rewarded ad wasn't ready yet.");
         }
     }
+    boolean isStillOptions;
+    public void showRewardedAd3() {
+
+        if (mRewardedAd != null) {
+            mRewardedAd.show(this, rewardItem -> {
+                // Handle the reward.
+                prefs.setHasSeenAd(true);
+                Intent intent = new Intent(this, Vocabulary2023.class);
+                intent.putExtra("isStillOptions",true);
+                intent.putExtra("class",selection);
+                intent.putExtra("counter",5);
+                intent.putExtra("correctCounter",correctDc);
+                startActivity(intent);
 
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (player != null) {
-            player.release(); // Asegúrate de liberar el player cuando la actividad es destruida
-            player = null;
+            });
+
+        } else {
+            Log.d("TAG", "The rewarded ad wasn't ready yet.");
         }
     }
+    private void gotoURl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
+    public void hideViewsBelowSpanishLay(View v) {
+        Intent reciver2;
+        reciver2= getIntent();
+        if(reciver2.getBooleanExtra("isStillOptions",false)){
+            if(quieroPracticarSpeaking){
+                dialogueCounter=0;
+                correctDc=0;
+            }else{
+                dialogueCounter=5;
+                correctDc=reciver2.getIntExtra("correctCounter",0);
+            }
 
+        }
+        input_lay.setVisibility(View.GONE);
+        opclay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_emp_lay_nose.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        txt_exp.setVisibility(View.GONE);
+        spanish_lay.setVisibility(View.VISIBLE);
+        optionsLayout.setVisibility(View.VISIBLE);
+        btn_emp_lay_nose.setVisibility(View.GONE);
+        practice();
+
+    }
+    public void hideViewsBelowSpanishLay() {
+
+
+        input_lay.setVisibility(View.GONE);
+        opclay.setVisibility(View.GONE);
+        answer_lay.setVisibility(View.GONE);
+        btn_emp_lay.setVisibility(View.GONE);
+        btn_check_lay.setVisibility(View.GONE);
+        btn_emp_lay_nose.setVisibility(View.GONE);
+        btn_cont_lay.setVisibility(View.GONE);
+        txt_exp.setVisibility(View.GONE);
+
+        practice();
+        spanish_lay.setVisibility(View.VISIBLE);
+        optionsLayout.setVisibility(View.VISIBLE);
+        btn_emp_lay_nose.setVisibility(View.GONE);
+
+
+    }
+    String correctAnswer= "";
+    private void setTextToButtonsHandleOnClick(NewNounClass gen1,String methodName,String wrongAnswer1,String wrongAnswer2,String wrongAnswer3) {
+        try {
+
+            Method method = gen1.getClass().getMethod(methodName);
+            method.invoke(gen1);
+
+
+        } catch (NoSuchMethodException | IllegalAccessException |
+                 InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        String[] options = new String[4];
+        Random random = new Random();
+        int correctAnswerPosition = random.nextInt(4);
+        correctAnswer = gen1.gene;
+        options[correctAnswerPosition] = correctAnswer;
+
+        int optionIndex = 0;
+        for (int i = 0; i < options.length; i++) {
+            if (i != correctAnswerPosition) {
+                options[i] = new String[]{wrongAnswer1, wrongAnswer2, wrongAnswer3}[optionIndex++];
+            }
+        }
+
+
+        sptx.setText(gen1.gens);
+        engtx.setText(gen1.gene);
+
+        option1Btn.setText(options[0]);
+        option2Btn.setText(options[1]);
+        option3Btn.setText(options[2]);
+        option4Btn.setText(options[3]);
+
+        option1Btn.setOnClickListener(v -> checkAnswer(option1Btn,option1Btn.getText().toString(), correctAnswer));
+        option2Btn.setOnClickListener(v -> checkAnswer(option2Btn,option2Btn.getText().toString(), correctAnswer));
+        option3Btn.setOnClickListener(v -> checkAnswer(option3Btn,option3Btn.getText().toString(), correctAnswer));
+        option4Btn.setOnClickListener(v -> checkAnswer(option4Btn,option4Btn.getText().toString(), correctAnswer));
+        tts = new TextToSpeech(getApplicationContext(),
+                new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    if(timerTask == null){
+                                        startTimer();
+                                    }
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías    " + gen1.gens, 0, null, "zero");
+                        }
+
+                    }
+                });
+    }
+    private void setTextToButtonsHandleOnClick(NewMethods gen1,String methodName,String wrongAnswer1,String wrongAnswer2,String wrongAnswer3) {
+        try {
+
+            Method method = gen1.getClass().getMethod(methodName);
+            method.invoke(gen1);
+
+
+        } catch (NoSuchMethodException | IllegalAccessException |
+                 InvocationTargetException e) {
+            e.printStackTrace();
+        }
+
+        String[] options = new String[4];
+        Random random = new Random();
+        int correctAnswerPosition = random.nextInt(4);
+        correctAnswer = gen1.globalAnswer;
+        options[correctAnswerPosition] = correctAnswer;
+
+        int optionIndex = 0;
+        for (int i = 0; i < options.length; i++) {
+            if (i != correctAnswerPosition) {
+                options[i] = new String[]{wrongAnswer1, wrongAnswer2, wrongAnswer3}[optionIndex++];
+            }
+        }
+
+
+        sptx.setText(gen1.sp);
+        engtx.setText(gen1.globalAnswer);
+
+        option1Btn.setText(options[0]);
+        option2Btn.setText(options[1]);
+        option3Btn.setText(options[2]);
+        option4Btn.setText(options[3]);
+
+        option1Btn.setOnClickListener(v -> checkAnswer(option1Btn,option1Btn.getText().toString(), correctAnswer));
+        option2Btn.setOnClickListener(v -> checkAnswer(option2Btn,option2Btn.getText().toString(), correctAnswer));
+        option3Btn.setOnClickListener(v -> checkAnswer(option3Btn,option3Btn.getText().toString(), correctAnswer));
+        option4Btn.setOnClickListener(v -> checkAnswer(option4Btn,option4Btn.getText().toString(), correctAnswer));
+        tts = new TextToSpeech(getApplicationContext(),
+                new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    if(timerTask == null){
+                                        startTimer();
+                                    }
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías    " + gen1.sp, 0, null, "zero");
+                        }
+
+                    }
+                });
+    }
+    int dialogueCounter = 0, correctDc = 0;
+    double avrScore;
+    boolean dificultyChanged;
+
+    private void checkAnswer(Button button, String selectedAnswer, String correctAnswer) {
+        dialogueCounter++;
+        if(!prefs.getHasSeenAd()&&prefs.getPremium()==0) {
+            dialogueShowRewardedAd3("Ver Anuncio para Continuar ","Ver Anuncio", "Cipm Premium");
+
+        }else {
+            if (selectedAnswer.equals(correctAnswer)) {
+                showDialog(button, "Correct!", "Continue", correctAnswer, true, dialogueCounter);
+                button.setBackgroundColor(Color.GREEN);
+                sayThis(correctAnswer, Locale.ENGLISH);
+                correctDc++;
+            } else {
+                showDialog(button, "Incorrect. The correct answer is: " + correctAnswer, "Continue", correctAnswer, false, dialogueCounter);
+                button.setBackgroundColor(Color.RED);
+            }
+            if(dialogueCounter==5&& prefs.getPremium()==0){
+                // showDialogChangeDif(button, "¿Quieres practicar tu speaking?", "Quedarme aquí", "Practicar Speaking");
+                dialogueShowRewardedAd3("Ver Anuncio para Continuar ","Cipm Premium", "Ver anuncio");
+
+            } else if(dialogueCounter>5){
+                if (dialogueCounter == 10) {
+                    avrScore = (double) correctDc / dialogueCounter;
+
+                    if (avrScore >= 0.6) {
+
+                        showDialogChangeDif(button, "¿Quieres practicar tu speaking?", "Quedarme aquí", "Practicar Speaking");
+                        dialogueCounter = 0;
+                        correctDc = 0;
+                    } else {
+                        // User didn't get at least 6 correct answers (60%)
+                        showDialog(button, "You didn't pass. Try again.", "Retry", correctAnswer, false, dialogueCounter);
+                        dialogueCounter = 0;
+                        correctDc = 0;
+                    }
+
+                    // Reset counters for the next round
+
+                }
+            }
+        }
+
+
+
+    }
+
+    private void sayThis( String thingToSay, Locale language) {
+        ttr = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    // Set the language based on the method parameter
+                    int result = ttr.setLanguage(language);
+
+                    if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                        Log.e("TextToSpeech", "Language not supported or data missing");
+                    } else {
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+                                // Called when the speech starts
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+                                // Called when the speech is done
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                                // Called on an error during the speech
+                            }
+                        });
+                        ttr.speak(thingToSay, TextToSpeech.QUEUE_ADD, null, "string");
+                    }
+                }
+            }
+        });
+    }
+    private void showDialog(Button btn, String message, String buttonText, String correctAnswer, boolean isCorrect,int counterT) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.continuedialoguebox, null);
+
+        builder.setView(dialogView);
+        TextView counter = dialogView.findViewById(R.id.counterTv);
+        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
+        dialogMessage.setText(message);
+        counter.setText(counterT+"/10");
+
+        Button dialogButton = dialogView.findViewById(R.id.button);
+        dialogButton.setText(buttonText);
+
+        AlertDialog alertDialog = builder.create();
+
+        // Make the dialog non-cancelable by clicking outside or pressing the back button
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+
+
+        dialogButton.setOnClickListener(v -> {
+            alertDialog.dismiss();
+            practice();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+        });
+
+        // Set a listener to handle the case when the dialog is dismissed
+        alertDialog.setOnDismissListener(dialog -> {
+            practice();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+        });
+
+        alertDialog.show();
+    }
+    private void showDialogChangeDif(Button btn, String message, String buttonText1, String buttonText2) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.nextdificultydialoguebox, null);
+
+        builder.setView(dialogView);
+        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
+        dialogMessage.setText(message);
+
+        Button dialogButton1 = dialogView.findViewById(R.id.button1);
+
+        Button dialogButton2 = dialogView.findViewById(R.id.button2);
+
+        dialogButton1.setText(buttonText1);
+        dialogButton2.setText(buttonText2);
+
+        AlertDialog alertDialog = builder.create();
+
+        // Make the dialog non-cancelable by clicking outside or pressing the back button
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+
+        dialogButton1.setOnClickListener(v -> {
+            quieroPracticarSpeaking=true;
+             alertDialog.dismiss();
+            practice();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+
+        });
+
+        dialogButton2.setOnClickListener(v -> {
+            dificultyChanged=true;
+            quieroPracticarSpeaking=true;
+            alertDialog.dismiss();
+            reverseMultipleChoiceViewSetUp();
+            practice();
+        });
+
+        // Set a listener to handle the case when the dialog is dismissed
+        alertDialog.setOnDismissListener(dialog -> {
+            btn.setBackgroundResource(R.drawable.borde_azul);
+        });
+
+        alertDialog.show();
+    }
+
+    private void reverseMultipleChoiceViewSetUp() {
+        optionsLayout.setVisibility(View.GONE);
+
+        btn_emp_lay_nose.setVisibility(View.VISIBLE);
+        spanish_lay.setVisibility(View.VISIBLE);
+        input_lay.setVisibility(View.VISIBLE);
+        //answer_lay.setVisibility(View.VISIBLE);
+        opclay.setVisibility(View.VISIBLE);
+        btn_emp_lay.setVisibility(View.VISIBLE);
+        btn_check_lay.setVisibility(View.VISIBLE);
+        btn_cont_lay.setVisibility(View.VISIBLE);
+        txt_exp.setVisibility(View.VISIBLE);
+
+        //
+
+
+
+
+    }
+    private void setTextToButtonsHandleOnClick(String sp,String rightAnswer ,String wrongAnswer1,String wrongAnswer2,String wrongAnswer3) {
+
+
+        String[] options = new String[4];
+        Random random = new Random();
+        int correctAnswerPosition = random.nextInt(4);
+        correctAnswer = rightAnswer;
+        options[correctAnswerPosition] = correctAnswer;
+
+        int optionIndex = 0;
+        for (int i = 0; i < options.length; i++) {
+            if (i != correctAnswerPosition) {
+                options[i] = new String[]{wrongAnswer1, wrongAnswer2, wrongAnswer3}[optionIndex++];
+            }
+        }
+
+
+        sptx.setText(sp);
+        engtx.setText(rightAnswer);
+
+        option1Btn.setText(options[0]);
+        option2Btn.setText(options[1]);
+        option3Btn.setText(options[2]);
+        option4Btn.setText(options[3]);
+
+        option1Btn.setOnClickListener(v -> checkAnswer(option1Btn,option1Btn.getText().toString(), correctAnswer));
+        option2Btn.setOnClickListener(v -> checkAnswer(option2Btn,option2Btn.getText().toString(), correctAnswer));
+        option3Btn.setOnClickListener(v -> checkAnswer(option3Btn,option3Btn.getText().toString(), correctAnswer));
+        option4Btn.setOnClickListener(v -> checkAnswer(option4Btn,option4Btn.getText().toString(), correctAnswer));
+        tts = new TextToSpeech(getApplicationContext(),
+                new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        Locale spanish = new Locale("es", "MX");
+                        if (i == TextToSpeech.SUCCESS) {
+                            int lang = tts.setLanguage(spanish);
+                            tts.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                    if(timerTask == null){
+                                        startTimer();
+                                    }
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            tts.speak("como dirías    " +sp, 0, null, "zero");
+                        }
+
+                    }
+                });
+    }
 
 }

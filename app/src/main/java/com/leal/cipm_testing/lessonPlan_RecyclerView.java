@@ -28,6 +28,7 @@ public class lessonPlan_RecyclerView extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
     }
     public void loadLesson(){
+        lessonPlanItems.add(new LessonPlanItem("Familiarizate con El Vocabulario mas importante", "Palabras comunes", "refezca el vocabulario", "Vocabulario", "Nivel Muy Basico",0));
         lessonPlanItems.add(new LessonPlanItem("Aprende a usar las palabras mas básicas de una oración", "Function Words", "aprende a usar las palabras mas frequentes y funcionales del inglés,relacionan ideas dentro de la oración", "Lesson 1", "Nivel Muy Basico",0));
         lessonPlanItems.add(new LessonPlanItem("Responde a la pregunta: Que pasa?", "Present Simple", "Aprende a hablar de habitos y rutinas en inglés", "Lesson 2", "Nivel Basico",1));
         lessonPlanItems.add(new LessonPlanItem("Que está pasando?", "Present Continuous", "Aprende a hablar de cosas que estan sucediendo ahora mismo", "Lesson 3", "Nivel Basico",1));

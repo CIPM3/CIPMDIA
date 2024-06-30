@@ -84,7 +84,6 @@ public class Cultura2023 extends AppCompatActivity{
     boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
             isInTransition,isinIntcon;
 
-    VideoPlayer video_player = new VideoPlayer();
     int posKeyword = 0,posSele = 0;
     boolean explanation,clipMuestra;
     VideoPlayer fragment = new VideoPlayer();
@@ -109,9 +108,6 @@ public class Cultura2023 extends AppCompatActivity{
         explanation = false;
         clipMuestra = true;
 
-        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
-        btnFullScreen.setOnClickListener(view -> {});
-
         prefs = new Prefs(this);
         CounterToSubtractSelection=1;
         userid = mAuth.getCurrentUser().getUid();
@@ -120,7 +116,7 @@ public class Cultura2023 extends AppCompatActivity{
         loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.video_player_view,fragment)
+                .replace(R.id.fragmentContainerView5,fragment)
                 .commit();
 
         Bundle args = new Bundle();
@@ -502,11 +498,6 @@ public class Cultura2023 extends AppCompatActivity{
 
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
-        prefs.setSelection(selection); // Guarda la selección en Prefs
-
-        if (video_player != null) {
-            video_player.updateFragmentStateStructure(selection);
-        }
         if(selection.equals("Tutorial")){
             text_exp.setText("Seleccione una estructura para continuar con la practica");
             ocultartodo();
@@ -591,11 +582,11 @@ public class Cultura2023 extends AppCompatActivity{
         }
 
 
-//        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
-//
-//        if (fragment != null) {
-//            fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
-//        }
+        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
+
+        if (fragment != null) {
+            fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
+        }
 
 
     }
@@ -675,7 +666,7 @@ public class Cultura2023 extends AppCompatActivity{
     public void saltarExp(Boolean explanation){
 
 
-        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.video_player_view); // Use the actual container ID
+        VideoPlayer fragment = (VideoPlayer) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView5); // Use the actual container ID
         if (fragment != null) {
             fragment.updateFragmentState(selection, (String) KeyWordsObject[posSele][posKeyword][3], explanation);
         }

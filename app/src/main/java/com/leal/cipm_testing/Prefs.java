@@ -2,7 +2,6 @@ package com.leal.cipm_testing;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.util.Log;
 
 public class Prefs {
 
@@ -28,55 +27,10 @@ public class Prefs {
         editor.apply();
     }
 
-    public int getPremium() {
-        return sharedPreferences.getInt("Premium", 0);
-    }
-
     public void setPremium(int value) {
         editor.putInt("Premium", value);
         editor.apply();
     }
-
-    public String getSelection() {
-        String value = sharedPreferences.getString("tema", "");
-        Log.d("SharedPreferences", "Get selection: " + value);
-        return value;
-    }
-
-    public void setSelection(String value) {
-        if (value != null && !value.isEmpty()) {
-            editor.putString("tema", value);
-            editor.apply();
-            Log.d("SharedPreferences", "Set selection: " + value);
-        } else {
-            Log.d("SharedPreferences", "Attempted to set empty or null selection");
-        }
-    }
-
-
-    public String getVideoCultura() { return sharedPreferences.getString("video","");}
-
-    public void setVideoCultura(String value){
-        editor.putString("video",value);
-        editor.apply();
-    }
-
-    public Boolean getExplanation() { return sharedPreferences.getBoolean("explicacion",false);}
-
-    public void setExplanation(boolean value){
-        editor.putBoolean("explicacion",value);
-        editor.apply();
-    }
-
-    public void setLong(String key, long value) {
-        editor.putLong(key, value);
-        editor.apply();
-    }
-
-    public long getLong(String key, long defValue) {
-        return sharedPreferences.getLong(key, defValue);
-    }
-
 
     public void setTypeOfRecycler(int value){
 
@@ -108,7 +62,9 @@ public class Prefs {
         return sharedPreferences.getString(key, def);
     }
 
-
+    public int getPremium() {
+        return sharedPreferences.getInt("Premium", 0);
+    }
     public void setHasSeenAd(boolean value) {
         editor.putBoolean("hasSeenAd", value);
         editor.apply();
@@ -117,7 +73,6 @@ public class Prefs {
     public boolean getHasSeenAd() {
         return sharedPreferences.getBoolean("hasSeenAd", false); // Default to false if not set
     }
-
 
 
 }
