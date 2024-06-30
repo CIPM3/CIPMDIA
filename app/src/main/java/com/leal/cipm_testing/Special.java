@@ -5111,25 +5111,25 @@ public class Special {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + vsbc[rand];
-                        eng1 = "I " + "mustn't " + verbs[rand];
+                        eng1 = "I " + "must not  " + verbs[rand];
 
                         sp2 = "tú " + "no debés " + vsbc[rand];
-                        eng2 = "you " + "mustn't " + verbs[rand];
+                        eng2 = "you " + "must not  " + verbs[rand];
 
                         sp3 = "él " + "no debe " + vsbc[rand];
-                        eng3 = "he " + "mustn't " + verbs[rand];
+                        eng3 = "he " + "must not  " + verbs[rand];
 
                         sp3ella = "ella " + "no debe " + vsbc[rand];
-                        eng3she = "she " + "mustn't " + verbs[rand];
+                        eng3she = "she " + "must not  " + verbs[rand];
 
                         sp3eso = "eso " + "no debe " + vsbc[rand];
-                        sp3it = "it " + "mustn't " + verbs[rand];
+                        sp3it = "it " + "must not  " + verbs[rand];
 
                         sp4 = "ellos " + "no deben " + vsbc[rand];
-                        eng4 = "they " + "mustn't " + verbs[rand];
+                        eng4 = "they " + "must not  " + verbs[rand];
 
                         sp5 = "nosotros " + "no debemos " + vsbc[rand];
-                        eng5 = "we " + "mustn't " + verbs[rand];
+                        eng5 = "we " + "must not  " + verbs[rand];
                         break;
                 }
             }
@@ -5176,31 +5176,31 @@ public class Special {
                     case 1:
                         sp1 = "yo " + "no debo estar " + verbconti[rand];
                         eng1 = "I " + "must not be " + verbscont[rand];
-                        eng12 = "I " + "mustn't be " + verbscont[rand];
+                        eng12 = "I " + "must not  be " + verbscont[rand];
 
                         sp2 = "tú " + "no debés estar " + verbconti[rand];
                         eng2 = "you " + "must not be " + verbscont[rand];
-                        eng22 = "you " + "mustn't be " + verbscont[rand];
+                        eng22 = "you " + "must not  be " + verbscont[rand];
 
                         sp3 = "él " + "no debe estar " + verbconti[rand];
                         eng3 = "he " + "must not be " + verbscont[rand];
-                        eng32 = "he " + "mustn't be " + verbscont[rand];
+                        eng32 = "he " + "must not  be " + verbscont[rand];
 
                         sp3ella = "ella " + "no debe estar " + verbconti[rand];
                         eng3she = "she " + "must not be " + verbscont[rand];
-                        eng3she2 = "she " + "mustn't be " + verbscont[rand];
+                        eng3she2 = "she " + "must not  be " + verbscont[rand];
 
                         sp3eso = "eso " + "no debe estar " + verbconti[rand];
                         sp3it = "it " + "must not be " + verbscont[rand];
-                        sp3it2 = "it " + "mustn't be " + verbscont[rand];
+                        sp3it2 = "it " + "must not  be " + verbscont[rand];
 
                         sp4 = "ellos " + "no deben estar " + verbconti[rand];
                         eng4 = "they " + "must not be " + verbscont[rand];
-                        eng42 = "they " + "mustn't be " + verbscont[rand];
+                        eng42 = "they " + "must not  be " + verbscont[rand];
 
                         sp5 = "nosotros " + "no debemos estar " + verbconti[rand];
                         eng5 = "we " + "must not be " + verbscont[rand];
-                        eng52 = "we " + "mustn't be " + verbscont[rand];
+                        eng52 = "we " + "must not  be " + verbscont[rand];
                         break;
                 }
             }
@@ -8509,25 +8509,25 @@ public class Special {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + vsbc[rand] + arraySodEsp;
-                        eng1 = "I " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng1 = "I " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp2 = "tú " + "no debés " + vsbc[rand] + arraySodEsp;
-                        eng2 = "you " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng2 = "you " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp3 = "él " + "no debe " + vsbc[rand] + arraySodEsp;
-                        eng3 = "he " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng3 = "he " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp3ella = "ella " + "no debe " + vsbc[rand] + arraySodEsp;
-                        eng3she = "she " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng3she = "she " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp3eso = "eso " + "no debe " + vsbc[rand] + arraySodEsp;
-                        sp3it = "it " + "mustn't " + verbs[rand] + arraySodEng;
+                        sp3it = "it " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp4 = "ellos " + "no deben " + vsbc[rand] + arraySodEsp;
-                        eng4 = "they " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng4 = "they " + "must not  " + verbs[rand] + arraySodEng;
 
                         sp5 = "nosotros " + "no debemos " + vsbc[rand] + arraySodEsp;
-                        eng5 = "we " + "mustn't " + verbs[rand] + arraySodEng;
+                        eng5 = "we " + "must not  " + verbs[rand] + arraySodEng;
                         break;
                 }
             }
@@ -8575,31 +8575,31 @@ public class Special {
                     case 1:
                         sp1 = "yo " + "no debo estar " + verbconti[rand] + arraySodEsp;
                         eng1 = "I " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng12 = "I " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng12 = "I " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp2 = "tú " + "no debés estar " + verbconti[rand] + arraySodEsp;
                         eng2 = "you " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng22 = "you " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng22 = "you " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp3 = "él " + "no debe estar " + verbconti[rand] + arraySodEsp;
                         eng3 = "he " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng32 = "he " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng32 = "he " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp3ella = "ella " + "no debe estar " + verbconti[rand] + arraySodEsp;
                         eng3she = "she " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng3she2 = "she " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng3she2 = "she " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp3eso = "eso " + "no debe estar " + verbconti[rand] + arraySodEsp;
                         sp3it = "it " + "must not be " + verbscont[rand] + arraySodEng;
-                        sp3it2 = "it " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        sp3it2 = "it " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp4 = "ellos " + "no deben estar " + verbconti[rand] + arraySodEsp;
                         eng4 = "they " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng42 = "they " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng42 = "they " + "must not  be " + verbscont[rand] + arraySodEng;
 
                         sp5 = "nosotros " + "no debemos estar " + verbconti[rand] + arraySodEsp;
                         eng5 = "we " + "must not be " + verbscont[rand] + arraySodEng;
-                        eng52 = "we " + "mustn't be " + verbscont[rand] + arraySodEng;
+                        eng52 = "we " + "must not  be " + verbscont[rand] + arraySodEng;
                         break;
                 }
             }
@@ -12907,25 +12907,25 @@ public class Special {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng1 = "I " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng1 = "I " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp2 = "tú " + "no debés " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng2 = "you " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng2 = "you " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp3 = "él " + "no debe " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng3 = "he " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng3 = "he " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp3ella = "ella " + "no debe " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng3she = "she " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng3she = "she " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp3eso = "eso " + "no debe " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        sp3it = "it " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        sp3it = "it " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp4 = "ellos " + "no deben " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng4 = "they " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng4 = "they " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
 
                         sp5 = "nosotros " + "no debemos " + vsbc[rand] + arraySodEsp + advfrequ[radv];
-                        eng5 = "we " + "mustn't " + verbs[rand] + arraySodEng + frequadv[radv];
+                        eng5 = "we " + "must not  " + verbs[rand] + arraySodEng + frequadv[radv];
                         break;
                 }
             }
@@ -12974,31 +12974,31 @@ public class Special {
                     case 1:
                         sp1 = "yo " + "no debo estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng1 = "I " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng12 = "I " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng12 = "I " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp2 = "tú " + "no debés estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng2 = "you " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng22 = "you " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng22 = "you " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp3 = "él " + "no debe estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng3 = "he " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng32 = "he " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng32 = "he " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp3ella = "ella " + "no debe estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng3she = "she " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng3she2 = "she " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng3she2 = "she " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp3eso = "eso " + "no debe estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         sp3it = "it " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        sp3it2 = "it " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        sp3it2 = "it " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp4 = "ellos " + "no deben estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng4 = "they " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng42 = "they " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng42 = "they " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
 
                         sp5 = "nosotros " + "no debemos estar " + verbconti[rand] + arraySodEsp + advfrequ[radv];
                         eng5 = "we " + "must not be " + verbscont[rand] + arraySodEng + frequadv[radv];
-                        eng52 = "we " + "mustn't be " + verbscont[rand] + arraySodEng + frequadv[radv];
+                        eng52 = "we " + "must not  be " + verbscont[rand] + arraySodEng + frequadv[radv];
                         break;
                 }
             }
@@ -17283,25 +17283,25 @@ public class Special {
                         break;
                     case 1:
                         sp1 = "yo " + "no debo " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng1 = "I " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng1 = "I " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp2 = "tú " + "no debés " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng2 = "you " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng2 = "you " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3 = "él " + "no debe " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng3 = "he " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng3 = "he " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3ella = "ella " + "no debe " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng3she = "she " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng3she = "she " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3eso = "eso " + "no debe " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        sp3it = "it " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        sp3it = "it " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp4 = "ellos " + "no deben " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng4 = "they " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng4 = "they " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp5 = "nosotros " + "no debemos " + vsbc[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
-                        eng5 = "we " + "mustn't " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng5 = "we " + "must not  " + verbs[rand] + arraySodEng + arrayEng + frequadv[radv];
                         break;
                 }
             }
@@ -17351,31 +17351,31 @@ public class Special {
                     case 1:
                         sp1 = "yo " + "no debo estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng1 = "I " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng12 = "I " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng12 = "I " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp2 = "tú " + "no debés estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng2 = "you " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng22 = "you " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng22 = "you " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3 = "él " + "no debe estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng3 = "he " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng32 = "he " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng32 = "he " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3ella = "ella " + "no debe estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng3she = "she " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng3she2 = "she " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng3she2 = "she " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp3eso = "eso " + "no debe estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         sp3it = "it " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        sp3it2 = "it " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        sp3it2 = "it " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp4 = "ellos " + "no deben estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng4 = "they " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng42 = "they " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng42 = "they " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
 
                         sp5 = "nosotros " + "no debemos estar " + verbconti[rand] + arraySodEsp + arrayEsp + advfrequ[radv];
                         eng5 = "we " + "must not be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
-                        eng52 = "we " + "mustn't be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
+                        eng52 = "we " + "must not  be " + verbscont[rand] + arraySodEng + arrayEng + frequadv[radv];
                         break;
                 }
             }

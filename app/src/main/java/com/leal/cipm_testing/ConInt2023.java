@@ -718,7 +718,7 @@ boolean isFromLessonPlan;
         }
 
         if(explanation & !clipMuestra){
-            spanishsentence.setText("Pon atencion a la siguiente frase a continuacion y cuando termine escribe lo que entendiste");
+            spanishsentence.setText("Escribe lo que escuchaste");
             btn_salt_exp.setVisibility(View.GONE);
             input_lay.setVisibility(View.VISIBLE);
 

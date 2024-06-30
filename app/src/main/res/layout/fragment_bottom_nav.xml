@@ -87,6 +87,7 @@
             android:layout_height="60dp"
             android:layout_marginHorizontal="4dp"
             android:gravity="center"
+            android:visibility="gone"
             android:orientation="vertical">
             <LinearLayout
                 android:id="@+id/bgTest"

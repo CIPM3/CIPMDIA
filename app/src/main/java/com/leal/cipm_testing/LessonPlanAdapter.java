@@ -43,7 +43,10 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
         this.lessonPlanItemList = lessonPlanItemList;
         this.context=context;
         this.prefs=prefs;
-        loadRewardedAd();
+        if(prefs.getPremium()==0){
+            loadRewardedAd();
+        }
+
     }
 
     @NonNull
@@ -353,7 +356,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
         GradientDrawable drawable2 = new GradientDrawable();
         drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
         drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
-        drawable2.setColor(Color.GRAY); // Set the background color
+        drawable2.setColor(Color.YELLOW); // Set the background color
         button2.setText(buttonno);
         button2.setTextColor(Color.BLACK);
         button2.setBackground(drawable2);

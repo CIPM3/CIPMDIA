@@ -1,5 +1,7 @@
 package com.leal.cipm_testing;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.util.Log;
@@ -61,6 +64,9 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         }
         else if(reciver.getBooleanExtra("visitante",false)){
             loadVisitanteStructures()   ;
+        }
+        else if(reciver.getBooleanExtra("isFromNoSe",false)){
+                loadNoSeVocab();
         }
 
 
@@ -117,6 +123,64 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         vocabItemList.add(new VocabItem("Quieres Todas las 500 palabras de vocabulario?","Versión Premium 5 USD al mes",text.cancelPolicy,3));
 
 
+
+    }
+    private void loadNoSeVocab(){
+
+        vocabItemList.add(new VocabItem("the","El-La-Los-Las",text.theDef,0));
+        vocabItemList.add(new VocabItem("be","Ser o Estar",text.toBeDef,0));
+        vocabItemList.add(new VocabItem("and","Y",text.andDef,0));
+        vocabItemList.add(new VocabItem("of","de",text.ofDef,0));
+        vocabItemList.add(new VocabItem("a","un-una",text.aDef,0));
+        vocabItemList.add(new VocabItem("in","en-dentro",text.inDef,0));
+        vocabItemList.add(new VocabItem("to(infinitive)","parte de un verbo sin conjugar",text.toInfinitiveDef,0));
+        vocabItemList.add(new VocabItem("have","tener-haber-consumir",text.haveDef,0));
+        vocabItemList.add(new VocabItem("to","a-como preposición ",text.toPrepositionDef,0));
+        vocabItemList.add(new VocabItem("it","eso",text.itDef,0));
+        //10
+        vocabItemList.add(new VocabItem("I","Yo",text.iDef,0));
+        vocabItemList.add(new VocabItem("that","que-para conectar ideas",text.thatConnectorDef,0));
+        vocabItemList.add(new VocabItem("for","por o para",text.forDef,0));
+        vocabItemList.add(new VocabItem("you","tú",text.youDef,0));
+        vocabItemList.add(new VocabItem("he","él",text.heDef,0));
+        vocabItemList.add(new VocabItem("with","con",text.withDef,0));
+        vocabItemList.add(new VocabItem("on","sobre",text.onDef,0));
+        vocabItemList.add(new VocabItem("do","hacer",text.doDef,0));
+        vocabItemList.add(new VocabItem("´s","indica posesión",text.possessiveSDef,0));
+        vocabItemList.add(new VocabItem("say","Decir",text.sayDef,0));
+        //20
+        vocabItemList.add(new VocabItem("they","ellos",text.theyDef,0));
+        vocabItemList.add(new VocabItem("this","esto",text.thisDef,0));
+        vocabItemList.add(new VocabItem("but","pero",text.butDef,0));
+        vocabItemList.add(new VocabItem("at","en",text.atDef,0));
+        vocabItemList.add(new VocabItem("we","nosotros",text.weDef,0));
+        vocabItemList.add(new VocabItem("his","su de él",text.hisDef,0));
+        vocabItemList.add(new VocabItem("from","de-proveniencia",text.fromDef,0));
+        vocabItemList.add(new VocabItem("that (determiner)","eso",text.thatDeterminerDef,0));
+        vocabItemList.add(new VocabItem("not","negador",text.notDef,0));
+        vocabItemList.add(new VocabItem("n´t","negador contraido",text.nTDef,0));
+        //30
+        vocabItemList.add(new VocabItem("by","por",text.byDef,0));
+        vocabItemList.add(new VocabItem("or","o",text.orDef,0));
+        vocabItemList.add(new VocabItem("she","ella",text.sheDef,0));
+        vocabItemList.add(new VocabItem("as(conjunction)","en lo que",text.asConjunctionDef,0));
+        vocabItemList.add(new VocabItem("what(determiner)","que",text.whatDeterminerDef,0));
+        vocabItemList.add(new VocabItem("go","ir",text.goDef,0));
+        vocabItemList.add(new VocabItem("their","su de ellos",text.theirDef,0));
+        vocabItemList.add(new VocabItem("will","modal para futuro",text.willDef,0));
+        vocabItemList.add(new VocabItem("who","quien",text.whoDef,0));
+        vocabItemList.add(new VocabItem("can","poder",text.canDef,0));
+        //40
+        vocabItemList.add(new VocabItem("get","obtener",text.getDef,0));
+        vocabItemList.add(new VocabItem("if","si",text.ifDef,0));
+        vocabItemList.add(new VocabItem("all","todo",text.allDef,0));
+        vocabItemList.add(new VocabItem("would","modal hipotético",text.wouldDef,0));
+        vocabItemList.add(new VocabItem("her","su de ella",text.herDef,0));
+        vocabItemList.add(new VocabItem("make","hacer",text.makeDef,0));
+        vocabItemList.add(new VocabItem("about","acerca de",text.aboutDef,0));
+        vocabItemList.add(new VocabItem("my","mi-posesivo",text.myDef,0));
+        vocabItemList.add(new VocabItem("know","saber-conocer",text.knowDef,0));
+        vocabItemList.add(new VocabItem("as(preposition)","como",text.asPrepositionDef,0));
 
     }
 
@@ -1005,7 +1069,10 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
         }
     }
 
-
+    private void gotoURl(String s) {
+        Uri uri = Uri.parse(s);
+        startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
 
 
 }

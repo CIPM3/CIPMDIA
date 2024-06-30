@@ -402,7 +402,7 @@ public class VideoPlayer extends Fragment {
                 case "Supposed To":
                     ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F28.%20Supposed%20to.mp4?alt=media&token=ad82d175-3583-4efa-9a09-316f40b56208");
                     break;
-                case "Be Able To":
+                case "Able To":
                     ShowVideo("https://adrianlealcaldera.com/ableto.mp4");
                     break;
 

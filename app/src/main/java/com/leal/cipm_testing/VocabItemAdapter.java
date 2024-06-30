@@ -13,6 +13,7 @@ import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
 import android.mtp.MtpConstants;
+import android.net.Uri;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.speech.tts.UtteranceProgressListener;
@@ -68,6 +69,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
     Context context ;
     Prefs prefs;
     MediaItem mediaItem;
+    boolean hasSeenDialogue;
     int itemType;
     public VocabItemAdapter(Context context, List<VocabItem> vocabItems, SpeechInitiator speechInitiator, Prefs prefs,AdListener adlistener) {
 
@@ -86,7 +88,11 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
     @Override
     public VocabItemAdapter.VocabItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType)   {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.vocab_recycler_view, parent, false);
-        loadRewardedAd();
+        if(prefs.getPremium()==0){
+            loadRewardedAd();
+        }
+
+
         return  new VocabItemAdapter.VocabItemViewHolder(view);
     }
     @Override
@@ -104,6 +110,8 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         NewNounClass nouns= new NewNounClass();
         String[] subjectsEnglish = {"I ", "You ", "He ", "She ", "We ", "They "};
         itemType=item.getType();
+        String tit;
+
         holder.checarRespBtn.setVisibility(View.GONE);
         holder.continuarBtn.setVisibility(View.GONE);
         holder.description.setVisibility(View.GONE);
@@ -115,11 +123,19 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         holder.definition.setTypeface(null, Typeface.BOLD);
         holder.title.setText(String.valueOf(position)+"."+item.getTitle());
         holder.title.setPaintFlags(holder.title.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        tit=holder.title.getText().toString();
         // sets original colors of buttons
         holder.definition.setText(item.getDefinition());
         holder.userInput.setText(item.getUserInput());
         holder.userInput.setVisibility(View.GONE);
         holder.practicaBtn.setVisibility(View.VISIBLE);
+        holder.ejemplosBtn.setVisibility(View.VISIBLE);
+        holder.masInfoBtn.setVisibility(View.VISIBLE);
+        if(tit.equalsIgnoreCase("0.the")&& !hasSeenDialogue){
+            hasSeenDialogue=true;
+            dialogueContainer2("Estas en ceros? No te Preocupes,Aprende a usar las palabras mas comunes oralmente y cuando estes listo lo intentas de nuevo","Entendido","Ver tutorial",holder,position);
+
+        }
 
 
 
@@ -3190,9 +3206,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                                                               sp = object.gens + "- " + object.gene;
                                                               break;
                                                           case 77:
-                                                              //how adverb
-                                                              /*gen1.GenHowSimp2();
-                                                              sp = gen1.gens + "--" + gen1.gene;*/
+
 
                                                               break;
                                                           case 78:
@@ -8997,9 +9011,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                             break;
                         case 77:
                             //how adverb
-                           /* gen1.GenHowSimp2();
-                            sp = gen1.gens;
-                            globalAnswer=gen1.gene;*/
+
 
                             break;
                         case 78:
@@ -14883,10 +14895,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                         globalAnswer=object.gene;
                         break;
                     case 77:
-                        //how adverb
-                       /* gen1.GenHowSimp2();p
-                        sp = gen1.gens;
-                        globalAnswer=gen1.gene;*/
+
 
                         break;
                     case 78:
@@ -17487,11 +17496,9 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                        temp="fromVocab";
                        break;
                    case 1:
-
                        temp="fromStructures";
                        break;
                    case 2:
-
                        temp="fromTrans";
                        break;
                }
@@ -17582,7 +17589,74 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
     }
 
+    public void  dialogueContainer2(String text, String buttonyes, String buttonno,VocabItemAdapter.VocabItemViewHolder holder,int position){
+        AlertDialog.Builder builder = new AlertDialog.Builder((Activity) context);
+        LayoutInflater inflater = ((Activity) context).getLayoutInflater();
 
+        View dialogView = inflater.inflate(R.layout.biggerdialoguebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(15); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               hasSeenDialogue=true;
+               dialog.dismiss();
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                gotoURl("https://adrianlealcaldera.com/tutnewvocabrecyclerview.mp4");
+
+
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+
+
+            }
+        });
+
+        dialog.show();
+
+    }
+
+    private void gotoURl(String s) {
+        Uri uri = Uri.parse(s);
+        context.startActivity(new Intent(Intent.ACTION_VIEW, uri));
+    }
 
 
 }

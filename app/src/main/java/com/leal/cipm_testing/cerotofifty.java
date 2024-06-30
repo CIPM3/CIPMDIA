@@ -2352,8 +2352,9 @@ public class cerotofifty {
        }
         gens += " " + selectedParticipleEsp+" por "+spanishSust;
         gene += " " + selectedParticiple+" by "+englishNoun;
-    }
 
+    }
+String gene2;
     public void genWho() {
         int t = (int) (Math.random() * pronombres.length);
         String tempt = pronombres[t];

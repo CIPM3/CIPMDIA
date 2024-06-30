@@ -854,6 +854,91 @@ public class NewNounClass {
             currentIndex = 0;
         }
     }
+    public void GenIntPorPrep() {
+        int n = (int)(Math.random()*nouns.length);
+        int n2 = (int)(Math.random()*nouns.length);
+
+
+        String noun = nouns[n];
+        String sust = nounsSpanish[n];
+        verbsObject.GenIntPorSujeto();
+        switch (currentIndex) {
+            case 0:
+                gens = "en "+ sust+verbsObject.gens;
+                gene = verbsObject.gene+"in the "+noun;
+                gene2 = verbsObject.gene2+"in the "+noun;
+                break;
+
+            case 1:
+                gens = "para " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"for the " + noun;
+                gene2 = verbsObject.gene2+"for the " + noun;
+                break;
+            case 2:
+                gens = "con " + sust+verbsObject.gens;
+                gene =verbsObject.gene+ "with the " + noun;
+                gene2 =verbsObject.gene2+ "with the " + noun;
+                break;
+            case 3:
+                gens = "sobre " + sust+verbsObject.gens;
+                gene =verbsObject.gene+ "on the " + noun;
+                gene2 =verbsObject.gene2+ "on the " + noun;
+                break;
+            case 4:
+                gens = "cerca de " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"by the " + noun;
+                gene2 = verbsObject.gene2+"by the " + noun;
+                break;
+
+            case 5:
+                gens = "como " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"like the " + noun;
+                gene2 = verbsObject.gene2+"like the " + noun;
+                break;
+            case 6:
+                gens = "a través de " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"through the " + noun;
+                gene2 = verbsObject.gene2+"through the " + noun;
+                break;
+
+            case 7:
+                gens = "entre " + sust + "y "+ nounsSpanish[n2]+verbsObject.gens;
+                gene = verbsObject.gene+"between the " + noun + "and the "+nouns[n2];
+                gene2 = verbsObject.gene2+"between the " + noun + "and the "+nouns[n2];
+                break;
+            case 8:
+                gens = "fuera de " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"out of the " + noun;
+                gene2 = verbsObject.gene2+"out of the " + noun;
+                break;
+
+
+            case 9:
+                gens = "sin " + sust+verbsObject.gens;
+                gene =verbsObject.gene+ "without the " + noun;
+                gene2 =verbsObject.gene2+ "without the " + noun;
+                break;
+
+            case 10:
+                gens = "alrededor de " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"around the " + noun;
+                gene2 = verbsObject.gene2+"around the " + noun;
+                break;
+
+            case 11:
+                gens = "detrás de " + sust+verbsObject.gens;
+                gene = verbsObject.gene+"behind the " + noun;
+                gene2 = verbsObject.gene2+"behind the " + noun;
+                break;
+            default:
+                // Handle unrecognized preposition
+                break;
+        }
+        currentIndex++;
+        if (currentIndex == 12 ) {  // Adjust this number to the last case index
+            currentIndex = 0;
+        }
+    }
     public void genPronoun(String pronounParm) {
         int prep = (int) (Math.random() * prepositionsEng.length);
         String engPrep = prepositionsEng[prep];
@@ -1519,6 +1604,7 @@ gens = verbsObject.gens;
 String gene2;
     AuxModalNegator negator = new AuxModalNegator();
     public void GenWish(int wishType){
+
 
         switch (wishType){
             case 0:

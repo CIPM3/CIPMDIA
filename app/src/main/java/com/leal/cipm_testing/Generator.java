@@ -54948,7 +54948,7 @@ gene2 = o.ps4eng2;
                 }
                 break;
         }
-    } // done
+    } // don__e
     public void GenIntPorPasiva(){
         int verb= (int)(Math.random()*4);// tipo de verbo, por ahora solo los 4 base
         switch (verb) {

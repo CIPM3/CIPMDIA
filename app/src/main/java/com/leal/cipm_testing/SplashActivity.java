@@ -96,7 +96,7 @@ public class SplashActivity extends AppCompatActivity {
                         } else if (list.size() == 0) {
                             //When the list returns zero, it means there are no active subscription
                             prefs.setPremium(0);
-                            prefs.setHasSeenAd(false);
+                            prefs.setHasSeenAd(true);
 
 
                         }
