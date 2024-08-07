@@ -1,638 +1,126 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SpaInt2023"
-    android:background="@color/white">
-
-    <LinearLayout
-        android:id="@+id/btn_opc2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/gray"
-        android:orientation="vertical"
-        android:elevation="10dp"
-        android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView7"
-            android:name="com.leal.cipm_testing.TopNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            tools:layout="@layout/fragment_top_navigation" />
-
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" tools:context=".SpaInt2023" android:background="@color/white">
+    <LinearLayout android:id="@+id/btn_opc2" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/gray" android:orientation="vertical" android:elevation="10dp" android:gravity="center" app:layout_constraintTop_toTopOf="parent">
+        <androidx.fragment.app.FragmentContainerView android:id="@+id/fragmentContainerView7" android:name="com.leal.cipm_testing.TopNavigation" android:layout_width="match_parent" android:layout_height="match_parent" tools:layout="@layout/fragment_top_navigation"/>
     </LinearLayout>
-
-    <ScrollView
-        android:id="@+id/scrollView3"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/btn_opc2"
-        app:layout_constraintBottom_toTopOf="@id/btn_opc"
-        android:layout_marginBottom="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="1dp"
-            android:orientation="vertical">
-
-            <!-- Spinner -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp">
-
-                <TextView
-                    android:id="@+id/textspin1"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Titulo Video"
-                    android:textColor="@color/black"
-                    android:textSize="24dp"
-                    android:textStyle="bold"
-                    android:layout_weight="1"
-                    android:onClick="activaSpinner1" />
-
-                <Spinner
-                    android:id="@+id/spinuno"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:background="@drawable/ic_grupo_select"
-                    android:gravity="end"
-                    android:spinnerMode="dialog"
-                    android:theme="@style/MySpinnerStyle"
-                    android:layout_gravity="center_vertical" />
+    <ScrollView android:id="@+id/scrollView3" android:layout_width="match_parent" android:layout_height="0dp" android:scrollbars="none" app:layout_constraintTop_toBottomOf="@id/btn_opc2" app:layout_constraintBottom_toTopOf="@id/btn_opc" android:layout_marginBottom="10dp" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:elevation="1dp" android:orientation="vertical">
+            <!--  Spinner  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="horizontal" android:paddingHorizontal="30dp">
+                <TextView android:id="@+id/textspin1" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Titulo Video" android:textColor="@color/black" android:textSize="24dp" android:textStyle="bold" android:layout_weight="1" android:onClick="activaSpinner1"/>
+                <Spinner android:id="@+id/spinuno" android:layout_width="25dp" android:layout_height="25dp" android:background="@drawable/ic_grupo_select" android:gravity="end" android:spinnerMode="dialog" android:theme="@style/MySpinnerStyle" android:layout_gravity="center_vertical"/>
             </LinearLayout>
-
-            <!-- Video View -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp">
-
-                <androidx.fragment.app.FragmentContainerView
-                    android:id="@+id/fragmentContainerView6"
-                    android:name="com.leal.cipm_testing.VideoPlayer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:layout="@layout/fragment_video_player"
-                    android:layout_weight="1" />
+            <!--  Video View  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="horizontal" android:paddingHorizontal="30dp">
+                <androidx.fragment.app.FragmentContainerView android:id="@+id/fragmentContainerView6" android:name="com.leal.cipm_testing.VideoPlayer" android:layout_width="wrap_content" android:layout_height="wrap_content" tools:layout="@layout/fragment_video_player" android:layout_weight="1"/>
             </LinearLayout>
-            <!-- Spanish Sentences -->
-            <LinearLayout
-                android:id="@+id/spanish_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Como dirias? : "
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
-
-                <TextView
-                    android:id="@+id/spanishsentence"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Spanish"
-                    android:textColor="@color/black"
-                    android:textSize="15dp" />
+            <!--  Spanish Sentences  -->
+            <LinearLayout android:id="@+id/spanish_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="40dp" android:paddingHorizontal="30dp" android:visibility="gone" android:orientation="horizontal">
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Como dirias? : " android:textColor="@color/black" android:textSize="15dp"/>
+                <TextView android:id="@+id/spanishsentence" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Spanish" android:textColor="@color/black" android:textSize="15dp"/>
             </LinearLayout>
-            <!-- Texto Spinner2 y 3 -->
-            <LinearLayout
-                android:id="@+id/rangoSpinnerLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Practice it"
-                        android:textColor="@color/azul"
-                        android:textSize="19dp"
-                        android:textStyle="normal" />
-
-                    <LinearLayout
-                        android:layout_width="85dp"
-                        android:layout_height="3dp"
-                        android:layout_marginTop="8dp"
-                        android:background="@drawable/ic_rect_ngulo_selecline">
-                    </LinearLayout>
+            <!--  Texto Spinner2 y 3  -->
+            <LinearLayout android:id="@+id/rangoSpinnerLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="horizontal" android:paddingHorizontal="30dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Practice it" android:textColor="@color/azul" android:textSize="19dp" android:textStyle="normal"/>
+                    <LinearLayout android:layout_width="85dp" android:layout_height="3dp" android:layout_marginTop="8dp" android:background="@drawable/ic_rect_ngulo_selecline"> </LinearLayout>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:onClick="activaSpinner3"
-                    android:visibility="invisible"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:id="@+id/textspin2"
-                        android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:text="Estructura"
-                        android:textColor="@color/black"
-                        android:textSize="12dp" />
-
-                    <Spinner
-                        android:id="@+id/spinest"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/ic_grupo_select"
-                        android:spinnerMode="dialog"
-                        android:theme="@style/MySpinnerStyle"
-                        android:layout_gravity="end" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_gravity="center_vertical" android:onClick="activaSpinner3" android:visibility="invisible" android:gravity="center_vertical">
+                    <TextView android:id="@+id/textspin2" android:layout_width="60dp" android:layout_height="wrap_content" android:text="Estructura" android:textColor="@color/black" android:textSize="12dp"/>
+                    <Spinner android:id="@+id/spinest" android:layout_width="18dp" android:layout_height="18dp" android:background="@drawable/ic_grupo_select" android:spinnerMode="dialog" android:theme="@style/MySpinnerStyle" android:layout_gravity="end"/>
                 </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_gravity="center_vertical"
-                    android:onClick="activaSpinner2"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:id="@+id/textspin3"
-                        android:layout_width="60dp"
-                        android:layout_height="match_parent"
-                        android:text="0-100"
-                        android:textColor="@color/black"
-                        android:textSize="15dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="35dp" />
-
-                    <Spinner
-                        android:id="@+id/spinrango"
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:background="@drawable/ic_grupo_select"
-                        android:spinnerMode="dialog"
-                        android:theme="@style/MySpinnerStyle"
-                        android:layout_gravity="end" />
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_gravity="center_vertical" android:onClick="activaSpinner2" android:gravity="center_vertical">
+                    <TextView android:id="@+id/textspin3" android:layout_width="60dp" android:layout_height="match_parent" android:text="0-100" android:textColor="@color/black" android:textSize="15dp" android:textAlignment="center" android:layout_marginLeft="35dp"/>
+                    <Spinner android:id="@+id/spinrango" android:layout_width="18dp" android:layout_height="18dp" android:background="@drawable/ic_grupo_select" android:spinnerMode="dialog" android:theme="@style/MySpinnerStyle" android:layout_gravity="end"/>
                 </LinearLayout>
             </LinearLayout>
-            <!-- Input Eng -->
-            <LinearLayout
-                android:id="@+id/input_lay"
-                android:layout_width="match_parent"
-                android:layout_height="55dp"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
-                android:paddingVertical="5dp"
-                android:visibility="gone">
-
-                <EditText
-                    android:id="@+id/answerinput"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:ems="10"
-                    android:textColor="@color/black"
-                    android:hint="Presiona el microfono y di tu respuesta  ->"
-                    android:inputType="textPersonName"
-                    android:paddingLeft="20dp"
-                    android:textColorHint="@color/black"
-                    android:textSize="14dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
-                    android:id="@+id/respdecir"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_microfono"
-                    android:visibility="visible"
-                    android:onClick="speakdecir"
-                    android:orientation="horizontal">
+            <!--  Input Eng  -->
+            <LinearLayout android:id="@+id/input_lay" android:layout_width="match_parent" android:layout_height="55dp" android:layout_marginTop="10dp" android:gravity="center" android:orientation="horizontal" android:paddingHorizontal="30dp" android:paddingVertical="5dp" android:visibility="gone">
+                <EditText android:id="@+id/answerinput" android:layout_width="0dp" android:layout_height="match_parent" android:ems="10" android:textColor="@color/black" android:hint="Presiona el microfono y di tu respuesta ->" android:inputType="textPersonName" android:paddingLeft="20dp" android:textColorHint="@color/black" android:textSize="14dp" android:layout_weight="1"/>
+                <LinearLayout android:id="@+id/respdecir" android:layout_width="wrap_content" android:layout_height="match_parent" android:layout_gravity="center" android:background="@drawable/ic_microfono" android:visibility="visible" android:onClick="speakdecir" android:orientation="horizontal"> </LinearLayout>
+            </LinearLayout>
+            <!--  BTN Empezar  -->
+            <LinearLayout android:id="@+id/btn_emp_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:gravity="center" android:paddingHorizontal="30dp">
+                <Button android:id="@+id/emp" android:layout_width="match_parent" android:layout_height="40dp" android:background="@drawable/ic_rect_ngulo_btncheck" android:text="Empezar" android:onClick="showOptions" android:textColor="@color/azul" android:textSize="14dp"/>
+            </LinearLayout>
+            <!--  Options buttons  -->
+            <LinearLayout android:id="@+id/button_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:visibility="gone" android:gravity="center" android:padding="10dp">
+                <Button android:id="@+id/answer_button_1" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Answer 1" android:layout_marginBottom="10dp" android:textSize="16sp" android:background="@drawable/borde_azul" android:textColor="@color/black"/>
+                <Button android:id="@+id/answer_button_2" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Answer 2" android:layout_marginBottom="10dp" android:textSize="16sp" android:background="@drawable/borde_azul" android:textColor="@color/black"/>
+                <Button android:id="@+id/answer_button_3" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Answer 3" android:layout_marginBottom="10dp" android:textSize="16sp" android:background="@drawable/borde_azul" android:textColor="@color/black"/>
+                <Button android:id="@+id/answer_button_4" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Answer 4" android:layout_marginBottom="10dp" android:textSize="16sp" android:background="@drawable/borde_azul" android:textColor="@color/black"/>
+                <Button android:id="@+id/answer_button_5" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Answer 5" android:layout_marginBottom="10dp" android:textSize="16sp" android:background="@drawable/borde_azul" android:textColor="@color/black"/>
+            </LinearLayout>
+            <!--  Validacion  -->
+            <LinearLayout android:id="@+id/opclay" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_weight="7" android:layout_gravity="center" android:orientation="horizontal">
+                <!--   <LinearLayout
+                                    android:id="@+id/resppass"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="5dp"
+                                    android:visibility="gone"
+                                    android:background="@drawable/ic_controlar"
+                                    android:orientation="horizontal">
+                                </LinearLayout> -->
+                <!--  <LinearLayout
+                                    android:id="@+id/respinc"
+                                    android:layout_width="15dp"
+                                    android:layout_height="15dp"
+                                    android:layout_gravity="center"
+                                    android:background="@drawable/ic_cruzar"
+                                    android:layout_marginLeft="5dp"
+                                    android:visibility="gone"
+                                    android:orientation="horizontal">
+                                </LinearLayout> -->
+                <LinearLayout android:id="@+id/respescu" android:layout_width="15dp" android:layout_height="15dp" android:layout_gravity="center" android:background="@drawable/ic_volumen" android:layout_marginLeft="5dp" android:visibility="gone" android:onClick="speakans" android:orientation="horizontal"> </LinearLayout>
+            </LinearLayout>
+            <!--  EngCheck  -->
+            <LinearLayout android:id="@+id/answer_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:orientation="horizontal" android:paddingHorizontal="30dp" android:visibility="gone">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Respuesta correcta es:" android:textColor="@color/black" android:textSize="14dp" android:paddingLeft="20dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="horizontal">
+                    <TextView android:id="@+id/txteng" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <LinearLayout android:id="@+id/respescu2" android:layout_width="15dp" android:layout_height="15dp" android:layout_gravity="center" android:background="@drawable/ic_volumen" android:layout_marginLeft="5dp" android:orientation="horizontal" android:onClick="speakans" android:visibility="gone"> </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
-            <!-- BTN Empezar -->
-            <LinearLayout
-                android:id="@+id/btn_emp_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:paddingHorizontal="30dp">
-
-                <Button
-                    android:id="@+id/emp"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:text="Empezar"
-                    android:onClick="showOptions"
-                    android:textColor="@color/azul"
-                    android:textSize="14dp" />
-            </LinearLayout>
-
-            <!-- Options buttons -->
-            <LinearLayout
-                android:id="@+id/button_layout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone"
-                android:gravity="center"
-                android:padding="10dp">
-
-                <Button
-                    android:id="@+id/answer_button_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer 1"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/borde_azul"
-                    android:textColor="@color/black" />
-
-                <Button
-                    android:id="@+id/answer_button_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer 2"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/borde_azul"
-                    android:textColor="@color/black" />
-
-                <Button
-                    android:id="@+id/answer_button_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer 3"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/borde_azul"
-                    android:textColor="@color/black" />
-
-                <Button
-                    android:id="@+id/answer_button_4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer 4"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/borde_azul"
-                    android:textColor="@color/black" />
-                <Button
-                    android:id="@+id/answer_button_5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Answer 5"
-                    android:layout_marginBottom="10dp"
-                    android:textSize="16sp"
-                    android:background="@drawable/borde_azul"
-                    android:textColor="@color/black" />
-            </LinearLayout>
-
-
-
-            <!-- Validacion -->
-            <LinearLayout
-                android:id="@+id/opclay"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="7"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-              <!--  <LinearLayout
-                    android:id="@+id/resppass"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="gone"
-                    android:background="@drawable/ic_controlar"
-                    android:orientation="horizontal">
-                </LinearLayout>-->
-
-               <!-- <LinearLayout
-                    android:id="@+id/respinc"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_cruzar"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="gone"
-                    android:orientation="horizontal">
-                </LinearLayout>-->
-
-                <LinearLayout
-                    android:id="@+id/respescu"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:layout_gravity="center"
-                    android:background="@drawable/ic_volumen"
-                    android:layout_marginLeft="5dp"
-                    android:visibility="gone"
-                    android:onClick="speakans"
-                    android:orientation="horizontal">
+            <!--  Posible ans  -->
+            <LinearLayout android:id="@+id/answer_pos" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:orientation="horizontal" android:paddingHorizontal="30dp" android:visibility="gone">
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Respuesta correcta es:" android:textColor="@color/black" android:textSize="14dp" android:paddingLeft="20dp"/>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical">
+                    <TextView android:id="@+id/txteng1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 1" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng2" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 2" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng3" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 3" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng4" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 4" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng5" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 5" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng6" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 6" android:textColor="@color/azul" android:textSize="14dp"/>
+                    <TextView android:id="@+id/txteng7" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="1" android:text="eng 7" android:textColor="@color/azul" android:textSize="14dp"/>
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- EngCheck -->
-            <LinearLayout
-                android:id="@+id/answer_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Respuesta correcta es:"
-                    android:textColor="@color/black"
-                    android:textSize="14dp"
-                    android:paddingLeft="20dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/txteng"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <LinearLayout
-                        android:id="@+id/respescu2"
-                        android:layout_width="15dp"
-                        android:layout_height="15dp"
-                        android:layout_gravity="center"
-                        android:background="@drawable/ic_volumen"
-                        android:layout_marginLeft="5dp"
-                        android:orientation="horizontal"
-                        android:onClick="speakans"
-                        android:visibility="gone">
-                    </LinearLayout>
+            <!--  TRP Layout  -->
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="10dp" android:layout_marginLeft="35dp">
+                <TextView android:id="@+id/TRPsp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="Tiempo de respuesta: " android:textColor="@color/black" android:textSize="16dp" android:layout_weight="1"/>
+                <TextView android:id="@+id/TRPNumbersp" android:layout_width="0dp" android:layout_height="wrap_content" android:text="xxx segundos" android:textColor="@color/black" android:textSize="16dp" android:layout_weight="1"/>
+            </LinearLayout>
+            <!--  BTNS INT Y POS ANS  -->
+            <LinearLayout android:id="@+id/btns_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="20dp" android:orientation="horizontal" android:paddingHorizontal="30dp" android:visibility="gone">
+                <LinearLayout android:layout_width="0dp" android:layout_height="40dp" android:layout_marginRight="1dp" android:layout_weight="1" android:gravity="center" android:onClick="practice" android:background="@drawable/ic_rect_ngulo_btncheck">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Siguiente oración" android:textColor="@color/azul" android:textAlignment="center"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="40dp" android:layout_marginLeft="1dp" android:layout_weight="1" android:gravity="center" android:background="@drawable/ic_rect_ngulo_btncheck" android:onClick="possibleanswers">
+                    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Respuestas posibles" android:textColor="@color/azul" android:textAlignment="center"/>
                 </LinearLayout>
             </LinearLayout>
-
-            <!-- Posible ans -->
-            <LinearLayout
-                android:id="@+id/answer_pos"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Respuesta correcta es:"
-                    android:textColor="@color/black"
-                    android:textSize="14dp"
-                    android:paddingLeft="20dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/txteng1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 1"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 2"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 3"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 4"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 5"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 6"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txteng7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="eng 7"
-                        android:textColor="@color/azul"
-                        android:textSize="14dp" />
-                </LinearLayout>
+            <!--  BTN Checar Respuestas  -->
+            <LinearLayout android:id="@+id/btn_check_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:gravity="center" android:paddingHorizontal="30dp">
+                <Button android:id="@+id/btn_check" android:layout_width="match_parent" android:layout_height="40dp" android:background="@drawable/ic_rect_ngulo_btncheck" android:text="Checar la respuesta" android:textColor="@color/azul" android:textSize="14dp" android:onClick="checkans"/>
             </LinearLayout>
-
-            <!-- TRP Layout -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="35dp">
-
-                <TextView
-                    android:id="@+id/TRPsp"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="Tiempo de respuesta: "
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:layout_weight="1" />
-
-                <TextView
-                    android:id="@+id/TRPNumbersp"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="xxx segundos"
-                    android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <!-- BTNS INT Y POS ANS -->
-            <LinearLayout
-                android:id="@+id/btns_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:orientation="horizontal"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="1dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:onClick="practice"
-                    android:background="@drawable/ic_rect_ngulo_btncheck">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Siguiente oración"
-                        android:textColor="@color/azul"
-                        android:textAlignment="center" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="40dp"
-                    android:layout_marginLeft="1dp"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:onClick="possibleanswers">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Respuestas posibles"
-                        android:textColor="@color/azul"
-                        android:textAlignment="center" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <!-- BTN Checar Respuestas -->
-            <LinearLayout
-                android:id="@+id/btn_check_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:paddingHorizontal="30dp"
-                >
-
-                <Button
-                    android:id="@+id/btn_check"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:text="Checar la respuesta"
-                    android:textColor="@color/azul"
-                    android:textSize="14dp"
-                    android:onClick="checkans" />
-            </LinearLayout>
-
-            <!-- BTN INTENTALO OTRA VEZ -->
-            <LinearLayout
-                android:id="@+id/btn_intent_lay"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:gravity="center"
-                android:paddingHorizontal="30dp"
-                android:visibility="gone">
-
-                <Button
-                    android:id="@+id/btn_intent"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@drawable/ic_rect_ngulo_btncheck"
-                    android:text="Siguiente oración"
-                    android:textColor="@color/azul"
-                    android:textSize="14dp"
-                    android:onClick="practice" />
+            <!--  BTN INTENTALO OTRA VEZ  -->
+            <LinearLayout android:id="@+id/btn_intent_lay" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="30dp" android:gravity="center" android:paddingHorizontal="30dp" android:visibility="gone">
+                <Button android:id="@+id/btn_intent" android:layout_width="match_parent" android:layout_height="40dp" android:background="@drawable/ic_rect_ngulo_btncheck" android:text="Siguiente oración" android:textColor="@color/azul" android:textSize="14dp" android:onClick="practice"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
-
-    <!-- BTNS OPC -->
-    <LinearLayout
-        android:id="@+id/btn_opc"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/graybg"
-        android:orientation="vertical"
-        android:elevation="5dp"
-        android:gravity="center"
-        app:layout_constraintBottom_toBottomOf="parent">
-
-        <androidx.fragment.app.FragmentContainerView
-            android:id="@+id/fragmentContainerView2"
-            android:name="com.leal.cipm_testing.BottomNav"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/fragment_bottom_nav" />
+    <!--  BTNS OPC  -->
+    <LinearLayout android:id="@+id/btn_opc" android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/graybg" android:orientation="vertical" android:elevation="5dp" android:gravity="center" app:layout_constraintBottom_toBottomOf="parent">
+        <androidx.fragment.app.FragmentContainerView android:id="@+id/fragmentContainerView2" android:name="com.leal.cipm_testing.BottomNav" android:layout_width="match_parent" android:layout_height="wrap_content" tools:layout="@layout/fragment_bottom_nav"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

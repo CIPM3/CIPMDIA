@@ -150,8 +150,10 @@ public class SpaInt2023 extends AppCompatActivity {
     double secondsWithDecimal;
     int counterDB;
     Intent reciver;
+
     LinearLayout rangoLayout,option_btns_layout;
     Button option1Btn,option2Btn,option3Btn,option4Btn,option5Btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -214,8 +216,11 @@ public class SpaInt2023 extends AppCompatActivity {
         txteng5 =  findViewById(R.id.txteng5);
         txteng6 =  findViewById(R.id.txteng6);
         txteng7 = findViewById(R.id.txteng7);
+
         mAuth= FirebaseAuth.getInstance();
+
         userid = mAuth.getCurrentUser().getUid();
+
         docref= db.collection(userid).document("WhereisStudent");
         temp= arrayGetter.SpIntArray;
         prefs = new Prefs(this);
@@ -225,9 +230,13 @@ public class SpaInt2023 extends AppCompatActivity {
         four=0;
         five=0;
         counterDB=0;
+
         if(prefs.getPremium()==0){
             loadRewardedAd();
         }
+
+        loadRewardedAd();
+
         getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.fragmentContainerView6, video_player)

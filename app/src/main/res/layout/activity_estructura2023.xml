@@ -500,92 +500,108 @@
                         android:textSize="18dp" />
                 </LinearLayout>
             </LinearLayout>
-
-            <HorizontalScrollView
-                android:id="@+id/horizontalScrollView1"
+            <LinearLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:scrollbars="none">
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_gravity="center">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:id="@+id/starterBtns"
+                    android:layout_width="300dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="19dp"
-                    android:orientation="horizontal"
-
-                    android:paddingHorizontal="30dp">
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    android:padding="16dp">
 
                     <Button
                         android:id="@+id/dif0"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
-                        android:background="@drawable/button_flash_animation"
-                        android:onClick="showOptions"
-                        android:text="Principiante"
-                        android:textColor="@color/azul"
-                        android:textSize="14sp"
-                        android:padding="2dp" />
-
-                    <Button
-                        android:id="@+id/dif1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
                         android:background="@drawable/button_flash_animation"
-                        android:onClick="dificulty1Activation"
-                        android:text="Basico"
+                        android:onClick="showOptions"
+                        android:text="Opción Multiple"
                         android:textColor="@color/azul"
                         android:textSize="14sp"
-                        android:padding="2dp" />
-
+                        android:layout_marginBottom="8dp"
+                        android:padding="10dp" />
                     <Button
                         android:id="@+id/dif1Speaking"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginRight="15dp"
                         android:background="@drawable/button_flash_animation"
                         android:onClick="dificulty1Activation"
-                        android:text="Speaking"
+                        android:text="Empezar"
                         android:textColor="@color/azul"
                         android:textSize="14sp"
-                        android:padding="2dp" />
+                        android:padding="10dp" />
 
-                    <Button
-                        android:id="@+id/dif2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/borde_azul"
-                        android:onClick="dificulty2Activation"
-                        android:text="Normal"
-                        android:textColor="@color/azul"
-                        android:textSize="14sp" />
-
-                    <Button
-                        android:id="@+id/dif3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/borde_azul"
-                        android:onClick="dificulty3Activation"
-                        android:text="Intermedio"
-                        android:textColor="@color/azul"
-                        android:textSize="14sp" />
-
-                    <Button
-                        android:id="@+id/dif4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
-                        android:background="@drawable/borde_azul"
-                        android:text="Avanzado"
-                        android:textColor="@color/azul"
-                        android:textSize="14sp"
-                        android:onClick="dificulty4Activation" />
 
                 </LinearLayout>
-            </HorizontalScrollView>
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scrollbars="none"
+                    android:layout_marginTop="19dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="30dp">
+
+                        <Button
+                            android:id="@+id/dif1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/button_flash_animation"
+                            android:onClick="dificulty1Activation"
+                            android:text="Speaking"
+                            android:textColor="@color/azul"
+                            android:textSize="14sp"
+                            android:padding="2dp" />
+
+                        <Button
+                            android:id="@+id/dif2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/borde_azul"
+                            android:onClick="dificulty2Activation"
+                            android:text="Normal"
+                            android:textColor="@color/azul"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/dif3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/borde_azul"
+                            android:onClick="dificulty3Activation"
+                            android:text="Intermedio"
+                            android:textColor="@color/azul"
+                            android:textSize="14sp" />
+
+                        <Button
+                            android:id="@+id/dif4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/borde_azul"
+                            android:text="Avanzado"
+                            android:textColor="@color/azul"
+                            android:textSize="14sp"
+                            android:onClick="dificulty4Activation" />
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+
 
 
             <LinearLayout
@@ -603,6 +619,7 @@
                     android:layout_marginLeft="10dp"
                     android:background="@drawable/borde_azul"
                     android:text="No Se"
+                    android:onClick="nose"
                     android:textColor="@color/azul"
                     android:textSize="14sp" />
 
