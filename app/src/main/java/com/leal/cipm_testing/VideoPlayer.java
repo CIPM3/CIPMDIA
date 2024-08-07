@@ -588,7 +588,19 @@ public class VideoPlayer extends Fragment {
 
         if(currenttxt.contains("Vocabulary2023")){
             switch (selection) {
+
+                case "Sustantivos":
+                case "Verbos":
+                case "Adverbios":
+                case "Adjetivos":
+                case "Preposiciones":
+
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F42.%20Vocabulario%2051%20-%20100.mp4?alt=media&token=4ecf44db-09a1-4341-b3e6-7a26c4e3ff8c");
+
+                    break;
+
                 case "Function Words":
+                case "Palabras comunes":
                     ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/clasebasica.mp4?alt=media&token=aa040ec8-7699-4d54-a614-0742ea8c4d32");
                     break;
                 case "Present Simple":

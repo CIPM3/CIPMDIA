@@ -35,29 +35,7 @@
                 android:textColor="@color/black"
                 android:textSize="10dp" />
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/btn_main"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="4dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/bgMain"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:orientation="vertical"
-                android:background="@drawable/diversity"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Clases en linea"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8dp" />
-        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/btn_premium_bottom"
             android:layout_width="70dp"
@@ -81,6 +59,30 @@
                 android:textColor="@color/black"
                 android:textSize="10dp" />
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/btn_main"
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="4dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/bgMain"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                android:background="@drawable/diversity"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Clases en linea"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="8dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:id="@+id/btn_test_bottom"
             android:layout_width="70dp"
@@ -107,7 +109,7 @@
         </LinearLayout>
 
 
-
+<!--
         <LinearLayout
             android:id="@+id/btn_chat_maestro"
             android:layout_width="70dp"
@@ -126,35 +128,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:text="Servicio al Cliente"
+                android:text="Hablar con Adrian"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="8dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/toefllayout"
-            android:layout_width="70dp"
-            android:layout_height="60dp"
-            android:layout_marginHorizontal="4dp"
-            android:gravity="center"
-            android:orientation="vertical">
-            <LinearLayout
-                android:id="@+id/bgtoefllay"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:orientation="vertical"
-                android:background="@drawable/transcribe"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:text="Toefl"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="8dp" />
-        </LinearLayout>
-        <LinearLayout
+        </LinearLayout>-->
+    <!--    <LinearLayout
             android:id="@+id/planLayout"
             android:layout_width="70dp"
             android:layout_height="60dp"
@@ -177,6 +156,8 @@
                 android:textColor="@color/black"
                 android:textSize="8dp" />
         </LinearLayout>
+-->
+
 
 
     </LinearLayout>

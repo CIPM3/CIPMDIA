@@ -29,6 +29,7 @@ public class Login2023 extends AppCompatActivity {
     TextView tvRegisterhere;
     EditText etloginemail,etloginpassword;
     LinearLayout visitante;
+    Prefs prefs ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class Login2023 extends AppCompatActivity {
         etloginpassword = findViewById(R.id.input_password);
         recuperarcontra =findViewById(R.id.recuperarcontras);
         visitante = findViewById(R.id.visitantebtn);
-        //visitante.setVisibility(View.GONE);
+        prefs= new Prefs(Login2023.this);
         // email and password
         btnlogin=findViewById(R.id.btnLogin);
         btnlogin.setOnClickListener(new View.OnClickListener() {
@@ -70,11 +71,12 @@ public class Login2023 extends AppCompatActivity {
                 mAuth.signInAnonymously().addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful()){
-                            FirebaseUser user = mAuth.getCurrentUser();
+                        if (task.isSuccessful()) {
+
                             Intent intent = new Intent(Login2023.this, lessonPlan_RecyclerView.class);
                             intent.putExtra("visitante", true);
                             startActivity(intent);
+                            Toast.makeText(Login2023.this, mAuth.getUid(), Toast.LENGTH_SHORT).show();
                         }
                     }
                 }).addOnFailureListener(new OnFailureListener() {
@@ -106,7 +108,6 @@ public class Login2023 extends AppCompatActivity {
         }
 
     }
-
     // email-password sign in
     private void loginUser() {
 
@@ -125,7 +126,6 @@ public class Login2023 extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if(task.isSuccessful()){
-                                Toast.makeText(Login2023.this, "Usuario Logeado existosamente", Toast.LENGTH_SHORT).show();
                                 startActivity(new Intent(Login2023.this, lessonPlan_RecyclerView.class ));
 
                             }else {

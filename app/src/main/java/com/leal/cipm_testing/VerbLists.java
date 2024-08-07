@@ -1,7 +1,38 @@
 package com.leal.cipm_testing;
 
 public class VerbLists {
+    // Java String array with the 100 most common English words
+    String[] commonEnglishWords = {
+            "the", "be", "to", "of", "and", "a", "in", "that", "have", "I",
+            "it", "for", "not", "on", "with", "he", "as", "you", "do", "at",
+            "this", "but", "his", "by", "from", "they", "we", "say", "her", "she",
+            "or", "an", "will", "my", "one", "all", "would", "there", "their", "what",
+            "so", "up", "out", "if", "about", "who", "get", "which", "go", "me",
+            "when", "make", "can", "like", "time", "no", "just", "him", "know", "take",
+            "people", "into", "year", "your", "good", "some", "could", "them", "see", "other",
+            "than", "then", "now", "look", "only", "come", "its", "over", "think", "also",
+            "back", "after", "use", "two", "how", "our", "work", "first", "well", "way",
+            "even", "new", "want", "because", "any", "these", "give", "day", "most", "us"
+    };
 
+    // Java String array with the Spanish translations of the 100 most common English words
+    String[] commonSpanishWords = {
+            "el,la,los,las", "ser", "a", "de", "y", "un", "en o dentro", "que", "tener", "yo",
+            "eso", "para", "no", "en para superficies", "con", "él", "como", "tú", "hacer", "en para lugares generales",
+            "esto", "pero", "su de él(posesivo)", "por para lugares", "de para proveniencia", "ellos", "nosotros", "decir", "su de ella", "ella",
+            "o", "un o una", "modal para futuro", "mi", "uno", "todos", "modal para hípotetico", "allí", "su de ellos ", "qué para preguntar",
+            "asi que", "arriba", "fuera", "si", "sobre", "quién", "obtener", "cual", "ir", "yo",
+            "cuando", "hacer", "puede", "gustar", "tiempo", "no", "solo", "el como objeto", "saber", "tomar",
+            "gente", "hacia dentro de", "año", "tu posesivo", "bueno", "algún", "podría", "ellos como objeto", "ver", "otro",
+            "que para comparar", "entonces", "ahora", "mirar", "solamente", "venir", "su de eso", "por arriba de", "pensar", "también",
+            "atrás", "después", "usar", "dos", "cómo ", "nuestro", "trabajar", "primero", "bien", "camino o forma",
+            "incluso", "nuevo", "querer", "porque", "algún", "estos", "dar", "día", "el más", "nos"
+    };
+    public void firstOneHundred() {
+        int r = (int) (Math.random() * commonEnglishWords.length);
+        gene = commonEnglishWords[r];
+        gens = commonSpanishWords[r];
+    }
     String[] reflexiveIntransitiveVerbsEnglish = {
             "go away",
             "come over",
@@ -244,7 +275,7 @@ public class VerbLists {
             "se quiere ", "se mira a ", "se usa ", "se encuentra ",
             "se da ", "se cuenta ", "se llama ", "se intenta ",
             "se pregunta ", "se necesita ", "se siente ", "se deja ",
-            "se pone ",  "se mantiene ", "se empieza ",
+            "se pone ", "se mantiene ", "se empieza ",
             "se ayuda ", "se comienza ", "se muestra ", "se oye ",
             "se juega ", "se mueve ", "se cree en ", "se sostiene ",
             "se vive ", "se trae ", "se escribe ", "se proporciona ",
@@ -264,28 +295,28 @@ public class VerbLists {
 
 
     String[] verbsEnglishBaseSe = {
-            "have", "do", "say",  "get",
+            "have", "do", "say", "get",
             "make", "know", "think", "see", "take",
-             "want", "look at", "use", "find",
+            "want", "look at", "use", "find",
 
-            "give", "tell","call", "try",
+            "give", "tell", "call", "try",
 
-            "ask", "need", "feel",  "leave",
-            "put",  "keep", "begin",
+            "ask", "need", "feel", "leave",
+            "put", "keep", "begin",
 
             "help", "start",
 
 
-            "show", "hear",  "play", "move",
-           "believe in", "hold", "live", "bring",
-            "write", "provide",  "lose",
+            "show", "hear", "play", "move",
+            "believe in", "hold", "live", "bring",
+            "write", "provide", "lose",
             "pay",
 
             "include", "continue", "change",
             "set", "learn", "understand", "watch",
             "follow", "stop", "speak", "create", "allow",
-            "read", "spend", "add",  "open",
-             "offer", "remember", "win",
+            "read", "spend", "add", "open",
+            "offer", "remember", "win",
 
             "consider", "love", "buy",
             "send", "expect", "serve", "build",
@@ -662,7 +693,6 @@ public class VerbLists {
             {"a meeting ", "a record ", "an opinion ", "a ceremony ", "hands "},
 
 
-
             // Objects for "vivir " (to live)
             {"in a city ", "with family ", "an adventure ", "a life ", "alone "},
 
@@ -839,70 +869,225 @@ public class VerbLists {
             "broken"
     };
 
+    String[] serSp= {"Yo soy el que ", "Tú eres el que ", "él es el que ", "ella es la que ", "nosotros somos los que ", "ellos son los que "};
+    String[] beEng= {"I am the one who ", "you are the one who ", "he is the one who ", "she is the one who ", "we are the ones who ", "they are the ones who "};
 
-    public void GenIntPasiva(){
-        int r = (int) (Math.random()*verbsEnglishBaseSe.length);
-        int o = (int)(Math.random()*verbObjects[r].length);
 
-        gens = verbsSpanishBaseSe[r]+verbObjectsSpanish[r][o];
-        gene= "He "+verbsEnglishThirdPerson[r] +" "+verbObjects[r][o];
-        gene2= "She "+verbsEnglishThirdPerson[r]+" "+verbObjects[r][o];
-        gene3= "somebody "+verbsEnglishThirdPerson[r]+" "+verbObjects[r][o];
-        gene4= "We "+verbsEnglishBaseSe[r]+" "+verbObjects[r][o];
-        gene5= "They "+verbsEnglishBaseSe[r]+" "+verbObjects[r][o];
-        gene7= verbObjects[r][o]+"gets "+verbsEnglishPastParticiple[r];
-        gene6= verbObjects[r][o]+"is "+verbsEnglishPastParticiple[r];
+    public void GenIntPasiva() {
+        int r = (int) (Math.random() * verbsEnglishBaseSe.length);
+        int o = (int) (Math.random() * verbObjects[r].length);
+
+        gens = verbsSpanishBaseSe[r] + verbObjectsSpanish[r][o];
+        gene = "He " + verbsEnglishThirdPerson[r] + " " + verbObjects[r][o];
+        gene2 = "She " + verbsEnglishThirdPerson[r] + " " + verbObjects[r][o];
+        gene3 = "somebody " + verbsEnglishThirdPerson[r] + " " + verbObjects[r][o];
+        gene4 = "We " + verbsEnglishBaseSe[r] + " " + verbObjects[r][o];
+        gene5 = "They " + verbsEnglishBaseSe[r] + " " + verbObjects[r][o];
+        gene7 = verbObjects[r][o] + "gets " + verbsEnglishPastParticiple[r];
+        gene6 = verbObjects[r][o] + "is " + verbsEnglishPastParticiple[r];
     }
+    String pronouns[] = {"I", "You", "He", "She", "We", "They"};
+    String gens, gene, gene2, gene3, gene4, gene5, gene6, gene7;
 
-
-    String pronouns[]={"I","You","He","She","We","They"};
-    String gens,gene,gene2,gene3,gene4,gene5,gene6,gene7;
-    public void GenReflInt3(){
-        int r = (int) (Math.random()*reflexiveIntransitiveVerbsEnglish.length);
-        int rp = (int)(Math.random()*pronouns.length);
+    public void GenReflInt3() {
+        int r = (int) (Math.random() * reflexiveIntransitiveVerbsEnglish.length);
+        int rp = (int) (Math.random() * pronouns.length);
         String pronoun = pronouns[rp];
-        switch (pronoun){
+        switch (pronoun) {
             case "I":
-                gens= reflexiveIntransitiveVerbsSpanishFirstPerson[r];
-                gene= "I "+ reflexiveIntransitiveVerbsEnglish[r];
-                gene2=".";
+                gens = reflexiveIntransitiveVerbsSpanishFirstPerson[r];
+                gene = "I " + reflexiveIntransitiveVerbsEnglish[r];
+                gene2 = ".";
                 break;
 
             case "You":
-                gens= reflexiveIntransitiveVerbsSpanishSecondPerson[r];
-                gene= "You "+ reflexiveIntransitiveVerbsEnglish[r];
-                gene2=".";
+                gens = reflexiveIntransitiveVerbsSpanishSecondPerson[r];
+                gene = "You " + reflexiveIntransitiveVerbsEnglish[r];
+                gene2 = ".";
                 break;
 
             case "He":
-                gens= reflexiveIntransitiveVerbsSpanishThirdPerson[r];
-                gene= "He " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
-                gene2= "She " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
+                gens = reflexiveIntransitiveVerbsSpanishThirdPerson[r];
+                gene = "He " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
+                gene2 = "She " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
                 break;
 
             case "She":
-                gens= reflexiveIntransitiveVerbsSpanishThirdPerson[r];
-                gene= "She " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
-                gene2= "He " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
+                gens = reflexiveIntransitiveVerbsSpanishThirdPerson[r];
+                gene = "She " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
+                gene2 = "He " + reflexiveIntransitiveVerbsEnglishThirdPerson[r];
                 break;
 
             case "We":
-                gens= reflexiveIntransitiveVerbsSpanishFirstPersonPlural[r];
-                gene= "We "+ reflexiveIntransitiveVerbsEnglish[r];
-                gene2=".";
+                gens = reflexiveIntransitiveVerbsSpanishFirstPersonPlural[r];
+                gene = "We " + reflexiveIntransitiveVerbsEnglish[r];
+                gene2 = ".";
                 break;
 
             case "They":
-                gens= reflexiveIntransitiveVerbsSpanishThirdPersonPlural[r];
-                gene= "They "+ reflexiveIntransitiveVerbsEnglish[r];
-                gene2=".";
+                gens = reflexiveIntransitiveVerbsSpanishThirdPersonPlural[r];
+                gene = "They " + reflexiveIntransitiveVerbsEnglish[r];
+                gene2 = ".";
                 break;
         }
 
 
     }
+    String[] commonEnglishNouns = {
+            "time", "year", "people", "way", "day", "man", "thing", "woman", "life", "child",
+            "world", "school", "state", "family", "student", "group", "country", "problem", "hand", "part",
+            "place", "case", "week", "company", "system", "program", "question", "work", "government", "number",
+            "night", "point", "home", "water", "room", "mother", "area", "money", "story", "fact",
+            "month", "lot", "right", "study", "book", "eye", "job", "word", "business", "issue",
+            "side", "kind", "head", "house", "service", "friend", "father", "power", "hour", "game",
+            "line", "end", "member", "law", "car", "city", "community", "name", "president", "team",
+            "minute", "idea", "kid", "body", "information", "back", "parent", "face", "others", "level",
+            "office", "door", "health", "person", "art", "war", "history", "party", "result", "change",
+            "morning", "reason", "research", "girl", "guy", "moment", "air", "teacher", "force", "education"
+    };
 
+    // Array of 100 most common Spanish nouns
+    String[] commonSpanishNouns = {
+            "tiempo", "año", "gente", "camino", "día", "hombre", "cosa", "mujer", "vida", "niño",
+            "mundo", "escuela", "estado", "familia", "estudiante", "grupo", "país", "problema", "mano", "parte",
+            "lugar", "caso", "semana", "compañía", "sistema", "programa", "pregunta", "trabajo", "gobierno", "número",
+            "noche", "punto", "hogar", "agua", "habitación", "madre", "área", "dinero", "historia", "hecho",
+            "mes", "lote", "derecho", "estudio", "libro", "ojo", "empleo", "palabra", "negocio", "asunto",
+            "lado", "tipo", "cabeza", "casa", "servicio", "amigo", "padre", "poder", "hora", "juego",
+            "línea", "final", "miembro", "ley", "coche", "ciudad", "comunidad", "nombre", "presidente", "equipo",
+            "minuto", "idea", "niño", "cuerpo", "información", "espalda", "padre", "cara", "otros", "nivel",
+            "oficina", "puerta", "salud", "persona", "arte", "guerra", "historia", "fiesta", "resultado", "cambio",
+            "mañana", "razón", "investigación", "chica", "chico", "momento", "aire", "profesor", "fuerza", "educación"
+    };
 
+    public void randomNounPair() {
+        int r = (int) (Math.random() * commonEnglishNouns.length);
+         gene = commonEnglishNouns[r];
+         gens = commonSpanishNouns[r];
 
+    }
 
+    String[] commonEnglishVerbs = {
+            "be", "have", "do", "say", "go", "get", "make", "know", "think", "take",
+            "see", "come", "want", "look", "use", "find", "give", "tell", "work", "call",
+            "try", "ask", "need", "feel", "become", "leave", "put", "mean", "keep", "let",
+            "begin", "seem", "help", "talk", "turn", "start", "show", "hear", "play", "run",
+            "move", "like", "live", "believe", "hold", "bring", "happen", "write", "provide", "sit",
+            "stand", "lose", "pay", "meet", "include", "continue", "set", "learn", "change", "lead",
+            "understand", "watch", "follow", "stop", "create", "speak", "read", "allow", "add", "spend",
+            "grow", "open", "walk", "win", "offer", "remember", "love", "consider", "appear", "buy",
+            "wait", "serve", "die", "send", "expect", "build", "stay", "fall", "cut", "reach",
+            "kill", "remain", "suggest", "raise", "pass", "sell", "require", "report", "decide", "pull"
+    };
+
+    // Array of 100 most common Spanish verbs
+    String[] commonSpanishVerbs = {
+            "ser", "tener", "hacer", "decir", "ir", "obtener", "hacer", "saber", "pensar", "tomar",
+            "ver", "venir", "querer", "mirar", "usar", "encontrar", "dar", "contar", "trabajar", "llamar",
+            "intentar", "preguntar", "necesitar", "sentir", "convertirse", "dejar", "poner", "significar", "mantener", "dejar",
+            "comenzar", "parecer", "ayudar", "hablar", "girar", "empezar", "mostrar", "oír", "jugar", "correr",
+            "mover", "gustar", "vivir", "creer", "sostener", "traer", "suceder", "escribir", "proporcionar", "sentarse",
+            "pararse", "perder", "pagar", "encontrarse", "incluir", "continuar", "colocar", "aprender", "cambiar", "liderar",
+            "entender", "ver", "seguir", "detener", "crear", "hablar", "leer", "permitir", "añadir", "gastar",
+            "crecer", "abrir", "caminar", "ganar", "ofrecer", "recordar", "amar", "considerar", "aparecer", "comprar",
+            "esperar", "servir", "morir", "enviar", "esperar", "construir", "quedarse", "caer", "cortar", "alcanzar",
+            "matar", "permanecer", "sugerir", "levantar", "pasar", "vender", "requerir", "informar", "decidir", "tirar"
+    };
+
+    public void randomVerbPair() {
+        int r = (int) (Math.random() * commonEnglishVerbs.length);
+        gene = commonEnglishVerbs[r];
+        gens = commonSpanishVerbs[r];
+
+    }
+
+    String[] commonEnglishAdjectives = {
+            "good", "new", "first", "last", "long", "great", "little", "own", "other", "old",
+            "right", "big", "high", "different", "small", "large", "next", "early", "young", "important",
+            "few", "public", "bad", "same", "able", "happy", "sad", "angry", "kind", "beautiful",
+            "ugly", "interesting", "boring", "tall", "short", "wide", "narrow", "hot", "cold", "warm",
+            "cool", "fast", "slow", "hard", "soft", "heavy", "light", "strong", "weak", "safe",
+            "dangerous", "clean", "dirty", "rich", "poor", "thin", "thick", "loud", "quiet", "noisy",
+            "calm", "bright", "dark", "easy", "difficult", "simple", "complex", "cheap", "expensive", "free",
+            "close", "far", "young", "old", "early", "late", "modern", "ancient", "empty", "full",
+            "famous", "unknown", "friendly", "unfriendly", "polite", "rude", "healthy", "sick", "tired", "energetic",
+            "beautiful", "handsome", "pretty", "funny", "serious", "strong", "weak", "active", "lazy", "intelligent"
+    };
+
+    // Array of 100 most common Spanish adjectives
+    String[] commonSpanishAdjectives = {
+            "bueno", "nuevo", "primero", "último", "largo", "genial", "pequeño", "propio", "otro", "viejo",
+            "derecho", "grande", "alto", "diferente", "pequeño", "grande", "próximo", "temprano", "joven", "importante",
+            "pocos", "público", "malo", "mismo", "capaz", "feliz", "triste", "enojado", "amable", "hermoso",
+            "feo", "interesante", "aburrido", "alto", "bajo", "ancho", "estrecho", "caliente", "frío", "cálido",
+            "fresco", "rápido", "lento", "duro", "blando", "pesado", "ligero", "fuerte", "débil", "seguro",
+            "peligroso", "limpio", "sucio", "rico", "pobre", "delgado", "grueso", "ruidoso", "tranquilo", "ruidoso",
+            "calmado", "brillante", "oscuro", "fácil", "difícil", "simple", "complejo", "barato", "caro", "gratis",
+            "cerca", "lejos", "joven", "viejo", "temprano", "tarde", "moderno", "antiguo", "vacío", "lleno",
+            "famoso", "desconocido", "amigable", "antipático", "educado", "grosero", "saludable", "enfermo", "cansado", "enérgico",
+            "hermoso", "guapo", "bonito", "divertido", "serio", "fuerte", "débil", "activo", "perezoso", "inteligente"
+    };
+
+    public void randomAdjectivePair() {
+        int r = (int) (Math.random() * commonEnglishAdjectives.length);
+        gene= commonEnglishAdjectives[r];
+        gens = commonSpanishAdjectives[r];
+
+    }
+    String[] commonEnglishAdverbs = {
+            "up", "so", "out", "just", "now", "how", "then", "more", "also", "here",
+            "well", "only", "very", "even", "back", "there", "down", "still", "in", "as",
+            "too", "when", "never", "really", "most", "on", "why", "about", "over", "again",
+            "where", "right", "off", "always", "next", "far", "quite", "perhaps", "soon", "however",
+            "almost", "later", "much", "once", "least", "ago", "together", "around", "already", "enough",
+            "both", "maybe", "actually", "probably", "home", "of course", "yet", "ever", "certainly", "away",
+            "today", "sure", "better", "clearly", "instead", "early", "finally", "quickly", "no", "recently",
+            "before", "usually", "thus", "exactly", "hard", "especially", "eventually", "always", "generally", "likely",
+            "simply", "naturally", "soon", "after", "slowly", "seriously", "completely", "nearly", "definitely", "often",
+            "currently", "immediately", "perhaps", "suddenly", "merely", "obviously", "truly", "strongly", "rarely", "necessarily"
+    };
+
+    // Array of 100 most common Spanish adverbs
+    String[] commonSpanishAdverbs = {
+            "arriba", "tan", "fuera", "solo", "ahora", "cómo", "entonces", "más", "también", "aquí",
+            "bien", "solo", "muy", "incluso", "atrás", "allí", "abajo", "todavía", "en", "como",
+            "también", "cuando", "nunca", "realmente", "más", "en", "por qué", "acerca de", "sobre", "otra vez",
+            "dónde", "derecho", "apagado", "siempre", "siguiente", "lejos", "bastante", "quizás", "pronto", "sin embargo",
+            "casi", "más tarde", "mucho", "una vez", "menos", "hace", "juntos", "alrededor", "ya", "suficiente",
+            "ambos", "tal vez", "realmente", "probablemente", "casa", "por supuesto", "aún", "siempre", "ciertamente", "lejos",
+            "hoy", "seguro", "mejor", "claramente", "en lugar", "temprano", "finalmente", "rápidamente", "no", "recientemente",
+            "antes", "usualmente", "así", "exactamente", "duro", "especialmente", "eventualmente", "siempre", "generalmente", "probablemente",
+            "simplemente", "naturalmente", "pronto", "después", "lentamente", "seriamente", "completamente", "casi", "definitivamente", "a menudo",
+            "actualmente", "inmediatamente", "quizás", "repentinamente", "meramente", "obviamente", "verdaderamente", "fuertemente", "raramente", "necesariamente"
+    };
+
+    public void randomAdverbPair() {
+        int r = (int) (Math.random() * commonEnglishAdverbs.length);
+        gene = commonEnglishAdverbs[r];
+        gens = commonSpanishAdverbs[r];
+
+    }
+
+    String[] commonEnglishPrepositions = {
+            "of", "in", "to", "for", "with", "on", "at", "by", "from", "about",
+            "as", "into", "like", "through", "after", "over", "between", "out", "against", "during",
+            "without", "before", "under", "around", "among", "since", "upon", "within", "along", "following",
+            "across", "behind", "beyond", "plus", "except", "but", "up", "down", "near", "above",
+            "below", "off", "around", "past", "despite", "towards", "upon", "amongst", "regarding", "concerning"
+    };
+
+    // Array of 50 most common Spanish prepositions
+    String[] commonSpanishPrepositions = {
+            "de", "en", "a", "para", "con", "sobre", "en", "por", "de", "acerca de",
+            "como", "en", "como", "a través de", "después de", "sobre", "entre", "fuera de", "contra", "durante",
+            "sin", "antes de", "debajo de", "alrededor de", "entre", "desde", "sobre", "dentro de", "a lo largo de", "siguiendo",
+            "a través de", "detrás de", "más allá de", "más", "excepto", "pero", "arriba", "abajo", "cerca de", "por encima de",
+            "por debajo de", "apagado", "alrededor de", "pasado", "a pesar de", "hacia", "sobre", "entre", "con respecto a", "en cuanto a"
+    };
+
+    public void randomPrepositionPair() {
+        int r = (int) (Math.random() * commonEnglishPrepositions.length);
+        gene = commonEnglishPrepositions[r];
+        gens = commonSpanishPrepositions[r];
+    }
 }

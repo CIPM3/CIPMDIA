@@ -61,108 +61,60 @@ import java.util.TimerTask;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.webkit.internal.ApiFeature;
 
 public class Estructura2023 extends AppCompatActivity {
+    // Variables for UI elements
     private ActivityResultLauncher<Intent> speechRecognitionLauncher;
-    TextView counterTv;
-    Spinner spin;
-    Spinner spin2;
-    TextView txt1;
-    TextView txt2;
-    String selection;
-    String selection2;
-    LinearLayout texto_inicial,averageresponetimelayout;
-    LinearLayout spanish_lay;
-    LinearLayout input_lay;
-    LinearLayout btn_lay,btn_cont_lay;
-    LinearLayout answer_lay;
-    LinearLayout resplay;
-    LinearLayout respescu;
-    LinearLayout respescu2;
-    LinearLayout noseLayout;
-    LinearLayout respinc;
-    LinearLayout opclay;
-    LinearLayout vf;
-    TextView btncheck;
-    VideoView vv;
-    TextView sptx;
-    TextView txteng;
-    TextView txteng2;
+    TextView counterTv, txt1, txt2, btncheck, sptx, txteng, txteng2, palabraclave, verboEs, tiempopromedioderespuestatexto;
+    Spinner spin, spin2;
+    LinearLayout texto_inicial, averageresponetimelayout, starters, spanish_lay, input_lay, btn_lay, btn_cont_lay;
+    LinearLayout answer_lay, resplay, respescu, respescu2, noseLayout, respinc, opclay, vf, buttonLayout, palabraClabe, activarSpinner2;
     EditText answerinp;
-    TextToSpeech tts;
-    TextToSpeech ttr;
-    TextToSpeech tt1;
+    VideoView vv;
+    Button btndif0, btndif0Speaking, btndif1, btndif2, btndif3, btndif4, option1Btn, option2Btn, option3Btn, option4Btn, continueOptionBtn;
+    HorizontalScrollView horizontalScrollView;
+
+    // Variables for speech and text processing
+    TextToSpeech tts, ttr, tt1;
     Prefs prefs;
     String algosele = "";
     ArrayAdapter<String> adapter;
-    Button btndif0;
-    Button btndif0Speaking;
-    Button btndif1;
-    Button btndif2;
-    Button btndif3;
-    Button btndif4;
-    TextView palabraclave,verboEs,tiempopromedioderespuestatexto;
-    String[] temp,isFromCustom100Db;
-    boolean personalizedPlan,iscustom100;
-    boolean isInVocab,isInStructure,isInSpanishInt,isInCulture,isInPrager,
-            isInTransition,isinIntcon,isPlanIntermedio,isFromListeningPlan,isFromListeningPlanDb;
-    String[] ArrayWithElementRemoved;
-    int PositionOfElementsLeft=0;
+
+    // Firebase variables
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     FirebaseAuth mAuth;
     String userid;
-    DocumentReference docref;
-    VocabModeloPersistencia vmp= new VocabModeloPersistencia();
-    ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
-    boolean isPlanIntermedioStandard,isPlanBasicRecommended,
-            isCustomPlan,isListeningPlan,isAdvancedPlan,isplanintermedioFromDb;
-    int r;
-    public static final int REC_CODE_SPEECH_INPUT = 100;
-    DocumentReference docrefStructures;
-    VideoPlayer video_player = new VideoPlayer();
-    AnimationDrawable flashingAnimation;
-    int condicionparapasar;
-    double scoredeestructuras;
-    int totalstructurecount;
-
-    Timer timer;
-    TimerTask timerTask;
-    Double timen = 0.0;
-    double prom;
-
-    int counter;
-    int roundedMilliseconds;
-    double total;
-    double one;
-    double two;
-    double three;
-    double four ;
-    double five;
-    boolean isFromLessonPlan;
+    DocumentReference docref, docrefStructures, scoresStructureDBDocRef;
     CollectionReference uid;
     Map<String, Object> userdb = new HashMap<>();
-    DocumentReference scoresStructureDBDocRef;
+
+    // Variables for plans and states
+    boolean personalizedPlan, iscustom100;
+    boolean isInVocab, isInStructure, isInSpanishInt, isInCulture, isInPrager;
+    boolean isInTransition, isinIntcon, isPlanIntermedio, isFromListeningPlan, isFromListeningPlanDb;
+    boolean isPlanIntermedioStandard, isPlanBasicRecommended, isCustomPlan, isListeningPlan, isAdvancedPlan, isplanintermedioFromDb;
+    boolean isPlanIntermedioFromDb, isCustom, isNonBasics, isBasics, isBasicsArray, isNonBasicsArray, isFromLessonPlan;
+    boolean quierePracticarSpeaking, stillOptions;
+
+    // Other variables
+    int PositionOfElementsLeft = 0, r, REC_CODE_SPEECH_INPUT = 100, condicionparapasar, totalstructurecount;
+    int counter, roundedMilliseconds, dialogueCounter, correctDc, noseCounter;
+    double scoredeestructuras, timen = 0.0, prom, total, one, two, three, four, five, division, result, avrScore;
+    String selection, selection2, engAnswer2, engAnswer3, engAnswer4, engAnswer5, correctAnswer = "";
+    String[] temp, isFromCustom100Db, placeHolder = new String[]{"Default value"};
     Intent reciver;
-    String engAnswer2,engAnswer3,engAnswer4,engAnswer5;
-    LinearLayout buttonLayout,palabraClabe,activarSpinner2;
-
-    Button option1Btn,option2Btn,option3Btn,option4Btn,continueOptionBtn;
-    HorizontalScrollView horizontalScrollView;
-    NewVerbClass object= new NewVerbClass();
-    NewNounClass nouns= new NewNounClass();
-    boolean isCustom;
-    boolean isNonBasics;
-    boolean isBasics;
-    boolean isBasicsArray;
-    boolean isNonBasicsArray;
-    double division;
-    double result;
+    VocabModeloPersistencia vmp = new VocabModeloPersistencia();
+    ArraysdeLosPlanesPersonalizados arrayGetter = new ArraysdeLosPlanesPersonalizados();
     AuxModalNegator negator = new AuxModalNegator();
-    String correctAnswer= "";
-
-    private RewardedAd mRewardedAd;
-    String[] placeHolder = new String[]{"Default value"};
-
+    NewVerbClass object = new NewVerbClass();
+    NewNounClass nouns = new NewNounClass();
+    Timer timer;
+    TimerTask timerTask;
+    RewardedAd mRewardedAd;
+    VideoPlayer video_player = new VideoPlayer();
+    AnimationDrawable flashingAnimation;
+    String[] ArrayWithElementRemoved;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,6 +129,7 @@ public class Estructura2023 extends AppCompatActivity {
             engAnswer5="no answer";
             btndif0=findViewById(R.id.dif0);
             btndif0Speaking=findViewById(R.id.dif1Speaking);
+            btndif0.setVisibility(View.GONE);
             option1Btn= findViewById(R.id.answer_button_1);
 
             option2Btn= findViewById(R.id.answer_button_2);
@@ -185,6 +138,7 @@ public class Estructura2023 extends AppCompatActivity {
             option4Btn= findViewById(R.id.answer_button_4);
             noseLayout=findViewById(R.id.noseLayout);
             noseLayout.setVisibility(View.GONE);
+            starters= findViewById(R.id.starterBtns);
 
         spin = (Spinner) findViewById(R.id.spinuno);
         txt1 = (TextView) findViewById(R.id.textspin1);
@@ -256,8 +210,7 @@ public class Estructura2023 extends AppCompatActivity {
         five=0;
 
 
-       reciver = getIntent();
-
+        reciver = getIntent();
         isNonBasics =reciver.getBooleanExtra("isNonBasics",false);
         isBasics=reciver.getBooleanExtra("basicSctructures",false);
         isPlanIntermedio= reciver.getBooleanExtra("isPlanIntermedioStandard",false);
@@ -267,7 +220,8 @@ public class Estructura2023 extends AppCompatActivity {
         isCustom = reciver.getBooleanExtra("isCustom",false);
         isplanintermedioFromDb=reciver.getBooleanExtra("isFromIntermedioStandarPlan",false);
         iscustom100= reciver.getBooleanExtra("Custom100Plan",false);
-
+        stillOptions=reciver.getBooleanExtra("isStillOptions",false);
+        isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
         if(isNonBasics){
             temp= arrayGetter.nonBasicStructures;
         }else if(isBasics) {
@@ -292,11 +246,11 @@ public class Estructura2023 extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("tema", selection);
         video_player.setArguments(args);
+        prefs.setHasSeenAd(true);
 
 
-
-            flashingAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_flash_animation);
-            btndif0.setBackground(flashingAnimation);
+            /*flashingAnimation = (AnimationDrawable) getResources().getDrawable(R.drawable.button_flash_animation);
+            btndif0.setBackground(flashingAnimation);*/
 
 
 
@@ -307,7 +261,6 @@ public class Estructura2023 extends AppCompatActivity {
 
 
     }
-
     //DB FUNC
     public void PremiumControler(){
 
@@ -529,19 +482,12 @@ public class Estructura2023 extends AppCompatActivity {
             sendInfotoDb();
         }
     }
-
-    //EMPIEZA ESTRUCTURA
-
-    //EVALUA SI EL USUARIO ES PREMIUM O NO
     public void checkPremiun(){
         prefs.setHasSeenAd(true);
-        reciver= getIntent();
-        isFromLessonPlan=reciver.getBooleanExtra("typeFromLessonPlan",false);
-
         //USUARIO PREMIUM
         if(prefs.getPremium()==1){
             if(isFromLessonPlan){
-                reciver= getIntent();
+
                 temp= reciver.getStringArrayExtra("class");
                 btndif1.setVisibility(View.GONE);
                 btndif4.setVisibility(View.GONE);
@@ -581,7 +527,7 @@ public class Estructura2023 extends AppCompatActivity {
                 btndif1.setVisibility(View.GONE);
                 btndif4.setVisibility(View.GONE);
                 btndif3.setVisibility(View.GONE);
-               btndif2.setVisibility(View.GONE);
+                btndif2.setVisibility(View.GONE);
                 ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.structures, android.R.layout.simple_spinner_item);
                 adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
                 spin.setAdapter(adapter);
@@ -619,7 +565,6 @@ public class Estructura2023 extends AppCompatActivity {
         } else if (prefs.getPremium()==0){
             if(isFromLessonPlan){
                 prefs.setHasSeenAd(true);
-                reciver= getIntent();
                 temp= reciver.getStringArrayExtra("class");
                 btndif1.setVisibility(View.GONE);
                 btndif4.setVisibility(View.GONE);
@@ -699,7 +644,6 @@ public class Estructura2023 extends AppCompatActivity {
             //USUARIO BASICO
         }
     }
-    //EVALUA QUE FUE SELECCIONADO
     public void spinnerSelected1(){
 
 
@@ -709,67 +653,110 @@ public class Estructura2023 extends AppCompatActivity {
             video_player.updateFragmentStateStructure(selection);
         }
         if(!selection.equals("Tutorial")){
-            flashingAnimation.start();
-            btndif0.setText("Opcion Multiple");
+            //flashingAnimation.start();
+           // btndif0.setText("Opcion Multiple");
         }
 
 
     }
-
-    //TOMA TODO EL ESPACIO PARA EL SPINNER 1
     public void activaSpinner1(View v){
         Spinner mySpinner = findViewById(R.id.spinuno);
         mySpinner.performClick();
     }
-
-    //TOMA TODO EL ESPACIO PARA EL SPINNER 2
     public void activaSpinner2(View v){
         Spinner mySpinner = findViewById(R.id.spinrango);
         mySpinner.performClick();
     }
 
     //BTNS DE ACTIVACION
-
     public void dificulty1Activation(View vista){
-        buttonLayout.setVisibility(View.GONE);
-        btndif0Speaking.setVisibility(View.GONE);
-        noseLayout.setVisibility(View.VISIBLE);
-        btndif0.setVisibility(View.GONE);
-        btndif3.setVisibility(View.GONE);
-        btndif4.setVisibility(View.GONE);
-        btndif2.setVisibility(View.GONE);
-        reverseMultipleChoiceViewSetUp();
-        limpans();
-        btn_lay.setVisibility(View.GONE);
-        algosele = "dif1";
-        r = 0;
-        practice();
+
+
+        if(stillOptions){
+
+            dialogueCounter=5;
+            correctDc=reciver.getIntExtra("counter",0);
+            algosele = "dif1";
+            r = 0;
+            btndif0Speaking.setVisibility(View.GONE);
+            practice();
+            multipleChoiceViewSetUp();
+        }else{
+            buttonLayout.setVisibility(View.GONE);
+            btndif0Speaking.setVisibility(View.GONE);
+            noseLayout.setVisibility(View.VISIBLE);
+            starters.setVisibility(View.GONE);
+            reverseMultipleChoiceViewSetUp();
+            limpans();
+            btn_lay.setVisibility(View.GONE);
+            algosele = "dif1";
+            r = 0;
+            practice();
+        }
+
+
+
     }
     public void dificulty1Activation(){
 
-        limpans();
-        algosele = "dif1";
-        r = 0;
-        practice();
+
+            if(quierePracticarSpeaking){
+                prefs.setHasSeenAd(true);
+                quierePracticarSpeaking=false;
+                stillOptions=false;
+            }
+            buttonLayout.setVisibility(View.GONE);
+            btndif0Speaking.setVisibility(View.GONE);
+            noseLayout.setVisibility(View.VISIBLE);
+            starters.setVisibility(View.GONE);
+            reverseMultipleChoiceViewSetUp();
+            limpans();
+            btn_lay.setVisibility(View.GONE);
+            algosele = "dif1";
+            r = 0;
+            practice();
+
     }
     public void dificulty2Activation(View vista){
-        limpans();
-        algosele = "dif2";
-        r = 1;
-        practice();      
+
+            limpans();
+            noseLayout.setVisibility(View.VISIBLE);
+            algosele = "dif2";
+            r = 1;
+            practice();
+
+
     }
     public void dificulty3Activation(View vista){
-        limpans();
-        algosele = "dif3";
-        r = 2;
-        practice();
+
+        if(prefs.getPremium()==0){
+
+            dialogueContainer3("Esta dificultad esta solo disponible para usuarios premium","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+        }else {
+            limpans();
+            noseLayout.setVisibility(View.VISIBLE);
+            algosele = "dif3";
+            r = 2;
+            practice();
+        }
+
     }
     public void dificulty4Activation(View vista){
-        limpans();
-        algosele = "dif4";
-        r = 3;
-        practice();
+        if(prefs.getPremium()==0){
+
+            dialogueContainer3("ver anuncio para desbloquear ","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+        }else {
+            limpans();
+            noseLayout.setVisibility(View.VISIBLE);
+            algosele = "dif4";
+            r = 3;
+            practice();
+        }
+
     }
+
 
     //ACTIVA LA PRACTICA
     public void practice(){
@@ -797,129 +784,8 @@ public class Estructura2023 extends AppCompatActivity {
 
     }
 
-    private void hintPalabraclave(Generator gen1) {
-        String verbo = extraerVerbo(gen1.gene);
-        palabraclave.setVisibility(View.VISIBLE);
-        verboEs.setVisibility(View.VISIBLE);
-        palabraclave.setText(verbo);
-        palabraclave.setTextColor(Color.BLUE);
-        SpannableString content = new SpannableString(verbo);
-        content.setSpan(new UnderlineSpan(), 0, verbo.length(), 0);
-        palabraclave.setText(content);
-        palabraclave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        if (i == TextToSpeech.SUCCESS) {
 
-                            ttr.setLanguage(Locale.ENGLISH);
-                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-
-
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
-
-
-
-                        }
-                    }
-                });
-
-            }
-        });
-    }
-    private String extraerVerbo(String oraciónCompleta) {
-        oraciónCompleta = oraciónCompleta.trim();
-        String[] palabras = oraciónCompleta.split(" ");
-        // Check if there are any words in the sentence
-        if (palabras.length > 0) {
-            // Return the last word
-            return palabras[palabras.length - 1];
-        } else {
-            // If the sentence is empty, return an empty string or handle the case as needed
-            return "";
-        }
-
-    }
-
-    private String[] extraerUltimasDosPalabras(String oraciónCompleta) {
-        oraciónCompleta = oraciónCompleta.trim();
-        String[] palabras = oraciónCompleta.split(" ");
-        int length = palabras.length;
-
-        if (length >= 2) {
-            // If there are at least two words, return the last two words as an array
-            return new String[]{palabras[length - 2], palabras[length - 1]};
-        } else if (length == 1) {
-            // If there's only one word, return it along with an empty string
-            return new String[]{palabras[0], ""};
-        } else {
-            // If the sentence is empty or contains no words, return two empty strings
-            return new String[]{"", ""};
-        }
-    }
-    private void hintPalabraclave2(Generator gen1) {
-        String[] verbo = extraerUltimasDosPalabras(gen1.gene);
-        palabraclave.setVisibility(View.VISIBLE);
-        verboEs.setVisibility(View.VISIBLE);
-
-        // Create a SpannableString with the underlined text
-        SpannableString content = new SpannableString(verbo[0] + " " + verbo[1]);
-        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
-
-        // Set the SpannableString to the TextView
-        palabraclave.setText(content);
-        palabraclave.setTextColor(Color.BLUE);
-
-        // Set an OnClickListener on the TextView
-        palabraclave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-                    @Override
-                    public void onInit(int i) {
-                        if (i == TextToSpeech.SUCCESS) {
-                            ttr.setLanguage(Locale.ENGLISH);
-                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
-                                @Override
-                                public void onStart(String s) {
-                                }
-
-                                @Override
-                                public void onDone(String utteranceId) {
-                                }
-
-                                @Override
-                                public void onError(String s) {
-                                }
-                            });
-
-                            // Speak the text when clicked
-                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
-                        }
-                    }
-                });
-
-            }
-        });
-    }
     private void initializeTextToSpeech(Generator gen1, String methodName,String wrongAnswer1,String wrongAnswer2,String wrongAnswer3) {
-
-
         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
@@ -1063,9 +929,6 @@ public class Estructura2023 extends AppCompatActivity {
             }
         });
     }
-
-
-
     private void initializeTextToSpeechNewMethods(String spString,String engString,String engString2,String engString3,String engString4,String engString5){
         tt1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -1103,7 +966,6 @@ public class Estructura2023 extends AppCompatActivity {
             }
         });
     }
-
     public void newMethods(String currentStructure){
     Generator gen1 = new Generator();
     AuxModalNegator negator = new AuxModalNegator();
@@ -2957,7 +2819,7 @@ public class Estructura2023 extends AppCompatActivity {
         limpans();
         checarischeck();
         mostrar_layout();
-        btndif1.setText("Otra oración");
+       // btndif1.setText("Otra oración");
         Generator gen1 = new Generator();
         cerotofifty gen = new cerotofifty();
         String methName="";
@@ -6877,7 +6739,6 @@ public class Estructura2023 extends AppCompatActivity {
                 switch (selection2) {
 
                     case "0 a 100":
-
                             newMethods(selection);
 
 
@@ -24925,7 +24786,6 @@ public class Estructura2023 extends AppCompatActivity {
         }
     }
 
-    //CHECAR QUE BTN FUE SELECCIONADO
     public void checarischeck(){
         if(!selection.equals("Tutorial")){
             if(algosele == "dif1"){
@@ -24978,22 +24838,8 @@ public class Estructura2023 extends AppCompatActivity {
             }
         }
     }
-    //MUESTRA LOS LAY DE STRUCTURA
-    public void mostrar_layout(){
-        if(!selection.equals("Tutorial")){
-            texto_inicial.setVisibility(View.GONE);
-            spanish_lay.setVisibility(View.VISIBLE);
-
-            input_lay.setVisibility(View.VISIBLE);
-
-            btn_cont_lay.setVisibility(View.GONE);
-
-        }
-    }
-
-    //VALIDACIONES DE TEXTO Y AUDIO
     public void checkanswer(View vista) {
-        flashingAnimation.start();
+        //flashingAnimation.start();
         btndif2.setVisibility(View.VISIBLE);
         if(prefs.getPremium()==1){
             btndif3.setVisibility(View.VISIBLE);
@@ -25105,13 +24951,11 @@ public class Estructura2023 extends AppCompatActivity {
              }
              counter++;
              sum = one+two+three+four+five;
-            if(counter == 3){
+            if(counter == 10){
 
                  turnTrue(selection,sum);
                  counter=0;
                  if(prefs.getPremium()==0){
-
-
                      showDialogueWithAd();
                  }else if(prefs.getPremium()==1&&isFromLessonPlan){
                      classSelector(selection);
@@ -25205,14 +25049,277 @@ public class Estructura2023 extends AppCompatActivity {
 
         }
     }
+    public void checkanswer() {
+        //flashingAnimation.start();
+        btndif2.setVisibility(View.VISIBLE);
+        btndif3.setVisibility(View.VISIBLE);
+        btndif4.setVisibility(View.VISIBLE);
+        btndif3.setText("mas difícil todavía");
+        btndif4.setText("la mas difícil");
+        btndif1.setText("oración facil");
+        btndif2.setText(" mas difícil");
+        String t = txteng.getText().toString().trim().toLowerCase();
+        String te2 = txteng2.getText().toString().trim().toLowerCase(); // esta la usariamos para la segunda opcion
+        String t2 = answerinp.getText().toString().trim().toLowerCase();
+        if(t2==null){
+            t2=correctAnswer;
+        }
 
-    private void showDialogueWithAd() {
-        if(prefs.getPremium()==0){
-          //  dialogueContainer("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
-            dialogueContainer2("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
+        //RESPUESTA CORRECTA
+        if (isAnswerCorrect(t2, t, engAnswer2, engAnswer3, engAnswer4, engAnswer5))
+        {
+            //ICONOS
+            Drawable correctIcon = getResources().getDrawable(R.drawable.ic_controlar);
+            //SE COLOCA RESPUESTA EN VERDE POR QUE SE CORRECTA
+            answerinp.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            opclay.setBackgroundColor(Color.parseColor("#E6FBEB"));
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(correctIcon);
+            //ESCONDER BOTON CHEQUEA TU RESPUESTA
+            btn_lay.setVisibility(View.GONE);
+
+            prom = roundedMilliseconds ;
+            averageresponetimelayout.setVisibility(View.VISIBLE);
+            double secondsWithDecimal = prom / 1000; // Divide by 100 to get seconds with two decimal places
+            tiempopromedioderespuestatexto.setText(String.format(String.valueOf(secondsWithDecimal))+" Segundos");
+            timen = 0.0;
+
+            if (timerTask != null) {
+                timerTask.cancel();
+            }
+            timerTask = null;
+            //LAYOUT DE RESPUESTA
+            answer_lay.setVisibility(View.GONE);
+            btncheck.setText("Chequea tu respuesta");
+            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if (i == TextToSpeech.SUCCESS) {
+                        ttr.setLanguage(Locale.ENGLISH);
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                            }
+                        });
+                        ttr.speak("answer is correct", TextToSpeech.QUEUE_ADD, null, "one");
+                        condicionparapasar++;
+                        if(personalizedPlan ){
+                            if(condicionparapasar>12){
+                                SubtractSelectionAndSendinfoToDb();
+                                condicionparapasar=0;
+
+
+
+                            }else {
+                            }
+
+                        }
+
+                    }
+                }
+            });
+
+
+
+
+            double sum;
+            switch (counter){
+                 case 0:
+                     one=secondsWithDecimal;
+                     break;
+
+                 case 1:
+                     two=secondsWithDecimal;
+
+                     break;
+
+                 case 2:
+                     three=secondsWithDecimal;
+
+                     break;
+
+                 case 3:
+                     four=secondsWithDecimal;
+
+                     break;
+                 case 4:
+                     five=secondsWithDecimal;
+
+                     break;
+
+             }
+             counter++;
+             sum = one+two+three+four+five;
+            if(counter == 10){
+
+                 turnTrue(selection,sum);
+                 counter=0;
+                 if(prefs.getPremium()==0){
+                   showDialogueWithAd();
+
+                 }else if(prefs.getPremium()==1&&isFromLessonPlan){
+                     classSelector(selection);
+                     if(placeHolder[0].equals("Por Sujeto")){
+                         Intent intent = new Intent(this, SpaInt2023.class);
+                         intent.putExtra("typeFromLessonPlan",true);
+                         intent.putExtra("class",placeHolder);
+                         startActivity(intent);
+                     }else {
+                         Intent intent = new Intent(this, Estructura2023.class);
+                         intent.putExtra("typeFromLessonPlan",true);
+                         intent.putExtra("class",placeHolder);
+                         startActivity(intent);
+
+                     }
+                 }
+
+
+             }
+
+        } else {
+            //ICONOS
+            Drawable incorrectIcon = getResources().getDrawable(R.drawable.ic_cruzar);
+
+            //SE COLOCA LA RESPUESTA EN ROJO POR QUE ES INCORRECTA
+            answerinp.setBackgroundColor(Color.parseColor("#FEE6E6"));
+            opclay.setBackgroundColor(Color.parseColor("#FEE6E6"));
+
+            //LAYOUT QUE MUESTRA ICONOS
+            resplay.setVisibility(View.VISIBLE);
+            resplay.setBackground(incorrectIcon);
+
+            //LAYOUT DE RESPUESTA
+            answer_lay.setVisibility(View.VISIBLE);
+
+            btncheck.setText("Checa Tu Respuesta ");
+            //if you say stop it returns part of the flow control system
+            ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                @Override
+                public void onInit(int i) {
+                    if (i == TextToSpeech.SUCCESS) {
+                        txteng.setTextColor(Color.BLACK);
+                        if (r == 0) {
+
+                        }
+                        if (r == 1) {
+
+                        }
+                        if (r == 2) {
+                        }
+                        ttr.setLanguage(Locale.ENGLISH);
+                        ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                            @Override
+                            public void onStart(String s) {
+
+                            }
+
+                            @Override
+                            public void onDone(String utteranceId) {
+
+
+                            }
+
+                            @Override
+                            public void onError(String s) {
+                            }
+                        });
+
+
+                        ttr.speak("answer is incorrect   the answer is  " + txteng.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+                        txteng.setTextColor(Color.BLUE);
+                        txteng.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                String textFromTxteng = txteng.getText().toString();
+                                answerinp.setText(textFromTxteng);
+                            }
+                        });
+                        //trying to enable them when ttr is speaking if clickable return so they can try again and hear answer, not done
+                        //with this yet
+                        if(personalizedPlan){
+                            //reset counter?
+                            condicionparapasar=0;
+                        }
+
+
+
+                    }
+                }
+            });
 
         }
     }
+
+    private void checkAnswer(Button button, String selectedAnswer, String correctAnswer) {
+        dialogueCounter++;
+        if(!prefs.getHasSeenAd()){
+            dialogueContainer2("Te gusta ver anuncios? o prefieres pagar 59.99mx al mes por la versión premium","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+        }else {
+
+            if(dialogueCounter == 5 && prefs.getPremium()==0){
+                dialogueContainer2("Ver anuncio para continuar","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+            }else if(dialogueCounter>5){
+
+                if (dialogueCounter == 10 ) {
+                    avrScore = (double) correctDc / dialogueCounter;
+
+                    if (avrScore >= 0.6) {
+                        // User got at least 60% correct answers
+                        showDialogChangeDif(button, "¿Quieres practicar tu speaking?", "Practicar Speaking", "Quedarme aqui");
+
+
+
+                    } else {
+                        // User didn't get at least 60% correct answers
+                        showDialog(button, "You didn't pass. Try again.", "Retry", correctAnswer, false, dialogueCounter);
+                        dialogueCounter=0;
+                        correctDc=0;
+                    }
+
+
+
+                }
+            }
+
+            if(dialogueCounter == 5 && prefs.getPremium()==0){
+                //no code
+            }else if(dialogueCounter == 10 ) {
+            }else {
+                showContinueDialogue(button, selectedAnswer, correctAnswer);
+            }
+
+
+        }
+
+
+
+
+    }
+
+    private void showContinueDialogue(Button button, String selectedAnswer, String correctAnswer) {
+        if (selectedAnswer.equals(correctAnswer)) {
+            showDialog(button, "Correct!", "Continue", correctAnswer, true, dialogueCounter);
+            button.setBackgroundColor(Color.GREEN);
+            sayThis(correctAnswer, Locale.ENGLISH);
+            correctDc++;
+        } else {
+            showDialog(button, "Incorrect. The correct answer is: " + correctAnswer, "Continue", correctAnswer, false, dialogueCounter);
+            button.setBackgroundColor(Color.RED);
+        }
+    }
+
 
     public void speakans(View vista){
         ttr.setLanguage(Locale.ENGLISH);
@@ -25237,6 +25344,7 @@ public class Estructura2023 extends AppCompatActivity {
     }
     public void speakdecir(View vista){
         iniciarentradavoz();
+        noseLayout.setVisibility(View.GONE);
         btncheck.setVisibility(View.VISIBLE);
         answerinp.setVisibility(View.VISIBLE);
         btn_lay.setVisibility(View.VISIBLE);
@@ -25259,72 +25367,7 @@ public class Estructura2023 extends AppCompatActivity {
     //ESTRUCTURAS QUE DEBEN IR EN GENERADOR
     //RANDOM GEN
 
-    private void startTimer() {
-        timerTask = new TimerTask()
-        {
-            @Override
-            public void run()
-            {
-                runOnUiThread(new Runnable()
-                {
-                    @Override
-                    public void run()
-                    {
-                        timen++;
-                        tiempopromedioderespuestatexto.setText(getTimerTextWithMilliseconds());
 
-                    }
-                });
-            }
-
-        };
-        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
-    }
-    private String getTimerTextWithMilliseconds() {
-        double milliseconds = timen * 1000; // Convert seconds to milliseconds
-
-        roundedMilliseconds = (int) Math.round(milliseconds);
-        int seconds = ((roundedMilliseconds % 86400000) % 3600000) % 60000 / 1000; // Extract seconds
-        int minutes = ((roundedMilliseconds % 86400000) % 3600000) / 60000; // Extract minutes
-        int hours = (roundedMilliseconds % 86400000) / 3600000; // Extract hours
-        int millisecondsValue = roundedMilliseconds % 1000; // Extract milliseconds
-
-        return formatTimeWithMilliseconds(seconds, minutes, hours, millisecondsValue);
-    }
-    private String formatTimeWithMilliseconds(int seconds, int minutes, int hours, int milliseconds) {
-        return String.format("%02d : %02d : %02d : %03d", hours, minutes, seconds, milliseconds);
-    }
-    private void iniciarentradavoz() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
-        speechRecognitionLauncher.launch(intent);
-        try {
-        } catch (ActivityNotFoundException e) {
-        }
-
-    }
-    private void escribirEnelInputTextResultadodeUtterance() {
-        speechRecognitionLauncher = registerForActivityResult(
-                new ActivityResultContracts.StartActivityForResult(),
-                result -> {
-                    if (result.getResultCode() == RESULT_OK) {
-                        // Handle the result here
-                        Intent data = result.getData();
-                        if (data != null) {
-                            ArrayList<String> resultArray = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                            if (resultArray != null && !resultArray.isEmpty()) {
-                                // Get the recognized text (the first item in the list)
-                                String recognizedText = resultArray.get(0);
-
-
-                                // Set the recognized text to the EditText
-                                answerinp.setText(recognizedText);
-                            }
-                        }
-                    }
-                }
-        );
-    }
     ModeloEstructura mso;
     public void turnTrue(String CurrentStructure,double sum){
         scoresStructureDBDocRef = db.collection(userid).document("Scores Structures");
@@ -25663,8 +25706,10 @@ public class Estructura2023 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 prefs.setHasSeenAd(true);
+                if(algoMasFacil){
+                    showRewardedAd2();
+                }else{showRewardedAd();}
 
-                showRewardedAd();
 
 
             }
@@ -25764,6 +25809,258 @@ public class Estructura2023 extends AppCompatActivity {
         dialog.show();
 
     }
+    public void dialogueContainer3(String text, String buttonyes, String buttonno, Context contexto){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+
+        AlertDialog dialog = builder.create();
+
+// Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonyes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                showRewardedAd2();
+
+
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.GRAY); // Set the background color
+        button2.setText(buttonno);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                prefs.setHasSeenAd(true);
+                Intent intento = new Intent(contexto,Premium2023.class  );
+                startActivity(intento);
+
+            }
+        });
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+
+            }
+        });
+
+        dialog.show();
+
+    }
+    private void showDialogueWithAd() {
+        if(prefs.getPremium()==0){
+            //  dialogueContainer("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
+            dialogueContainer("Ver Anuncio para continuar","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+        }
+    }
+    private void showDialogueWithAd2() {
+        if(prefs.getPremium()==0){
+            //  dialogueContainer("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
+            dialogueContainer2("Para desbloquear puedes:","ver anuncio","CIPM PREMIUM",getApplicationContext());
+
+        }
+    }
+
+    boolean algoMasFacil;
+    public void dialogueMasFacil(String text, String buttonYes, String buttonNo) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = getLayoutInflater();
+
+        View dialogView = inflater.inflate(R.layout.dialogebox, null); // Replace with your layout file name
+        builder.setView(dialogView);
+
+        TextView textView = dialogView.findViewById(R.id.textodialogo);
+        textView.setText(Html.fromHtml(text));
+        textView.setTextSize(18); // Set the text size to 18sp
+        textView.setTypeface(null, Typeface.BOLD);
+        textView.setText(text);
+        builder.setCancelable(false);
+        AlertDialog dialog = builder.create();
+
+        // Set up the button click listener if needed
+        Button button = dialogView.findViewById(R.id.buttondialogo1);
+        button.setText(buttonYes);
+        GradientDrawable drawable = new GradientDrawable();
+        drawable.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable.setColor(Color.BLUE); // Set the background color
+        button.setBackground(drawable);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Ensure this runs on the UI thread
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        algoMasFacil=true;
+                        algosele = "dif1";
+                        r = 0;
+                        practice();
+                        multipleChoiceViewSetUp();
+                        dialog.dismiss();
+
+
+
+
+
+                    }
+                });
+            }
+        });
+
+        Button button2 = dialogView.findViewById(R.id.botondialogo2);
+        GradientDrawable drawable2 = new GradientDrawable();
+        drawable2.setShape(GradientDrawable.RECTANGLE); // Set the shape to rectangle
+        drawable2.setCornerRadii(new float[]{16, 16, 16, 16, 16, 16, 16, 16}); // Set corner radii (adjust the values as needed)
+        drawable2.setColor(Color.YELLOW); // Set the background color
+        button2.setText(buttonNo);
+        button2.setTextColor(Color.BLACK);
+        button2.setBackground(drawable2);
+
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Ensure this runs on the UI thread
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        dialog.dismiss();
+                    }
+                });
+            }
+        });
+
+        dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            @Override
+            public void onCancel(DialogInterface dialogInterface) {
+                // Code to execute when the dialog is cancelled (e.g., user clicks outside the dialog)
+                prefs.setHasSeenAd(false);
+            }
+        });
+
+        dialog.show();
+    }
+
+    // este es el de continue
+    private void showDialog(Button btn, String message, String buttonText, String correctAnswer, boolean isCorrect,int counterT) {
+        //este es el de continue
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.continuedialoguebox, null);
+
+        builder.setView(dialogView);
+        TextView counter = dialogView.findViewById(R.id.counterTv);
+        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
+        dialogMessage.setText(message);
+        counter.setText(counterT+"/10");
+
+        Button dialogButton = dialogView.findViewById(R.id.button);
+        dialogButton.setText(buttonText);
+
+        AlertDialog alertDialog = builder.create();
+
+        // Make the dialog non-cancelable by clicking outside or pressing the back button
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+
+
+        dialogButton.setOnClickListener(v -> {
+            algosele = "dif1";
+            r = 0;
+            practice();
+            multipleChoiceViewSetUp();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+            alertDialog.dismiss();
+        });
+
+        // Set a listener to handle the case when the dialog is dismissed
+        alertDialog.setOnDismissListener(dialog -> {
+            //dificulty1Activation();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+        });
+
+        alertDialog.show();
+    }
+    private void showDialogChangeDif(Button btn, String message, String buttonText1, String buttonText2) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        View dialogView = inflater.inflate(R.layout.nextdificultydialoguebox, null);
+
+        builder.setView(dialogView);
+        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
+        dialogMessage.setText(message);
+
+        Button dialogButton1 = dialogView.findViewById(R.id.button1);
+
+        Button dialogButton2 = dialogView.findViewById(R.id.button2);
+
+        dialogButton1.setText(buttonText1);
+        dialogButton2.setText(buttonText2);
+
+        AlertDialog alertDialog = builder.create();
+
+        // Make the dialog non-cancelable by clicking outside or pressing the back button
+        alertDialog.setCancelable(false);
+        alertDialog.setCanceledOnTouchOutside(false);
+
+        dialogButton1.setOnClickListener(v -> {
+
+            quierePracticarSpeaking=true;
+            algoMasFacil=false;
+            dialogueCounter=0;
+            correctDc=0;
+            alertDialog.dismiss();
+            dificulty1Activation();
+            btn.setBackgroundResource(R.drawable.borde_azul);
+
+        });
+
+        dialogButton2.setOnClickListener(v -> {
+            dialogueCounter=0;
+            correctDc=0;
+            algoMasFacil=true;
+            algosele = "dif1";
+            r = 0;
+            practice();
+            multipleChoiceViewSetUp();
+            alertDialog.dismiss();
+        });
+
+        // Set a listener to handle the case when the dialog is dismissed
+        alertDialog.setOnDismissListener(dialog -> {
+            btn.setBackgroundResource(R.drawable.borde_azul);
+        });
+
+        alertDialog.show();
+    }
+
 
     //ca-app-pub-3940256099942544/5224354917 test ad
     //ca-app-pub-9126282069959189/7451229891 real ad
@@ -25812,7 +26109,6 @@ public class Estructura2023 extends AppCompatActivity {
     }
     // Call this method when the button is clicked.
     public void showRewardedAd() {
-
         if (mRewardedAd != null) {
             mRewardedAd.show(this, rewardItem -> {
                 if(isFromLessonPlan){
@@ -25851,14 +26147,15 @@ public class Estructura2023 extends AppCompatActivity {
             startActivity(intento);
         }
     }
-
-
     public void showRewardedAd2() {
+
         if (mRewardedAd != null) {
             mRewardedAd.show(this, rewardItem -> {
+                placeHolder=new String []{selection};
                 Intent intent = new Intent(this, Estructura2023.class);
                 intent.putExtra("isStillOptions",true);
-                intent.putExtra("class",selection);
+                intent.putExtra("typeFromLessonPlan",isFromLessonPlan);
+                intent.putExtra("class",placeHolder);
                 intent.putExtra("counter",5);
                 intent.putExtra("correctCounter",correctDc);
                 startActivity(intent);
@@ -25875,7 +26172,6 @@ public class Estructura2023 extends AppCompatActivity {
             startActivity(intento);
         }
     }
-
     private void classSelector(String selected) {
         switch (selected) {
             case "Present Simple":
@@ -26087,44 +26383,11 @@ public class Estructura2023 extends AppCompatActivity {
                 break;
         }
     }
-
-    private boolean isAnswerCorrect(String answer, String... possibleAnswers) {
-        for (String possibleAnswer : possibleAnswers) {
-            if (possibleAnswer != null && possibleAnswer.trim().equalsIgnoreCase(answer.trim())) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public void returnData() {
         Intent returnIntent = new Intent();
         returnIntent.putExtra("result_key", "Your Result");
         setResult(Activity.RESULT_OK, returnIntent);
         finish();
-    }
-
-    public void showOptions(View vista){
-        reciver= getIntent();
-        if(reciver.getBooleanExtra("isStillOptions",false)){
-            if(quierePracticarSpeaking){
-                dialogueCounter=0;
-                correctDc=0;
-            }else{
-                dialogueCounter=5;
-                correctDc=reciver.getIntExtra("correctCounter",0);
-            }
-
-        }
-        multipleChoiceViewSetUp();
-        btndif0.setText("Opcion Multiple");
-        limpans();
-        btndif0.setBackgroundResource(R.drawable.borde_azul);
-        algosele = "dif1";
-        r = 0;
-        practice();
-
-
     }
 
     private void multipleChoiceViewSetUp() {
@@ -26145,143 +26408,6 @@ public class Estructura2023 extends AppCompatActivity {
         activarSpinner2.setVisibility(View.GONE);
 
     }
-    int dialogueCounter ;
-        int correctDc = 0;
-    double avrScore;
-
-    boolean quierePracticarSpeaking ;
-    private void checkAnswer(Button button, String selectedAnswer, String correctAnswer) {
-
-        dialogueCounter++;
-        if(!prefs.getHasSeenAd()){
-            dialogueContainer2("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
-
-        }else {
-            if (selectedAnswer.equals(correctAnswer)) {
-                showDialog(button, "Correct!", "Continue", correctAnswer, true, dialogueCounter);
-                button.setBackgroundColor(Color.GREEN);
-                sayThis(correctAnswer, Locale.ENGLISH);
-                correctDc++;
-            } else {
-                showDialog(button, "Incorrect. The correct answer is: " + correctAnswer, "Continue", correctAnswer, false, dialogueCounter);
-                button.setBackgroundColor(Color.RED);
-            }
-
-            if(dialogueCounter == 5 && prefs.getPremium()==0){
-                dialogueContainer2("Ver anuncio para desbloquear","ver anuncio","CIPM PREMIUM",getApplicationContext());
-
-            }else if(dialogueCounter>5){
-                if (dialogueCounter == 10 ) {
-                    avrScore = (double) correctDc / dialogueCounter;
-
-                    if (avrScore >= 0.6) {
-                        // User got at least 60% correct answers
-                        showDialogChangeDif(button, "¿Quieres practicar tu speaking?", "Quedarme aquí", "Practicar Speaking");
-                        dialogueCounter=0;
-                        correctDc=0;
-                    } else {
-                        // User didn't get at least 60% correct answers
-                        showDialog(button, "You didn't pass. Try again.", "Retry", correctAnswer, false, dialogueCounter);
-                        dialogueCounter=0;
-                        correctDc=0;
-                    }
-
-                   
-
-                }
-            }
-        }
-
-
-
-
-    }
-
-    private void showDialog(Button btn, String message, String buttonText, String correctAnswer, boolean isCorrect,int counterT) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.continuedialoguebox, null);
-
-        builder.setView(dialogView);
-        TextView counter = dialogView.findViewById(R.id.counterTv);
-        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
-        dialogMessage.setText(message);
-        counter.setText(counterT+"/10");
-
-        Button dialogButton = dialogView.findViewById(R.id.button);
-        dialogButton.setText(buttonText);
-
-        AlertDialog alertDialog = builder.create();
-
-        // Make the dialog non-cancelable by clicking outside or pressing the back button
-        alertDialog.setCancelable(false);
-        alertDialog.setCanceledOnTouchOutside(false);
-
-
-        dialogButton.setOnClickListener(v -> {
-            alertDialog.dismiss();
-            dificulty1Activation();
-            btn.setBackgroundResource(R.drawable.borde_azul);
-        });
-
-        // Set a listener to handle the case when the dialog is dismissed
-        alertDialog.setOnDismissListener(dialog -> {
-            dificulty1Activation();
-            btn.setBackgroundResource(R.drawable.borde_azul);
-        });
-
-        alertDialog.show();
-    }
-
-    private void showDialogChangeDif(Button btn, String message, String buttonText1, String buttonText2) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.nextdificultydialoguebox, null);
-
-        builder.setView(dialogView);
-        TextView dialogMessage = dialogView.findViewById(R.id.dialog_message);
-        dialogMessage.setText(message);
-
-        Button dialogButton1 = dialogView.findViewById(R.id.button1);
-
-        Button dialogButton2 = dialogView.findViewById(R.id.button2);
-
-        dialogButton1.setText(buttonText1);
-        dialogButton2.setText(buttonText2);
-
-        AlertDialog alertDialog = builder.create();
-
-        // Make the dialog non-cancelable by clicking outside or pressing the back button
-        alertDialog.setCancelable(false);
-        alertDialog.setCanceledOnTouchOutside(false);
-
-        dialogButton1.setOnClickListener(v -> {
-
-            quierePracticarSpeaking=true;
-            correctDc = 0;
-            alertDialog.dismiss();
-            dificulty1Activation();
-            btn.setBackgroundResource(R.drawable.borde_azul);
-
-        });
-
-        dialogButton2.setOnClickListener(v -> {
-
-            quierePracticarSpeaking=true;
-            alertDialog.dismiss();
-            reverseMultipleChoiceViewSetUp();
-            dificulty1Activation();
-        });
-
-        // Set a listener to handle the case when the dialog is dismissed
-        alertDialog.setOnDismissListener(dialog -> {
-            btn.setBackgroundResource(R.drawable.borde_azul);
-        });
-
-        alertDialog.show();
-    }
-
-
 
 
     private void setTextToButtonsHandleOnClick(Generator gen1,String methodName,String wrongAnswer1,String wrongAnswer2,String wrongAnswer3) {
@@ -26432,7 +26558,6 @@ public class Estructura2023 extends AppCompatActivity {
         option3Btn.setOnClickListener(v -> checkAnswer(option3Btn,option3Btn.getText().toString(), correctAnswer));
         option4Btn.setOnClickListener(v -> checkAnswer(option4Btn,option4Btn.getText().toString(), correctAnswer));
     }
-
     private void sayThis( String thingToSay, Locale language) {
         ttr = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -26484,4 +26609,227 @@ public class Estructura2023 extends AppCompatActivity {
         activarSpinner2.setVisibility(View.VISIBLE);
     }
 
+    public void nose(View v){
+        if(noseCounter==3){
+            dialogueMasFacil("Te Gustaría algo mas fácil? ","si","no");
+            noseCounter=0;
+
+        }
+        noseLayout.setVisibility(View.GONE);
+        checkanswer();
+        noseCounter++;
+
+    }
+
+
+    // not really used right now//////////////////////////////////////////////////////////////////////
+    private void hintPalabraclave(Generator gen1) {
+        String verbo = extraerVerbo(gen1.gene);
+        palabraclave.setVisibility(View.VISIBLE);
+        verboEs.setVisibility(View.VISIBLE);
+        palabraclave.setText(verbo);
+        palabraclave.setTextColor(Color.BLUE);
+        SpannableString content = new SpannableString(verbo);
+        content.setSpan(new UnderlineSpan(), 0, verbo.length(), 0);
+        palabraclave.setText(content);
+        palabraclave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if (i == TextToSpeech.SUCCESS) {
+
+                            ttr.setLanguage(Locale.ENGLISH);
+                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+
+
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+
+
+
+                        }
+                    }
+                });
+
+            }
+        });
+    }
+    private String extraerVerbo(String oraciónCompleta) {
+        oraciónCompleta = oraciónCompleta.trim();
+        String[] palabras = oraciónCompleta.split(" ");
+        // Check if there are any words in the sentence
+        if (palabras.length > 0) {
+            // Return the last word
+            return palabras[palabras.length - 1];
+        } else {
+            // If the sentence is empty, return an empty string or handle the case as needed
+            return "";
+        }
+
+    }
+    private String[] extraerUltimasDosPalabras(String oraciónCompleta) {
+        oraciónCompleta = oraciónCompleta.trim();
+        String[] palabras = oraciónCompleta.split(" ");
+        int length = palabras.length;
+
+        if (length >= 2) {
+            // If there are at least two words, return the last two words as an array
+            return new String[]{palabras[length - 2], palabras[length - 1]};
+        } else if (length == 1) {
+            // If there's only one word, return it along with an empty string
+            return new String[]{palabras[0], ""};
+        } else {
+            // If the sentence is empty or contains no words, return two empty strings
+            return new String[]{"", ""};
+        }
+    }
+    private void hintPalabraclave2(Generator gen1) {
+        String[] verbo = extraerUltimasDosPalabras(gen1.gene);
+        palabraclave.setVisibility(View.VISIBLE);
+        verboEs.setVisibility(View.VISIBLE);
+
+        // Create a SpannableString with the underlined text
+        SpannableString content = new SpannableString(verbo[0] + " " + verbo[1]);
+        content.setSpan(new UnderlineSpan(), 0, content.length(), 0);
+
+        // Set the SpannableString to the TextView
+        palabraclave.setText(content);
+        palabraclave.setTextColor(Color.BLUE);
+
+        // Set an OnClickListener on the TextView
+        palabraclave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ttr = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+                    @Override
+                    public void onInit(int i) {
+                        if (i == TextToSpeech.SUCCESS) {
+                            ttr.setLanguage(Locale.ENGLISH);
+                            ttr.setOnUtteranceProgressListener(new UtteranceProgressListener() {
+                                @Override
+                                public void onStart(String s) {
+                                }
+
+                                @Override
+                                public void onDone(String utteranceId) {
+                                }
+
+                                @Override
+                                public void onError(String s) {
+                                }
+                            });
+
+                            // Speak the text when clicked
+                            ttr.speak(palabraclave.getText().toString().trim(), TextToSpeech.QUEUE_ADD, null, "string");
+                        }
+                    }
+                });
+
+            }
+        });
+    }
+    public void mostrar_layout(){
+        if(!selection.equals("Tutorial")){
+            texto_inicial.setVisibility(View.GONE);
+            spanish_lay.setVisibility(View.VISIBLE);
+
+            input_lay.setVisibility(View.VISIBLE);
+
+            btn_cont_lay.setVisibility(View.GONE);
+
+        }
+    }
+    private boolean isAnswerCorrect(String answer, String... possibleAnswers) {
+        for (String possibleAnswer : possibleAnswers) {
+            if (possibleAnswer != null && possibleAnswer.trim().equalsIgnoreCase(answer.trim())) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private void startTimer() {
+        timerTask = new TimerTask()
+        {
+            @Override
+            public void run()
+            {
+                runOnUiThread(new Runnable()
+                {
+                    @Override
+                    public void run()
+                    {
+                        timen++;
+                        tiempopromedioderespuestatexto.setText(getTimerTextWithMilliseconds());
+
+                    }
+                });
+            }
+
+        };
+        timer.scheduleAtFixedRate(timerTask, 0 ,1000);
+    }
+    private String getTimerTextWithMilliseconds() {
+        double milliseconds = timen * 1000; // Convert seconds to milliseconds
+
+        roundedMilliseconds = (int) Math.round(milliseconds);
+        int seconds = ((roundedMilliseconds % 86400000) % 3600000) % 60000 / 1000; // Extract seconds
+        int minutes = ((roundedMilliseconds % 86400000) % 3600000) / 60000; // Extract minutes
+        int hours = (roundedMilliseconds % 86400000) / 3600000; // Extract hours
+        int millisecondsValue = roundedMilliseconds % 1000; // Extract milliseconds
+
+        return formatTimeWithMilliseconds(seconds, minutes, hours, millisecondsValue);
+    }
+    private String formatTimeWithMilliseconds(int seconds, int minutes, int hours, int milliseconds) {
+        return String.format("%02d : %02d : %02d : %03d", hours, minutes, seconds, milliseconds);
+    }
+    private void iniciarentradavoz() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        speechRecognitionLauncher.launch(intent);
+        try {
+        } catch (ActivityNotFoundException e) {
+        }
+
+    }
+    private void escribirEnelInputTextResultadodeUtterance() {
+        speechRecognitionLauncher = registerForActivityResult(
+                new ActivityResultContracts.StartActivityForResult(),
+                result -> {
+                    if (result.getResultCode() == RESULT_OK) {
+                        // Handle the result here
+                        Intent data = result.getData();
+                        if (data != null) {
+                            ArrayList<String> resultArray = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                            if (resultArray != null && !resultArray.isEmpty()) {
+                                // Get the recognized text (the first item in the list)
+                                String recognizedText = resultArray.get(0);
+
+
+                                // Set the recognized text to the EditText
+                                answerinp.setText(recognizedText);
+                            }
+                        }
+                    }
+                }
+        );
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+
+    }
 }

@@ -327,7 +327,7 @@ public class FormularioInfo2023 extends AppCompatActivity {
 
     //VOLVER A MAIN
     public void main(View vista) {
-        Intent intento = new Intent(this, MainActivity.class);
+        Intent intento = new Intent(this, lessonPlan_RecyclerView.class);
         startActivity(intento);
     }
 }

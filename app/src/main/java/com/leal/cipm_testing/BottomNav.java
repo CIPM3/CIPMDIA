@@ -50,10 +50,10 @@ public class BottomNav extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bottom_nav, container, false);
 
         LinearLayout btn_main = view.findViewById(R.id.btn_main);
-        LinearLayout btn_chat_maestro = view.findViewById(R.id.btn_chat_maestro);
+      //  LinearLayout btn_chat_maestro = view.findViewById(R.id.btn_chat_maestro);
         LinearLayout btn_profile = view.findViewById(R.id.btn_profile);
         LinearLayout btn_test_bottom = view.findViewById(R.id.btn_test_bottom);
-        LinearLayout btn_premium_bottom = view.findViewById(R.id.btn_premium_bottom);
+      //  LinearLayout btn_premium_bottom = view.findViewById(R.id.btn_premium_bottom);
         context=getContext();
         assert context != null;
         prefs= new Prefs(context);
@@ -61,7 +61,7 @@ public class BottomNav extends Fragment {
         bgMain.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
 
         bgTest = view.findViewById(R.id.bgTest);
-        bgChat = view.findViewById(R.id.bgChat);
+     //   bgChat = view.findViewById(R.id.bgChat);
         bgProfile = view.findViewById(R.id.bgProfile);
         bgPremium = view.findViewById(R.id.bgPremium);
 
@@ -69,19 +69,19 @@ public class BottomNav extends Fragment {
         mAuth= FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
 
-        LinearLayout toefllay= view.findViewById(R.id.toefllayout);
+     /*   LinearLayout toefllay= view.findViewById(R.id.toefllayout);
         bgToefl=view.findViewById(R.id.bgtoefllay);
         bgToefl.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-
-        LinearLayout planLay = view.findViewById(R.id.planLayout);
+*/
+      /*  LinearLayout planLay = view.findViewById(R.id.planLayout);
         bgPlan = view.findViewById(R.id.bgMyPlan);
         bgPlan.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#000000")));
-
-        toefllay.setOnClickListener(v -> {
+*/
+       /* toefllay.setOnClickListener(v -> {
 
             if (user != null) {
                 if (user.isAnonymous()) {
-                   /* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                   *//* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
 //set icon
                             .setIcon(android.R.drawable.ic_dialog_alert)
 //set title
@@ -105,7 +105,7 @@ public class BottomNav extends Fragment {
 
                                 }
                             })
-                            .show();*/
+                            .show();*//*
                     dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
 
 
@@ -118,7 +118,7 @@ public class BottomNav extends Fragment {
 
                 }
             }
-        });
+        });*/
 
 
         ActualizarDondeEstoy();
@@ -167,11 +167,11 @@ public class BottomNav extends Fragment {
 
         });
 
-        btn_chat_maestro.setOnClickListener(v -> {
+      /*  btn_chat_maestro.setOnClickListener(v -> {
 
             if (user != null) {
                 if (user.isAnonymous()) {
-                   /* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                   *//* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
 //set icon
                             .setIcon(android.R.drawable.ic_dialog_alert)
 //set title
@@ -195,7 +195,7 @@ public class BottomNav extends Fragment {
 
                                 }
                             })
-                            .show();*/
+                            .show();*//*
                     dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
 
                 } else {
@@ -205,7 +205,7 @@ public class BottomNav extends Fragment {
                 }
             }
 
-        });
+        });*/
         btn_main.setOnClickListener(v -> {
 
             if (user != null) {
@@ -332,11 +332,11 @@ public class BottomNav extends Fragment {
                 }
             }
         });
-        planLay.setOnClickListener(v -> {
+       /* planLay.setOnClickListener(v -> {
 
             if (user != null) {
                 if (user.isAnonymous()) {
-                   /* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
+                   *//* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
 //set icon
                             .setIcon(android.R.drawable.ic_dialog_alert)
 //set title
@@ -360,7 +360,7 @@ public class BottomNav extends Fragment {
 
                                 }
                             })
-                            .show();*/
+                            .show();*//*
                     dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
 
 
@@ -378,7 +378,7 @@ public class BottomNav extends Fragment {
 
                 }
             }
-        });
+        });*/
 
 
         return view;

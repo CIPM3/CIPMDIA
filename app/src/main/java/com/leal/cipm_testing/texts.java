@@ -1370,18 +1370,18 @@ public class texts {
             "<br><b>Apoyo Constante:</b> Con acceso a profesores en vivo 24/7 para resolver dudas, junto con planes de lección personalizados y análisis de tus áreas de mejora, <b>CIPM</b> está comprometido con tu progreso.<br>" +
             "<br>Por solo 5 USD al mes (100 pesos mexicanos), <b>CIPM</b> es la inversión en tu futuro que estabas buscando. No solo aprendas inglés: domínalo, con <b>CIPM</b>.<br>" +
             "<br>Puedes cancelar tu suscripción en cualquier momento haciendo clic en el botón \"Cancelar en Google Play\".";
-    String pitchOnPremiumPageWithCancellation = "Bienvenido a <b>CIPM Premium</b><br><br>" +
-            "<b>CIPM Premium</b> te ofrece acceso ilimitado a:<br>" +
-            "- <b>Enfoque Generativo</b>: Profundización en la estructura del inglés.<br>" +
-            "- <b>Solución a la Interferencia del Español</b>: Ajustes para hispanohablantes.<br>" +
-            "- <b>Vocabulario Esencial y Avanzado</b>: Más de 500 palabras clave.<br>" +
-            "- <b>Comprensión Auditiva Profunda</b>: Entrenamiento para entender el inglés cotidiano.<br>" +
-            "- <b>Soporte Constante</b>: Acceso 24/7 a profesores en vivo.<br>" +
-            "- <b>Planes de Lección Personalizados</b>: Alineados con tus objetivos.<br>" +
-            "- <b>Versión Sin Anuncios</b>: Aprende sin interrupciones.<br>" +
-            "<br>Recuerda, puedes cancelar tu suscripción en cualquier momento con solo hacer clic en el botón \\\"Cancelar en Google Play\\\".";
-
-
+    String pitchOnPremiumPageWithCancellation =
+            "Bienvenido a <b>CIPM Premium</b><br><br>" +
+                    "<b>CIPM Premium</b> te ofrece acceso ilimitado a:<br>" +
+                    "1. <b>Versión Sin Anuncios:</b> Aprende sin interrupciones.<br>" +
+                    "2. <b>Obten Integridad Estructural:</b> Aprende a usar todas las estructuras del inglés.<br>" +
+                    "3. <b>Deja de Pensar en Español:</b> Condiciona fuera la interferencia del español cuando hablas.<br>" +
+                    "4. <b>Solo el Vocabulario Más Importante:</b> Enseñamos vocabulario en orden de frecuencia y conductualmente.<br>" +
+                    "5. <b>Entiende el Inglés Nativo:</b> Resuelve el problema de la interferencia consciente cuando haces listening.<br>" +
+                    "6. <b>Enfoque Generativo:</b> Profundiza en la estructura del inglés.<br>" +
+                    "7. <b>Soporte Constante:</b> Acceso 24/7 a profesores en vivo.<br>" +
+                    "8. <b>Planes de Lección Personalizados:</b> Alineados con tus objetivos.<br>" +
+                    "<br>Recuerda, puedes cancelar tu suscripción en cualquier momento con solo hacer clic en el botón \"Cancelar en Google Play\".";
 
 
     String concisePitchToPremium = "Eleva tu inglés con <b>CIPM Premium</b>, tu puente hacia la fluidez. A diferencia de Duolingo, que se enfoca en juegos y memorización, <b>CIPM</b> te invita a un aprendizaje profundo y generativo. Descubre:<br>" +

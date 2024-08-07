@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -6,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Vocabulary2023"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
 
     <LinearLayout
         android:id="@+id/btn_opc2"
@@ -25,7 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout="@layout/fragment_top_navigation" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -36,7 +33,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!--Header-->
+        <!-- Header -->
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
@@ -44,10 +41,7 @@
             android:background="@color/graybg"
             android:elevation="5dp"
             android:gravity="center"
-            android:orientation="horizontal">
-
-
-        </LinearLayout>
+            android:orientation="horizontal" />
 
         <ScrollView
             android:layout_width="match_parent"
@@ -56,16 +50,14 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="85dp"
-            >
+            android:layout_marginBottom="85dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
 
-                <!--Spinner-->
+                <!-- Spinner -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,7 +65,8 @@
                     android:onClick="activaSpinner1"
                     android:orientation="horizontal"
                     android:paddingHorizontal="30dp">
-                    <!--text-->
+
+                    <!-- text -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -86,12 +79,10 @@
                             android:text="Present Simple"
                             android:textColor="@color/black"
                             android:textSize="22dp"
-                            android:textStyle="bold"
-
-                            />
+                            android:textStyle="bold" />
                     </LinearLayout>
 
-                    <!--Spinner-->
+                    <!-- Spinner -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -108,10 +99,9 @@
                             android:spinnerMode="dialog"
                             android:theme="@style/MySpinnerStyle" />
                     </LinearLayout>
-
                 </LinearLayout>
 
-                <!--Video View-->
+                <!-- Video View -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -119,7 +109,6 @@
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:paddingHorizontal="30dp">
-
 
                     <androidx.fragment.app.FragmentContainerView
                         android:id="@+id/fragmentContainerView5"
@@ -130,33 +119,30 @@
                         tools:layout="@layout/fragment_video_player" />
                 </LinearLayout>
 
-                <!--Texto Spinner2-->
+                <!-- Texto Spinner2 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:orientation="horizontal"
                     android:paddingHorizontal="30dp">
-                    <!--Texto-->
+
+                    <!-- Texto -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-
                         <LinearLayout
                             android:layout_width="85dp"
                             android:layout_height="3dp"
                             android:layout_marginTop="8dp"
-                            android:background="@drawable/ic_rect_ngulo_selecline">
-
-                        </LinearLayout>
+                            android:background="@drawable/ic_rect_ngulo_selecline" />
                     </LinearLayout>
-
                 </LinearLayout>
 
-                <!--TEXT -->
+                <!-- TEXT -->
                 <LinearLayout
                     android:id="@+id/txt_exp"
                     android:layout_width="match_parent"
@@ -173,7 +159,7 @@
                         android:textSize="7pt" />
                 </LinearLayout>
 
-                <!--Spanish Sentences-->
+                <!-- Spanish Sentences -->
                 <LinearLayout
                     android:id="@+id/spanish_lay"
                     android:layout_width="match_parent"
@@ -230,7 +216,7 @@
                         android:layout_marginBottom="10dp"
                         android:textSize="16sp"
                         android:background="@drawable/borde_azul"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
 
                     <Button
                         android:id="@+id/answer_button_2"
@@ -240,7 +226,7 @@
                         android:layout_marginBottom="10dp"
                         android:textSize="16sp"
                         android:background="@drawable/borde_azul"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
 
                     <Button
                         android:id="@+id/answer_button_3"
@@ -250,7 +236,7 @@
                         android:layout_marginBottom="10dp"
                         android:textSize="16sp"
                         android:background="@drawable/borde_azul"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
 
                     <Button
                         android:id="@+id/answer_button_4"
@@ -260,7 +246,7 @@
                         android:layout_marginBottom="10dp"
                         android:textSize="16sp"
                         android:background="@drawable/borde_azul"
-                        android:textColor="@color/black"/>
+                        android:textColor="@color/black" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -287,11 +273,10 @@
                         android:gravity="center"
                         android:text="Palabra Clave"
                         android:textColor="@color/black"
-                        android:textSize="16dp"
-                        />
+                        android:textSize="16dp" />
                 </LinearLayout>
 
-                <!--Input Eng-->
+                <!-- Input Eng -->
                 <LinearLayout
                     android:id="@+id/input_lay"
                     android:layout_width="match_parent"
@@ -316,7 +301,7 @@
                         android:textColorHint="@color/black"
                         android:textSize="15dp" />
 
-                    <!--Validacion-->
+                    <!-- Validacion -->
                     <LinearLayout
                         android:id="@+id/opclay"
                         android:layout_width="match_parent"
@@ -343,13 +328,11 @@
                             android:layout_gravity="center"
                             android:background="@drawable/ic_controlar"
                             android:orientation="horizontal"
-                            android:visibility="gone">
-
-                        </LinearLayout>
+                            android:visibility="gone" />
                     </LinearLayout>
                 </LinearLayout>
 
-                <!--EngCheck-->
+                <!-- EngCheck -->
                 <LinearLayout
                     android:id="@+id/answer_lay"
                     android:layout_width="match_parent"
@@ -439,7 +422,6 @@
                         android:text="xxx segundos"
                         android:textColor="@color/black"
                         android:textSize="16dp" />
-
                 </LinearLayout>
 
                 <!-- Boton -->
@@ -451,12 +433,31 @@
                     android:paddingHorizontal="30dp">
 
                     <LinearLayout
+                        android:id="@+id/opcionMultipleBtn"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="10dp"
                         android:background="@drawable/borde_azul"
                         android:gravity="center"
                         android:onClick="hideViewsBelowSpanishLay">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Opción Múltiple"
+                            android:textAlignment="center"
+                            android:textColor="@color/azul"
+                            android:textSize="18dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/speakingBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/borde_azul"
+                        android:gravity="center"
+                        android:onClick="practice">
 
                         <TextView
                             android:layout_width="match_parent"
@@ -495,6 +496,7 @@
                             android:textSize="18dp" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <!-- Boton Cont -->
                 <LinearLayout
                     android:id="@+id/btn_cont_lay"
@@ -521,36 +523,34 @@
                             android:textSize="18dp" />
                     </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/btn_emp_lay_nose"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:paddingHorizontal="30dp"
-                    android:visibility="gone">
-
                     <LinearLayout
+                        android:id="@+id/btn_emp_lay_nose"
                         android:layout_width="match_parent"
-                        android:layout_height="45dp"
-                        android:layout_marginTop="15dp"
-                        android:background="@drawable/borde_azul"
-                        android:gravity="center"
-                        android:onClick="nose">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingHorizontal="30dp"
+                        android:visibility="gone">
 
-                        <TextView
-                            android:id="@+id/nose"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="No sé"
-                            android:textAlignment="center"
-                            android:textColor="@color/azul"
-                            android:textSize="18dp" />
+                            android:layout_height="45dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/borde_azul"
+                            android:gravity="center"
+                            android:onClick="nose">
+
+                            <TextView
+                                android:id="@+id/nose"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="No sé"
+                                android:textAlignment="center"
+                                android:textColor="@color/azul"
+                                android:textSize="18dp" />
+                        </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
 
-
-
-                </LinearLayout>
                 <TextView
                     android:id="@+id/totalTxtV"
                     android:layout_width="match_parent"
@@ -561,9 +561,9 @@
                     android:textSize="18dp" />
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
-    <!--BTNS OPC-->
+
+    <!-- BTNS OPC -->
     <LinearLayout
         android:id="@+id/btn_opc"
         android:layout_width="match_parent"
@@ -580,7 +580,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:layout="@layout/fragment_bottom_nav" />
-
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
