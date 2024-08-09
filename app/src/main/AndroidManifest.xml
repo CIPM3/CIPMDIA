@@ -6,8 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         android:maxSdkVersion="32" />
 
     <application
@@ -20,108 +19,76 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:targetApi="n">
-<!--        <activity-->
-<!--            android:name=".TestActivity"-->
-<!--            android:exported="false" />-->
-        <activity
-            android:name=".SplashActivity"
+
+        <activity android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
+
+        <activity android:name=".MainActivity"
             android:exported="false" />
-        <activity
-            android:name=".MyPlan"
+        <activity android:name=".MyPlan"
             android:exported="false" />
-        <activity
-            android:name=".PlanDeEstudiosChooser"
+        <activity android:name=".PlanDeEstudiosChooser"
             android:exported="false" />
-        <activity
-            android:name=".Culturalphrases"
+        <activity android:name=".Culturalphrases"
             android:exported="false" />
-        <activity
-            android:name=".lessonPlan_RecyclerView"
+        <activity android:name=".lessonPlan_RecyclerView"
             android:exported="false" />
-        <activity
-            android:name=".NewVocabRecyclerView"
+        <activity android:name=".NewVocabRecyclerView"
             android:exported="false" />
-        <activity
-            android:name=".AudioTest"
+        <activity android:name=".AudioTest"
             android:exported="false" />
-        <activity
-            android:name=".ToeflSpeaking"
+        <activity android:name=".ToeflSpeaking"
             android:exported="false" />
-        <activity
-            android:name=".Forgotpassword"
+        <activity android:name=".Forgotpassword"
             android:exported="false" />
-        <activity
-            android:name=".FormularioInfo2023"
+        <activity android:name=".FormularioInfo2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Estructura2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:exported="false" />
-        <activity
-            android:name=".Premium2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".Estructura2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Availability2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".Premium2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Cultura2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".Availability2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Registro2023"
+        <activity android:name=".Cultura2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Login2023"
+        <activity android:name=".Registro2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Transicion2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".Login2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ConInt2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".Transicion2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Vocabulary2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
-            android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity
-            android:name=".SpaInt2023"
-            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+        <activity android:name=".ConInt2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".ChatMaestro2023"
+        <activity android:name=".Vocabulary2023"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".SpaInt2023"
             android:exported="false"
             android:screenOrientation="portrait" />
-        <activity
-            android:name=".Profile2023"
+        <activity android:name=".ChatMaestro2023"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Profile2023"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <service
-            android:name=".PushNotificationService"
-            android:exported="false">
+        <service android:name=".PushNotificationService"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
@@ -129,7 +96,14 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9126282069959189~2256979082" />
+            android:value="ca-app-pub-9126282069959189~2256979082"/>
+
+        <!-- Replace the conflicting attribute -->
+        <property
+            android:name="android.adservices.AD_SERVICES_CONFIG"
+            android:resource="@xml/gma_ad_services_config"
+            tools:replace="android:resource" />
+
     </application>
 
 </manifest>

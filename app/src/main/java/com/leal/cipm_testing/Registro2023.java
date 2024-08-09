@@ -31,7 +31,7 @@ public class Registro2023 extends AppCompatActivity {
         etname = findViewById(R.id.input_nombre);
         etRegEmail= findViewById(R.id.input_user);
         etRegPassword= findViewById(R.id.input_password);
-        etpassword2=findViewById(R.id.input_password);
+        etpassword2=findViewById(R.id.input_password2);
         btnRegister= findViewById(R.id.btn_reg);
         tvloginhere= findViewById(R.id.btn_login);
         mAuth = FirebaseAuth.getInstance();
@@ -71,7 +71,7 @@ public class Registro2023 extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(Registro2023.this, "User Registered successfully", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Registro2023.this, "Bienvenido a la app! "+nameofuser, Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(Registro2023.this,Login2023.class));
 
                     }else{
@@ -81,4 +81,6 @@ public class Registro2023 extends AppCompatActivity {
             });
         }
     }
+
+
 }

@@ -104,6 +104,21 @@
                     android:inputType="textPassword"
                     >
                 </EditText>
+                <EditText
+                    android:id="@+id/input_password2"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/ic_input"
+                    android:layout_marginTop="10dp"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="5dp"
+                    android:textSize="15dp"
+                    android:hint="Repetir Contraseña"
+                    android:textColor="@color/gray"
+                    android:textColorHint="@color/gray"
+                    android:inputType="textPassword"
+                    >
+                </EditText>
             </LinearLayout>
 
             <!--BTN REGISTRO-->

@@ -114,43 +114,18 @@ public class TopNavigation extends Fragment {
 
         mAuth= FirebaseAuth.getInstance();
         user = mAuth.getCurrentUser();
+
         lessonLinearLayout.setOnClickListener(v -> {
-
-            if (user != null) {
-                if (user.isAnonymous()) {
-
-                    dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
-
-
-                } else {
-
-                    Intent intento = new Intent(getContext(), lessonPlan_RecyclerView.class);
-                    startActivity(intento);
-
-
-
-                }
-            }
+            Intent intento = new Intent(getContext(), lessonPlan_RecyclerView.class);
+            startActivity(intento);
         });
         structureNewLayout.setOnClickListener(v -> {
 
 
-            if (user != null) {
-                if (user.isAnonymous()) {
+            Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
+            intent.putExtra("fromStructures",true);
+            startActivity(intent);
 
-                    dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
-
-
-                } else {
-
-                    Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
-                    intent.putExtra("fromStructures",true);
-                    startActivity(intent);
-
-
-
-                }
-            }
         });
         readingLayout.setOnClickListener(v -> {
 
@@ -175,68 +150,19 @@ public class TopNavigation extends Fragment {
         });
         newVocabLayout.setOnClickListener(v -> {
 
+            Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
+            intent.putExtra("fromVocab",true);
+            startActivity(intent);
 
-            if (user != null) {
-                if (user.isAnonymous()) {
-                   /* AlertDialog alertDialog = new AlertDialog.Builder(getContext())
-//set icon
-                            .setIcon(android.R.drawable.ic_dialog_alert)
-//set title
-                            .setTitle("Atención ! ")
-//set message
-                            .setMessage("Necesitas Registrate con Correo y contraseña para acesar estas funciones")
-//set positive button
-                            .setPositiveButton("ir a registro", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-                                    //no hemos decidido a donde mandarlo todavia despues del examen
-                                    Intent intent = new Intent(getContext(),Registro2023.class);
-                                    startActivity(intent);
-
-                                }
-                            })
-//set negative button
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
-                                @Override
-                                public void onClick(DialogInterface dialogInterface, int i) {
-
-                                }
-                            })
-                            .show();*/
-                    dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
-
-
-                } else {
-                    Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
-                    intent.putExtra("fromVocab",true);
-                    startActivity(intent);
-
-
-
-
-                }
-            }
         });
         newConectores.setOnClickListener(v -> {
 
+            Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
+            intent.putExtra("fromTrans",true);
+            startActivity(intent);
 
-            if (user != null) {
-                if (user.isAnonymous()) {
-                    dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
-
-
-                } else {
-                    Intent intent = new Intent(getContext(), NewVocabRecyclerView.class);
-                    intent.putExtra("fromTrans",true);
-                    startActivity(intent);
-
-
-
-                }
-            }
         });
         spIntlay.setOnClickListener(v -> {
-
             if (user != null) {
                 if (user.isAnonymous()) {
 
@@ -257,6 +183,7 @@ public class TopNavigation extends Fragment {
 
                 }
             }
+
         });
         cultLay.setOnClickListener(v -> {
 
@@ -299,7 +226,6 @@ public class TopNavigation extends Fragment {
             }
         });
         struViejoLay.setOnClickListener(v -> {
-
             if (user != null) {
                 if (user.isAnonymous()) {
 
@@ -319,9 +245,10 @@ public class TopNavigation extends Fragment {
 
                 }
             }
+
+
         });
         vocViejoLay.setOnClickListener(v -> {
-
             if (user != null) {
                 if (user.isAnonymous()) {
                     dialogueContainer1("Necesitas Registrate con Correo y contraseña para acesar estas funciones","ir a registro","Quedarme aqui");
@@ -340,6 +267,7 @@ public class TopNavigation extends Fragment {
 
                 }
             }
+
         });
         conviejolay.setOnClickListener(v -> {
 

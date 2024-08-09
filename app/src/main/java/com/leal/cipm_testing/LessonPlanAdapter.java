@@ -7,6 +7,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -23,6 +24,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.webkit.internal.ApiFeature;
 
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
@@ -30,6 +32,9 @@ import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.rewarded.RewardedAd;
 import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback;
+import com.google.firebase.auth.FirebaseAuth;
+
+import org.checkerframework.checker.units.qual.C;
 
 import java.util.Arrays;
 import java.util.List;
@@ -38,6 +43,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
 
     private List<LessonPlanItem> lessonPlanItemList;
     Prefs prefs;
+
     private Context context;
     // Constructor
     public LessonPlanAdapter(Context context, List<LessonPlanItem> lessonPlanItemList, Prefs prefs) {
@@ -58,6 +64,16 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                 .inflate(R.layout.circularlessonvisual, parent, false);
         return new LessonPlanViewHolder(itemView);
     }
+    private final int[] colors = {
+            Color.parseColor("#FFFFE0"), // Light Yellow
+            Color.parseColor("#FFFACD"), // Lemon Chiffon
+            Color.parseColor("#FAFAD2"), // Light Goldenrod Yellow
+            Color.parseColor("#EEE8AA"), // Pale Goldenrod
+            Color.parseColor("#F0E68C"), // Khaki
+            Color.parseColor("#FFD700")  // Gold
+    };
+
+
 
     @Override
     public void onBindViewHolder(@NonNull LessonPlanViewHolder holder, int position) {
@@ -78,25 +94,60 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
         holder.descriptionTextView.setText(item.getDescription());
         holder.circularButton.setText(item.getCircularBtnTxt());
         holder.completedTextView.setText(item.getCompletedTxt());
+        String currentSubtitle = item.getSubTitle();
+        int typeOfItem = item.getType();
+        switch (typeOfItem) {
+            case 0:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[0])); // White
+                break;
+            case 1:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[1])); // Light Gray
+                break;
+            case 2:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[2])); // Silver
+                break;
+            case 3:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[3])); // Gray
+                break;
+            case 4:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[4])); // Dark Gray
+                break;
+            case 5:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[5])); // Black
+                break;
+            default:
+                holder.circularButton.setBackgroundTintList(ColorStateList.valueOf(colors[0])); // Default to White
+                break;
+        }
+
+
+
+
 
         holder.circularButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int typeOfItem = item.getType();
-                 String currentSubtitle = item.getSubTitle();
 
                 switch (typeOfItem){
                     case 0:
-                        Intent intento = new Intent(context,Vocabulary2023.class);
-                        intento.putExtra("type0FromLessonPlan",true);
-                        intento.putExtra("class",new String[]{currentSubtitle});
-                        context.startActivity(intento);
+
+
+                            if(prefs.getPremium()==1||prefs.getHasSeenAd()){
+                                Intent intento = new Intent(context,Vocabulary2023.class);
+                                intento.putExtra("type0FromLessonPlan",true);
+                                intento.putExtra("class",new String[]{currentSubtitle});
+                                context.startActivity(intento);
+                            }else if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
+                                  dialogueContainer("Ver anuncio para desbloquear","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
+
+                            }
                         break;
                     case 1:
-                        if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
-                            dialogueContainer("Ve un corto anuncio para desbloquear clase","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
 
-                        }else if(prefs.getPremium()==1){
+                        if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
+                            dialogueContainer("Ver anuncio para desbloquear nivel","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
+
+                        }else if(prefs.getPremium()==1||prefs.getHasSeenAd()){
                             Intent intent = new Intent(context,Estructura2023.class);
                             intent.putExtra("typeFromLessonPlan",true);
                             intent.putExtra("class",new String[]{currentSubtitle});
@@ -107,13 +158,15 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                             intent.putExtra("class",new String[]{currentSubtitle});
                             context.startActivity(intent);
                         }
+
+
                         break;
 
                     case 2:
                         if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
-                            dialogueContainer("Ve un corto anuncio para desbloquear clase","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
+                            dialogueContainer("No pierdas tu tiempo en anuncios mi querido alumno versión premium 59.99mx al mex","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
 
-                        }else if(prefs.getPremium()==1){
+                        }else if(prefs.getPremium()==1||prefs.getHasSeenAd()){
                             Intent intent = new Intent(context,SpaInt2023.class);
                             intent.putExtra("typeFromLessonPlan",true);
                             intent.putExtra("class",new String[]{currentSubtitle});
@@ -125,11 +178,13 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                             intent.putExtra("class",new String[]{currentSubtitle});
                             context.startActivity(intent);
                         }
+
+
                         break;
 
                     case 3:
                         if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
-                            dialogueContainer("Ve un corto anuncio para desbloquear clase","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
+                            dialogueContainer("59.99mx al mes y no tendrás que ver mas anuncios","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
 
                         }else {
                             Intent intento2 = new Intent(context,Transicion2023.class);
@@ -143,7 +198,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
 
                     case 4:
                         if(!prefs.getHasSeenAd()&&prefs.getPremium()==0){
-                            dialogueContainer("Ve un corto anuncio para desbloquear clase","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
+                            dialogueContainer("Ve un corto anuncio para desbloquear clase? o hacerme premium por 59.99mx al mes","ver anuncio","CIPM premium",currentSubtitle,typeOfItem);
 
                         }else {
                             Intent intento2 = new Intent(context,Availability2023.class);
@@ -183,6 +238,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                 }
             }
         });
+
     }
 
     @Override
@@ -208,6 +264,8 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
     }
 
     private RewardedAd mRewardedAd;
+    //ca-app-pub-3940256099942544/5224354917 test ad
+    //ca-app-pub-9126282069959189/2792718018 real ad
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
         RewardedAd.load(context, "ca-app-pub-9126282069959189/2792718018", adRequest,
@@ -260,11 +318,16 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
 
                 switch (type){
                     case 0:
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
+                        Intent intent0 = new Intent(context, Vocabulary2023.class);
+                        intent0.putExtra("type0FromLessonPlan",true);
+                        intent0.putExtra("class",new String[]{currentSubtitle});
+                        context.startActivity(intent0); // Corrected way to start an activity from non-Activity context
 
                         break;
 
                     case 1:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(context, Estructura2023.class);
                         intent.putExtra("typeFromLessonPlan",true);
                         intent.putExtra("class",new String[]{currentSubtitle});
@@ -273,7 +336,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                         break;
 
                     case 2:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent2 = new Intent(context, SpaInt2023.class);
                         intent2.putExtra("typeFromLessonPlan",true);
                         intent2.putExtra("class",new String[]{currentSubtitle});
@@ -282,7 +345,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                         break;
 
                     case 3:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent3 = new Intent(context, Transicion2023.class);
                         intent3.putExtra("typeFromLessonPlan",true);
                         intent3.putExtra("class",new String[]{currentSubtitle});
@@ -291,7 +354,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                         break;
 
                     case 4:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent4 = new Intent(context, Availability2023.class);
                         intent4.putExtra("typeFromLessonPlan",true);
                         intent4.putExtra("class",new String[]{currentSubtitle});
@@ -300,7 +363,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                         break;
 
                     case 5:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent5 = new Intent(context, Cultura2023.class);
                         intent5.putExtra("typeFromLessonPlan",true);
                         intent5.putExtra("class",new String[]{currentSubtitle});
@@ -309,7 +372,7 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
                         break;
 
                     case 6:
-                        Toast.makeText(context,"Thanks! :) "+ Arrays.toString(currentSubtitle.toCharArray()),Toast.LENGTH_SHORT).show();
+                        Toast.makeText(context,"Thanks! :) ",Toast.LENGTH_SHORT).show();
                         Intent intent6 = new Intent(context, ConInt2023.class);
                         intent6.putExtra("typeFromLessonPlan",true);
                         intent6.putExtra("class",new String[]{currentSubtitle});

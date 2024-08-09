@@ -127,8 +127,13 @@ public class Profile2023 extends AppCompatActivity {
         btn_menu_closed.setVisibility(View.GONE);
         //DB
         mAuth= FirebaseAuth.getInstance();
-        userid = mAuth.getCurrentUser().getUid();
-        docRef  = db.collection(userid).document("EstudentsInfo");
+        if(mAuth==null){
+        }else {
+            userid = mAuth.getCurrentUser().getUid();
+            docRef  = db.collection(userid).document("EstudentsInfo");
+        }
+
+
 
 
 
@@ -213,7 +218,6 @@ public class Profile2023 extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 if (firebaseAuth.getCurrentUser() == null) {
                     // User is signed out
-                    Toast.makeText(Profile2023.this, "Logged out", Toast.LENGTH_SHORT).show();
                     Intent intento = new Intent(Profile2023.this, Login2023.class);
                     startActivity(intento);
                     // Remove the listener after its job is done
@@ -707,7 +711,6 @@ public class Profile2023 extends AppCompatActivity {
 
     public void deleteDataAndAccount(View v){
         deleteAllUserDocuments(userid);
-        Toast.makeText(this,"Tu informacion ha sido borrada exitosamente",Toast.LENGTH_SHORT).show();
         Intent intento = new Intent(this, Registro2023.class);
         startActivity(intento);
 

@@ -133,7 +133,6 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         holder.masInfoBtn.setVisibility(View.VISIBLE);
         if(tit.equalsIgnoreCase("0.the")&& !hasSeenDialogue){
             hasSeenDialogue=true;
-            dialogueContainer2("Estas en ceros? No te Preocupes,Aprende a usar las palabras mas comunes oralmente y cuando estes listo lo intentas de nuevo","Entendido","Ver tutorial",holder,position);
 
         }
 
@@ -17244,6 +17243,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                             ||respuesta.equalsIgnoreCase(rightAnswer3) ){
                         holder.respCorrecta.setText("Answer is correct!!");
                         holder.respCorrecta.setTextColor(Color.argb(255, 0, 0, 128));
+
                         prefs.setHasSeenAd(false);
 
                     }else {
@@ -17436,6 +17436,8 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
+        // test ad ca-app-pub-3940256099942544/5224354917
+        // real ad ca-app-pub-9126282069959189/7168659878
         RewardedAd.load(context, "ca-app-pub-9126282069959189/7168659878", adRequest,
                 new RewardedAdLoadCallback() {
                     @Override

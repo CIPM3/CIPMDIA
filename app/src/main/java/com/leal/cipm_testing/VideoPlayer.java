@@ -1,7 +1,6 @@
 package com.leal.cipm_testing;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
@@ -10,13 +9,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.google.android.exoplayer2.ExoPlayer;
@@ -46,24 +42,19 @@ public class VideoPlayer extends Fragment {
         // Required empty public constructor
     }
 
-    Prefs prefs;
-
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
-
-        prefs = new Prefs(requireContext());
-        selection = prefs.getSelection();
-        Log.d("VideoPlayer", "Initial selection: " + selection);
-
         if (args != null) {
+            selection = args.getString("tema");
             video = args.getString("video");
             video1 = args.getString("videouno");
             video2 = args.getString("videodos");
             videoShow = args.getBoolean("videoShow");
             explanation = args.getBoolean("explicacion");
         }
+
     }
 
 
@@ -76,40 +67,25 @@ public class VideoPlayer extends Fragment {
         return view;
     }
 
-
     @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+        mAuth= FirebaseAuth.getInstance();
 
-        prefs = new Prefs(getContext());
-
-        selection = prefs.getSelection();
+        user= mAuth.getCurrentUser();
         playerView = view.findViewById(R.id.video_player);
-        if (player == null) {
-            player = new ExoPlayer.Builder(requireContext()).build();
-        }
+        player = new ExoPlayer.Builder(requireContext()).build();
         playerView.setPlayer(player);
-        if (savedInstanceState != null) {
-            long position = savedInstanceState.getLong("CURRENT_PLAYER_POSITION", 0);
-            player.seekTo(position);
-            player.setPlayWhenReady(savedInstanceState.getBoolean("PLAY_WHEN_READY", true));
-        }
-        mAuth = FirebaseAuth.getInstance();
-        user = mAuth.getCurrentUser();
-        // Safe-check before calling SelectUrl
-        if (selection != null) {
-            SelectUrl(); // Ensure that selection is not null before calling
-        } else {
-            Log.e("VideoPlayer", "Selection is null, cannot select URL");
-        }
+
+
     }
+
+
 
 
     public void SelectUrl() {
         String currenttxt = SaberDondeEstoy();
-        Log.d("video player", "SELECCION "+ selection);
-
-        //Log.d("VIDEO PLAYER", String.valueOf(explanation));
+       // Toast.makeText(getContext(), selection, Toast.LENGTH_SHORT).show();
         if (currenttxt.contains("Cultura2023")) {
             // Cambiar el video
             switch (selection){
@@ -612,7 +588,19 @@ public class VideoPlayer extends Fragment {
 
         if(currenttxt.contains("Vocabulary2023")){
             switch (selection) {
+
+                case "Sustantivos":
+                case "Verbos":
+                case "Adverbios":
+                case "Adjetivos":
+                case "Preposiciones":
+
+                    ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/Cursos%20en%20Video%20Estructuras%2F42.%20Vocabulario%2051%20-%20100.mp4?alt=media&token=4ecf44db-09a1-4341-b3e6-7a26c4e3ff8c");
+
+                    break;
+
                 case "Function Words":
+                case "Palabras comunes":
                     ShowVideo("https://firebasestorage.googleapis.com/v0/b/cipmbilling-24963.appspot.com/o/clasebasica.mp4?alt=media&token=aa040ec8-7699-4d54-a614-0742ea8c4d32");
                     break;
                 case "Present Simple":
@@ -767,25 +755,18 @@ public class VideoPlayer extends Fragment {
         }
     }
 
-    public String SaberDondeEstoy() {
-        Context context = getContext();
-        if (context == null) {
-            Log.e("VideoPlayer", "Contexto no disponible en SaberDondeEstoy()");
-            return "Contexto no disponible"; // Usar un valor por defecto o manejar esta situación específica
-        }
-        try {
-            return context.toString().replace("com.leal.cipm_testing.", "");
-        } catch (NullPointerException e) {
-            Log.e("VideoPlayer", "Error al obtener la cadena del contexto", e);
-            return "Error: Contexto nulo"; // Asegurarse de retornar algo que indique el error sin causar más excepciones
-        }
-    }
+    public String SaberDondeEstoy(){
+        String txtActivity = "";
+        String cadenaEliminar = "com.leal.cipm_testing.";
+        String txtActivitySinEliminar = getContext().toString();
+        txtActivity = txtActivitySinEliminar.replace(cadenaEliminar,"");
 
+        return txtActivity;
+    }
     @Override
     public void onStop()  {
 
         super.onStop();
-        prefs.setSelection("");
         if(player == null){
             return;
         }else {
@@ -795,8 +776,6 @@ public class VideoPlayer extends Fragment {
         }
 
     }
-
-
     /*@Override
     public void onStart() {
         super.onStart();
@@ -839,32 +818,10 @@ public class VideoPlayer extends Fragment {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
-        prefs.setSelection("");
         if (player != null) {
             player.release();
         }
     }
-
-    @Override
-    public void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        if (player != null) {
-            outState.putLong("CURRENT_PLAYER_POSITION", player.getCurrentPosition());
-            outState.putBoolean("PLAY_WHEN_READY", player.getPlayWhenReady());
-        }
-    }
-
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-        if (savedInstanceState != null) {
-            long position = savedInstanceState.getLong("player_position", 0);
-            boolean playWhenReady = savedInstanceState.getBoolean("player_play_when_ready", false);
-            player.seekTo(position);
-            player.setPlayWhenReady(playWhenReady);
-        }
-    }
-
 
     public void updateFragmentStateConint2(boolean newexplanation1) {
         explanation = newexplanation1;

@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.GradientDrawable;
@@ -17,8 +16,6 @@ import android.speech.tts.TextToSpeech;
 import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.OrientationEventListener;
-import android.view.Surface;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,8 +26,6 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.exoplayer2.SimpleExoPlayer;
-import com.google.android.exoplayer2.ui.StyledPlayerView;
 import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
@@ -97,16 +92,6 @@ public class ConInt2023 extends AppCompatActivity {
     VideoPlayer video_player = new VideoPlayer();
     int counterDb;
 
-    private StyledPlayerView playerView;
-    private SimpleExoPlayer player;
-    private boolean playWhenReady = true;
-    private int currentWindow = 0;
-    private long playbackPosition = 0;
-    private boolean isFullScreen = false;
-
-    private boolean hasOrientationChanged = false;
-    private OrientationEventListener orientationEventListener;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -135,45 +120,6 @@ public class ConInt2023 extends AppCompatActivity {
         clipMuestra = true;
         rachelfinish = false;
 
-        //prefs.setSelection(selection);
-
-        // Configura OrientationEventListener
-        orientationEventListener = new OrientationEventListener(this) {
-            @Override
-            public void onOrientationChanged(int orientation) {
-                if (orientation == ORIENTATION_UNKNOWN) {
-                    return;
-                }
-
-                // Determina la orientación
-                int rotation = getWindowManager().getDefaultDisplay().getRotation();
-
-                if((rotation == Surface.ROTATION_90 || rotation == Surface.ROTATION_270)){
-                    toggleFullScreen();
-                }
-
-                if ((rotation == Surface.ROTATION_0 || rotation == Surface.ROTATION_180)) {
-                    // Modo Portrait
-                    if(hasOrientationChanged){
-                        toggleFullScreen();
-                    }else{
-                        hasOrientationChanged = true;
-                    }
-                }
-            }
-        };
-
-        // Habilita OrientationEventListener
-        if (orientationEventListener.canDetectOrientation()) {
-            orientationEventListener.enable();
-
-        } else {
-            orientationEventListener.disable();
-        }
-
-        LinearLayout btnFullScreen = findViewById(R.id.btn_full_screen);
-        btnFullScreen.setOnClickListener(view -> toggleFullScreen());
-
         mAuth= FirebaseAuth.getInstance();
         userid = mAuth.getCurrentUser().getUid();
         docref= db.collection(userid).document("WhereisStudent");
@@ -183,7 +129,7 @@ public class ConInt2023 extends AppCompatActivity {
         loadRewardedAd();
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.video_player_view, video_player)
+                .replace(R.id.fragmentContainerView5, video_player)
                 .commit();
 
         Bundle args = new Bundle();
@@ -593,12 +539,6 @@ boolean isFromLessonPlan;
     public void spinnerSelected(){
         selection = spin.getSelectedItem().toString();
         textspin1.setText(selection);
-
-        prefs.setSelection(selection); // Guarda la selección en Prefs
-
-        if (video_player != null) {
-            video_player.updateFragmentStateStructure(selection);
-        }
         
         if(selection.equals("Tutorial")){
             spanishsentence.setText("Seleccione una estructura para continuar con la practica");
@@ -626,74 +566,6 @@ boolean isFromLessonPlan;
     public void activaSpinner(View v){
         Spinner mySpinner = findViewById(R.id.spinuno);
         mySpinner.performClick();
-    }
-
-    private void toggleFullScreen() {
-        if (!isFullScreen) {
-            if (player != null) {
-                // Guardar la posición actual del video
-                playbackPosition = player.getCurrentPosition();
-                playWhenReady = player.getPlayWhenReady();
-
-                // Guardar la posición de reproducción en Prefs
-                Prefs prefs = new Prefs(this);  // Asegúrate de que el contexto sea el correcto
-                prefs.setLong("playbackPosition", playbackPosition);
-                Log.d("FullScreenToggle", "Saved playback position: " + playbackPosition);
-            }
-
-            video_player.player.stop();
-
-            openFullScreenDialog();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            isFullScreen = true;
-        } else {
-            // Salir del modo pantalla completa
-            closeFullScreenDialog();
-            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            isFullScreen = false;
-
-            if (player != null) {
-                // Restaurar el estado de reproducción del video
-                player.seekTo(playbackPosition);
-                player.setPlayWhenReady(playWhenReady);
-            }
-        }
-    }
-
-    // Método para abrir el diálogo de pantalla completa
-    private void openFullScreenDialog() {
-        if (player != null) {
-            playbackPosition = player.getCurrentPosition();
-            playWhenReady = player.getPlayWhenReady();
-
-            player.stop();
-        }
-
-        FullScreenVideoFragment fullScreenFragment = new FullScreenVideoFragment();
-        // Pasar la posición y estado de reproducción al fragmento si es necesario
-        Bundle args = new Bundle();
-        args.putLong("position", playbackPosition);
-        args.putBoolean("playWhenReady", playWhenReady);
-        fullScreenFragment.setArguments(args);
-
-        getSupportFragmentManager().beginTransaction()
-                .replace(android.R.id.content, fullScreenFragment)
-                .addToBackStack(null)
-                .commit();
-
-    }
-    private void closeFullScreenDialog() {
-        getSupportFragmentManager().popBackStack();
-        // Restaura el estado del reproductor si es necesario
-        if (player != null) {
-            playbackPosition = player.getCurrentPosition();
-            playWhenReady = player.getPlayWhenReady();
-
-            // Pausar el video antes de abrir la pantalla completa
-            //player.play();
-            video_player.player.play();
-        }
-
     }
 
     public void videoPlayer(){
