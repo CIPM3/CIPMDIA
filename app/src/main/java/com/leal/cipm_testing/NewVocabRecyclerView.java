@@ -214,6 +214,7 @@ public class NewVocabRecyclerView extends AppCompatActivity implements VocabItem
 
     }
 
+    //OJO TENGO QUE PASARLO A IOS
     private void loadVocabItemsPremium()  {
 
 

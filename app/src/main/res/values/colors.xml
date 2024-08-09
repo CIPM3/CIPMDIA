@@ -32,4 +32,6 @@
     <color name="lime">#CDDC39</color>
     <color name="deep_orange">#FF5722</color>
 
+    <color name="slight_gray">#EEEEEE</color>
+
 </resources>

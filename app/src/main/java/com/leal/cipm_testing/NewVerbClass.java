@@ -3538,16 +3538,7 @@ public class NewVerbClass {
             "cinco minutos ",
             "seis meses "
     };
-    public void GenAgo(){
-        int el = (int)(Math.random()*phrasesBeforeAgo.length);
-        gens= "hace "+ phrasesBeforeAgoSpanish[el];
-        gene= phrasesBeforeAgo[el] + "ago ";
-    }
-    public void GenElse(){
-        int el = (int)(Math.random()*questionWordsWithElse.length);
-        gens= questionWordsWithElseSpanish[el];
-        gene= questionWordsWithElse[el];
-    }
+
     String[] verbsWithLong = {"wait ", "stay ", "last ", "take ", "work ", "live ", "survive ", "endure ", "continue "};
 
     String[] verbsWithLongThirdPerson = {"waits ", "stays ", "lasts ", "takes ", "works ", "lives ", "survives ", "endures ", "continues "};
@@ -4337,6 +4328,7 @@ public class NewVerbClass {
             {"la dirección ", "tus pensamientos ", "un recordatorio ", "notas "}
     };
 
+    //AQUI
     String[] phrasalVerbsSpanishFirstPerson = {
             "me porto mal ",
             "sumo ",//trans
@@ -5988,6 +5980,24 @@ public class NewVerbClass {
             "sugieren ", // suggest
             "toleran ", // tolerate
     };
+
+    VerbLists v = new VerbLists();
+
+    cerotofifty cero = new cerotofifty();
+    String gens,gene;
+    String gens3,gene3;
+
+
+    public void GenAgo(){
+        int el = (int)(Math.random()*phrasesBeforeAgo.length);
+        gens= "hace "+ phrasesBeforeAgoSpanish[el];
+        gene= phrasesBeforeAgo[el] + "ago ";
+    }
+    public void GenElse(){
+        int el = (int)(Math.random()*questionWordsWithElse.length);
+        gens= questionWordsWithElseSpanish[el];
+        gene= questionWordsWithElse[el];
+    }
     public void GenVerbosJuntos(){
         int v = (int)(Math.random()*verbsVJ.length);
         int ve= (int)(Math.random()*verbs.length);
@@ -6431,7 +6441,7 @@ public class NewVerbClass {
 
     }
 
-    VerbLists v = new VerbLists();
+
     public void GenIntReflx2(){
         int p = (int) (Math.random()* subjectsSpanish.length);
         String pronombre = subjectsSpanish[p];
@@ -6521,9 +6531,6 @@ public class NewVerbClass {
     }
 
 
-
-
-    String gens3,gene3;
     public void GenSupposedTo(boolean isPast){
         int pronounRand= (int)(Math.random()*subjectsEnglish.length);
         int verbrand= (int)(Math.random()*verbs.length);
@@ -6793,6 +6800,7 @@ public class NewVerbClass {
                 break;
         }
     }
+
     public void GenPvppPast(){
         int pronounRand= (int)(Math.random()*subjectsEnglish.length);
         int verbRand= (int)(Math.random()*pvppVerbsThirdPerson.length);
@@ -6884,7 +6892,6 @@ public class NewVerbClass {
     gens = verbsWithOffSpanish[off];
     gene = verbsWithOff[off];
 }
-    cerotofifty cero = new cerotofifty();
     public void GenThereBe(){
         int t= (int)(Math.random()* thereBeVariations.length);
         int c= (int)(Math.random()*cero.sustP.length);
@@ -6930,7 +6937,6 @@ public class NewVerbClass {
         gens = objetosHappen[h] +"sucede " +phrarsesHappen[o];
         gene= objectsBeforeHappen[h]+"happens "+phrasesAfterHappen[o];
     }
-
     public void genLong() {
     int pronounRand = (int) (Math.random() * subjectsEnglish.length);
     String pronoun = subjectsEnglish[pronounRand];
@@ -7048,7 +7054,6 @@ public class NewVerbClass {
                 break;
         }
     }
-    String gens,gene;
     public void GenPresSimp(){
         int pronounRand= (int)(Math.random()*subjectsEnglish.length);
         int verbRand= (int)(Math.random()*verbs.length);
@@ -7090,41 +7095,7 @@ public class NewVerbClass {
         }
     }
 
-    public void GenPresSimp(int pronounRand,int verbRand,int ob2,String pronoun){
 
-        switch (pronoun){
-            case "I ":
-                gene= subjectsEnglish[0]+verbs[verbRand]+ verbObjects[verbRand][ob2];
-                gens = subjectsSpanish[0]+verbsSpanishFirstPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
-                break;
-
-            case "You ":
-                gene= subjectsEnglish[1]+verbs[verbRand]+ verbObjects[verbRand][ob2];
-                gens = subjectsSpanish[1]+verbsSpanishSecondPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
-                break;
-
-            case "He ":
-                gene= subjectsEnglish[2]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
-                gens = subjectsSpanish[2]+verbsSpanishThirdPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
-
-                break;
-
-            case "She ":
-                gene= subjectsEnglish[3]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
-                gens = subjectsSpanish[3]+verbsSpanishThirdPerson[verbRand]+verbObjectsSpanish[verbRand][ob2 ];
-                break;
-
-            case "We ":
-                gens= subjectsSpanish[4]+verbsSpanishFirstPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2];
-                gene = subjectsEnglish[4]+verbs[verbRand]+ verbObjects[verbRand][ob2 ];
-                break;
-
-            case "They ":
-                gene = subjectsEnglish[5]+verbs[verbRand]+verbObjects[verbRand][ob2];
-                gens = subjectsSpanish[5]+verbsSpanishThirdPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
-                break;
-        }
-    }
     public void GenPresSimpNoS(int pronounRand,int verbRand,int ob2,String pronoun){
 
         switch (pronoun){
@@ -7146,6 +7117,41 @@ public class NewVerbClass {
 
             case "She ":
                 gene= subjectsEnglish[3]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gens = subjectsSpanish[3]+verbsSpanishThirdPerson[verbRand]+verbObjectsSpanish[verbRand][ob2 ];
+                break;
+
+            case "We ":
+                gens= subjectsSpanish[4]+verbsSpanishFirstPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2];
+                gene = subjectsEnglish[4]+verbs[verbRand]+ verbObjects[verbRand][ob2 ];
+                break;
+
+            case "They ":
+                gene = subjectsEnglish[5]+verbs[verbRand]+verbObjects[verbRand][ob2];
+                gens = subjectsSpanish[5]+verbsSpanishThirdPersonPlural[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
+                break;
+        }
+    }
+    public void GenPresSimp(int pronounRand,int verbRand,int ob2,String pronoun){
+
+        switch (pronoun){
+            case "I ":
+                gene= subjectsEnglish[0]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gens = subjectsSpanish[0]+verbsSpanishFirstPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
+                break;
+
+            case "You ":
+                gene= subjectsEnglish[1]+verbs[verbRand]+ verbObjects[verbRand][ob2];
+                gens = subjectsSpanish[1]+verbsSpanishSecondPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
+                break;
+
+            case "He ":
+                gene= subjectsEnglish[2]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
+                gens = subjectsSpanish[2]+verbsSpanishThirdPerson[verbRand]+ verbObjectsSpanish[verbRand][ob2 ];
+
+                break;
+
+            case "She ":
+                gene= subjectsEnglish[3]+verbsThirdPerson[verbRand]+ verbObjects[verbRand][ob2];
                 gens = subjectsSpanish[3]+verbsSpanishThirdPerson[verbRand]+verbObjectsSpanish[verbRand][ob2 ];
                 break;
 
@@ -7349,6 +7355,7 @@ public class NewVerbClass {
         }
 
     }
+
 
     public void GenAlmost(String almost,String casi){
         int pronounRand= (int)(Math.random()*subjectsEnglish.length);
@@ -7863,6 +7870,8 @@ public class NewVerbClass {
 
 
     }
+
+    //Continuar
     public void GenFuture(){
         int pronounRand=  (int)(Math.random()*subjectsEnglish.length);
         int verbRand=  (int)(Math.random()*verbs.length);

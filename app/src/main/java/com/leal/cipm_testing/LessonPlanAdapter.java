@@ -16,6 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -63,6 +64,15 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
         // Get the data model based on position
         LessonPlanItem item = lessonPlanItemList.get(position);
         // Set item views based on your views and data model
+        // Obtén la posición del ViewHolder
+
+        // Cambia el color de fondo basado en la posición
+        if (position % 2 == 0) {
+            holder.containet_card.setBackgroundColor(Color.parseColor("#EEEEEE")); // Fondo gris claro para posiciones pares
+        } else {
+            holder.containet_card.setBackgroundColor(Color.WHITE); // Fondo blanco para posiciones impares
+        }
+
         holder.titleTextView.setText(item.getTitle());
         holder.subTitleTextView.setText(item.getSubTitle());
         holder.descriptionTextView.setText(item.getDescription());
@@ -182,11 +192,13 @@ public class LessonPlanAdapter extends RecyclerView.Adapter<LessonPlanAdapter.Le
 
     public static class LessonPlanViewHolder extends RecyclerView.ViewHolder {
         public TextView titleTextView, subTitleTextView, descriptionTextView, completedTextView;
-        public Button circularButton;
+        public TextView circularButton;
+        public LinearLayout containet_card;
 
         public LessonPlanViewHolder(View itemView) {
             super(itemView);
 
+            containet_card = itemView.findViewById(R.id.containet_card);
             titleTextView = itemView.findViewById(R.id.titleTxt);
             subTitleTextView = itemView.findViewById(R.id.subTitleTxt);
             descriptionTextView = itemView.findViewById(R.id.descriptionTxt);

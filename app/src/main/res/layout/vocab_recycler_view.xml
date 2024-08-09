@@ -5,189 +5,274 @@
     android:layout_width="match_parent"
     android:background="@color/white"
     android:layout_height="wrap_content"
-    android:padding="16dp">
-
-    <TextView
-        android:id="@+id/textViewWord"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#0000FF"
-        android:text="1. The "
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginBottom="10dp"/>
-
-    <LinearLayout
-        android:id="@+id/translationsLinearLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/textViewWord"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-
-        <TextView
-            android:id="@+id/textViewTranslation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="El-La-Los-Las"/>
-
-        <TextView
-            android:id="@+id/textViewTranslation2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="The Car - El Carro"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/descriptiondelapalabra"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="en tehoría aqui debería de ir la descripción de la palabra en cuestion supongo que se va a wrappear al rededo rcuando escriba estas mamadas y en codigo se tendrá que dar el actual text "/>
+    android:orientation="vertical"
+    >
 
 
-        <TextView
-            android:id="@+id/comodiriasbla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="Como dirías - bla bla bla"/>
-    </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints"
+    android:background="@color/white"
+    android:paddingVertical="5dp"
+    android:orientation="vertical"
+    >
 
-    <LinearLayout
-        android:id="@+id/inputLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/translationsLinearLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
-
-        <EditText
-            android:id="@+id/editTextInput"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            android:hint="presiona el micro y di tu respuesta"/>
-
-        <ImageButton
-            android:id="@+id/imageButtonSubmit"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/circlebtn"
-            android:src="@drawable/ic_microfono"/>
-        <EditText
-            android:id="@+id/editTextInput2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:layout_weight="1"
-            android:background="@android:color/black"
-            android:hint="presiona el micro y di tu respuesta"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/actionButtonsLayout"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/inputLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:gravity="center_horizontal"
-        >
-
-        <TextView
-            android:id="@+id/resultadotext"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/black"
-            android:text="la respuesta correcta es: "
-
-            />
-        <Button
-            android:id="@+id/buttonCheckAnswer"
+        <!--   FRASE     -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Checar Respuesta"
-            android:background="@drawable/borde_azul"
-            android:textColor="@color/azul"
-            />
+            android:paddingHorizontal="40dp"
+            android:paddingTop="20dp"
+            android:orientation="vertical"
+            >
 
-        <Button
-            android:id="@+id/buttonContinue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Continuar"
-            android:background="@drawable/borde_azul"
-            android:textColor="@color/azul"
-            />
-    </LinearLayout>
+            <TextView
+                android:id="@+id/textViewWord"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#0000FF"
+                android:text="1. The "
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                />
 
-    <LinearLayout
-        android:id="@+id/linearLayoutButtons"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/actionButtonsLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottomDivider"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/textViewTranslation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/gray"
+                android:text="El-La-Los-Las"
+                android:paddingLeft="30dp"
+                />
 
-        <Button
+        </LinearLayout>
+
+        <!--    BTN EJEMPLO    -->
+        <LinearLayout
             android:id="@+id/buttonExamples"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:textColor="@color/azul"
-            android:background="@drawable/borde_azul"
-            android:text="Ejemplos"
-            android:layout_weight="1"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="40dp"
+            android:gravity="center_vertical"
+            android:layout_marginVertical="10dp"
+            >
 
-        <Button
-            android:id="@+id/buttonPractice"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:textColor="@color/azul"
-            android:background="@drawable/borde_azul"
-            android:text="Practicar"
-            android:layout_weight="1"/>
+            <LinearLayout
+                android:visibility="visible"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="#1132d8"
+                android:background="@drawable/play"
+                />
 
-        <Button
-            android:id="@+id/masinfo"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:background="@drawable/borde_azul"
-            android:textColor="@color/azul"
-            android:text="Explicación"
-            android:layout_weight="1"
-            app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                >
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ejemplos"
+                    android:textColor="#1132d8"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:backgroundTint="#1132d8"
+                android:background="@drawable/retry_svgrepo_com"
+                android:layout_marginLeft="5dp"
+                />
+        </LinearLayout>
+
+        <!--    EJEMPLO FIELD   -->
+        <LinearLayout
+            android:id="@+id/content_ejemplo"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/textViewTranslation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1132d8"
+                android:text="The car - El carro"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="40dp"
+                />
+
+            <TextView
+                android:id="@+id/descriptiondelapalabra"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=
+                    "Descripción del tema, se usa de esta mane-
+                ra y xd hola que tal, toy aprendiendo mu-
+                cho inglés con la app"
+                android:layout_marginLeft="65dp"
+                android:layout_marginRight="40dp"
+                android:textColor="@color/gray"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:text="¿Cómo dirías?: "
+                    android:textColor="@color/gray"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <TextView
+                    android:id="@+id/comodiriasbla"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:text="Lorem ipsum dolor"
+                    android:textColor="#1132d8"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/rounded_layout"
+                android:backgroundTint="#1132d8"
+                android:paddingHorizontal="20dp"
+                android:paddingVertical="10dp"
+                android:orientation="horizontal"
+                >
+
+                <EditText
+                    android:id="@+id/editTextInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#1132d8"
+                    android:background="@drawable/rounded_layout"
+                    android:textColorHint="@color/white"
+                    android:textSize="14sp"
+                    android:hint="Presiona este botón y di tu respuesta"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/imageButtonSubmit"
+                    android:layout_width="17dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_microfono"
+                    android:orientation="horizontal" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="40dp"
+                >
+
+                <Button
+                    android:id="@+id/buttonCheckAnswer"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:textColor="#1132d8"
+                    android:background="@drawable/borde_azul"
+                    android:text="Chequear Respuesta"
+                    android:textSize="10sp"
+                    android:layout_marginRight="2dp"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:id="@+id/buttonContinue"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:textColor="#1132d8"
+                    android:textSize="10sp"
+
+                    android:background="@color/white"
+                    android:text="Continuar"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:text="La respuesta correcta es: "
+                    android:textColor="@color/gray"
+                    />
+
+                <TextView
+                    android:id="@+id/resultadotext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="40dp"
+                    android:text="Lorem ipsum dolor"
+                    android:textColor="#1132d8"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--    BTNS    -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="40dp"
+            >
+
+            <Button
+                android:id="@+id/masinfo"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:backgroundTint="#1132d8"
+                android:background="@drawable/borde_azul"
+                android:text="Explicacion"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"/>
+
+            <Button
+                android:id="@+id/buttonPractice"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:textColor="#1132d8"
+                android:background="@drawable/borde_azul"
+                android:text="Practicar"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <!--   DASHED LINES     -->
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:backgroundTint="@color/gray_light"
+            android:background="@drawable/dashed_line"
             />
     </LinearLayout>
-
-    <View
-        android:id="@+id/bottomDivider"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="28dp"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

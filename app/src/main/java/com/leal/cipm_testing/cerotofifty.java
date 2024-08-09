@@ -199,22 +199,6 @@ public class cerotofifty {
             "informaciónF", "consejoM", "mobiliarioM", "climaM", "suerteF",
             "felicidadF", "tiempoM", "risaF", "tráficoM", "tareaF"
     };
-
-    public void uncountableNounsGen() {
-        int i = (int) (Math.random() * sustantivosIncontables.length);
-        String sustantivotagged = sustantivosIncontablesTagged[i];
-        String sust = sustantivosIncontables[i];
-        String noun = uncountableNouns[i];
-        char gender = sustantivotagged.charAt(sustantivotagged.length() - 1); // Get last character
-        if (gender == 'M') {
-            gens = "mucho " + sust;
-            gene = "much " + noun;
-        } else if (gender == 'F') {
-            gens = "mucha " + sust;
-            gene = "much " + noun;
-        }
-    }
-
     // los del be
     String be[] = {"am ", "are ", "is ", "is ", "is ", "are ", "are "};
     String ser[] = {"soy ", "eres ", "es ", "es ", "son ", "somos "};
@@ -270,12 +254,6 @@ public class cerotofifty {
             "como ingeniero",
 
     };
-
-    public void as() {
-        int a = (int) (Math.random() * wordsAfterAs.length);
-        gens = wordsAfterAssp[a];
-        gene = wordsAfterAs[a];
-    }
 
     String[] negatedAuxiliaries = {
             "isn't", // is not
@@ -525,16 +503,56 @@ public class cerotofifty {
             "rota",
     };
 
+    String [] make = {"I make", "you make" , "he makes", "she makes", "we make","they make"};
+
+    String[] hacer = {
+            "yo hago",
+            "tú haces",
+            "él hace",
+            "ella hace",
+            "nosotros hacemos",
+            "ellos hacen"
+    };
+
+    // este metodo genera prepossiciones, articulos y objetos
+    public String ob;
+    public String eng;
+    public static int j = 0;
+
+
+    // pronouns and verbs
+    String gens;
+    String gene;
+    String gene2;
+
+    public void uncountableNounsGen() {
+        int i = (int) (Math.random() * sustantivosIncontables.length);
+        String sustantivotagged = sustantivosIncontablesTagged[i];
+        String sust = sustantivosIncontables[i];
+        String noun = uncountableNouns[i];
+        char gender = sustantivotagged.charAt(sustantivotagged.length() - 1); // Get last character
+        if (gender == 'M') {
+            gens = "mucho " + sust;
+            gene = "much " + noun;
+        } else if (gender == 'F') {
+            gens = "mucha " + sust;
+            gene = "much " + noun;
+        }
+    }
+
+    public void as() {
+        int a = (int) (Math.random() * wordsAfterAs.length);
+        gens = wordsAfterAssp[a];
+        gene = wordsAfterAs[a];
+    }
+
     public void all() {
         int r = (int) (Math.random() * nounsAfterAll.length);
         gens = nounsAfterAllSpanish[r];
         gene = nounsAfterAll[r];
     }
 
-    // este metodo genera prepossiciones, articulos y objetos
-    public String ob;
-    public String eng;
-    public static int j = 0;
+
 
     public void vocab0a50() {
         if (j == alleng.length) {
@@ -753,9 +771,6 @@ public class cerotofifty {
 
     }
 
-    // pronouns and verbs
-    String gens;
-    String gene;
 
     public void pronverb() {
         int i = (int) (Math.random() * pronombres.length);
@@ -2354,7 +2369,7 @@ public class cerotofifty {
         gene += " " + selectedParticiple+" by "+englishNoun;
 
     }
-String gene2;
+
     public void genWho() {
         int t = (int) (Math.random() * pronombres.length);
         String tempt = pronombres[t];
@@ -2409,16 +2424,7 @@ String gene2;
         ob= "o " + lugaresEn[lugares];
         eng= "or " + placesAt[lugares];
     }
-    String [] make = {"I make", "you make" , "he makes", "she makes", "we make","they make"};
 
-    String[] hacer = {
-            "yo hago",
-            "tú haces",
-            "él hace",
-            "ella hace",
-            "nosotros hacemos",
-            "ellos hacen"
-    };
 
     public void make(){
         int m = (int)(Math.random()* make.length);

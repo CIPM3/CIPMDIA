@@ -151,8 +151,8 @@ public class Transicion2023 extends AppCompatActivity {
         option3Btn= findViewById(R.id.answer_button_3);
         option4Btn= findViewById(R.id.answer_button_4);
         mic=findViewById(R.id.respdecir);
-        empezarTxt=findViewById(R.id.empezarTxt);
-        noSeBtnLay= findViewById(R.id.btn_NoSe_lay);
+//        empezarTxt=findViewById(R.id.empezarTxt);
+//        noSeBtnLay= findViewById(R.id.btn_NoSe_lay);
         noSeBtnLay.setVisibility(View.GONE);
 
         sptx = findViewById(R.id.spanishsentence);

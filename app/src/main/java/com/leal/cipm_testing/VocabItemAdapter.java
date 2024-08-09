@@ -25,6 +25,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -107,7 +108,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         VocabItem item = vocabItems.get(position);
         texts text2 = new texts();
         cerotofifty gen = new cerotofifty();
-        NewNounClass nouns= new NewNounClass();
+        NewNounClass  nouns= new NewNounClass();
         String[] subjectsEnglish = {"I ", "You ", "He ", "She ", "We ", "They "};
         itemType=item.getType();
         String tit;
@@ -127,7 +128,6 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         // sets original colors of buttons
         holder.definition.setText(item.getDefinition());
         holder.userInput.setText(item.getUserInput());
-        holder.userInput.setVisibility(View.GONE);
         holder.practicaBtn.setVisibility(View.VISIBLE);
         holder.ejemplosBtn.setVisibility(View.VISIBLE);
         holder.masInfoBtn.setVisibility(View.VISIBLE);
@@ -140,8 +140,8 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
 
         if(prefs.getHasSeenAd()||prefs.getPremium()==1){
-            holder.ejemplosBtn.setBackgroundResource(R.drawable.borde_azul);
-            holder.ejemplosBtn.setTextColor(Color.BLUE);
+            //holder.ejemplosBtn.setBackgroundResource(R.drawable.borde_azul);
+            //holder.ejemplosBtn.(Color.BLUE);
             holder.ejemplosBtn.setVisibility(View.VISIBLE);
             holder.practicaBtn.setBackgroundResource(R.drawable.borde_azul);
             holder.practicaBtn.setTextColor(Color.BLUE);
@@ -164,6 +164,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
             holder.comoDirias.setVisibility(View.GONE);
 
         }
+        //BTN EJEMPLO
         holder.ejemplosBtn.setOnClickListener(new View.OnClickListener() {
                                                   @Override
                                                   public void onClick(View v) {
@@ -171,10 +172,6 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                                                       int rv = (int) (Math.random() * subjectsEnglish.length);
                                                       String pronoun = subjectsEnglish[rv];
                                                       // Change the button's background color to green.
-                                                      holder.ejemplosBtn.setBackgroundResource(R.drawable.ic_btn_small_blue);
-                                                      holder.ejemplosBtn.setTextColor(Color.WHITE);
-                                                      holder.ejemplostxt.setVisibility(View.VISIBLE);
-                                                      holder.practicaBtn.setVisibility(View.VISIBLE);
                                                       //set the examples
                                                       String sp;
 
@@ -5404,7 +5401,6 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
                                                       holder.ejemplostxt.setText(sp);
                                                       //set views to original state
-                                                      holder.masInfoBtn.setTextColor(Color.BLUE);
                                                       holder.masInfoBtn.setBackgroundResource(R.drawable.borde_azul);
                                                       holder.description.setVisibility(View.GONE);
 
@@ -5413,7 +5409,6 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
                                                       holder.continuarBtn.setVisibility(View.GONE);
                                                       holder.comoDirias.setVisibility(View.GONE);
-                                                      holder.userInput.setVisibility(View.GONE);
                                                       holder.mic.setVisibility(View.GONE);
                                                       holder.checarRespBtn.setVisibility(View.GONE);
                                                       holder.respCorrecta.setVisibility(View.GONE);
@@ -5421,21 +5416,22 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
                                                   }
                                               });
+        //BTN  PRACTICAR
         if(prefs.getHasSeenAd()||prefs.getPremium()==1) {
             holder.practicaBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     // set views for practice
                     holder.practicaBtn.setVisibility(View.GONE);
-                    holder.comoDirias.setVisibility(View.VISIBLE);
-                    holder.userInput.setVisibility(View.INVISIBLE);
-                    holder.placeholder.setVisibility(View.INVISIBLE);
-                    holder.mic.setVisibility(View.VISIBLE);
-                    holder.checarRespBtn.setVisibility(View.GONE);
-                    holder.respCorrecta.setVisibility(View.GONE);
-                    if(!holder.userInput.getText().toString().isEmpty()){
-                        holder.userInput.setText("");
-                    }
+//                    holder.comoDirias.setVisibility(View.VISIBLE);
+//                    holder.userInput.setVisibility(View.INVISIBLE);
+//                    holder.placeholder.setVisibility(View.INVISIBLE);
+//                    holder.mic.setVisibility(View.VISIBLE);
+//                    holder.checarRespBtn.setVisibility(View.GONE);
+//                    holder.respCorrecta.setVisibility(View.GONE);
+//                    if(!holder.userInput.getText().toString().isEmpty()){
+//                        holder.userInput.setText("");
+//                    }
                     int rv = (int)(Math.random()*subjectsEnglish.length);
                     String pronoun = subjectsEnglish[rv];
                     cerotofifty gen = new cerotofifty();
@@ -11296,9 +11292,8 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
 
 
                     // set views back
-                    holder.masInfoBtn.setTextColor(Color.BLUE);
                     holder.masInfoBtn.setBackgroundResource(R.drawable.borde_azul);
-                    holder.ejemplosBtn.setTextColor(Color.BLUE);
+                    //holder.ejemplosBtn.setTextColor(Color.BLUE);
                     holder.ejemplosBtn.setBackgroundResource(R.drawable.borde_azul);
                     holder.description.setVisibility(View.GONE);
                     holder.ejemplostxt.setVisibility(View.GONE);
@@ -11307,6 +11302,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                 }
             });
         }
+        //BTN PRACTICAR FREE
         else  {
             holder.practicaBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -17195,7 +17191,7 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                 holder.description.setVisibility(View.VISIBLE);
                 holder.description.setText(item.getDescription());
                 //set the other views back
-                holder.ejemplosBtn.setTextColor(Color.BLUE);
+                //holder.ejemplosBtn.setTextColor(Color.BLUE);
                 holder.ejemplosBtn.setBackgroundResource(R.drawable.borde_azul);
                 holder.practicaBtn.setTextColor(Color.BLUE);
                 holder.practicaBtn.setBackgroundResource(R.drawable.borde_azul);
@@ -17205,13 +17201,9 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
                 holder.respCorrecta.setVisibility(View.GONE);
                 holder.continuarBtn.setVisibility(View.GONE);
                 holder.comoDirias.setVisibility(View.GONE);
-                holder.userInput.setVisibility(View.GONE);
                 holder.mic.setVisibility(View.GONE);
                 holder.checarRespBtn.setVisibility(View.GONE);
                 holder.respCorrecta.setVisibility(View.GONE);
-
-
-
 
             }
         });
@@ -17407,9 +17399,15 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
         TextView comoDirias;
         TextView respCorrecta;
         TextView ejemplostxt;
-        Button masInfoBtn,practicaBtn,ejemplosBtn,continuarBtn,checarRespBtn;
+        Button
+            masInfoBtn,
+            practicaBtn,
+            continuarBtn
+            ,checarRespBtn;
+        LinearLayout
+                ejemplosBtn;
         EditText userInput,placeholder;
-        ImageButton mic;
+        LinearLayout mic;
 
         public VocabItemViewHolder(@NonNull View view) {
             super(view);
@@ -17425,18 +17423,17 @@ public class VocabItemAdapter extends RecyclerView.Adapter<VocabItemAdapter.Voca
             continuarBtn=view.findViewById(R.id.buttonContinue);
             checarRespBtn=view.findViewById(R.id.buttonCheckAnswer);
             userInput=view.findViewById(R.id.editTextInput);
-            placeholder=view.findViewById(R.id.editTextInput2);
+            //placeholder=view.findViewById(R.id.editTextInput2);
             mic= view.findViewById(R.id.imageButtonSubmit);
 
         }
-
-
 
 
     }
 
 
     private RewardedAd mRewardedAd;
+
     private void loadRewardedAd() {
         AdRequest adRequest = new AdRequest.Builder().build();
         RewardedAd.load(context, "ca-app-pub-9126282069959189/7168659878", adRequest,

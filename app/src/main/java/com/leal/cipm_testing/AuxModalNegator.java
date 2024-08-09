@@ -306,6 +306,8 @@ public class AuxModalNegator {
         }
         return false;
     }
+
+
     public String negatePastSimple(String sentence) {
         if(sentence == null){
             return "negate Past Simple Null";
@@ -442,8 +444,7 @@ public class AuxModalNegator {
 
 
 
-
-    // takes present continuous and contracts to be to the pronoun
+    // takes present continuous and contracts to be to the pronoun—–
     public String contractPresentContinuousPresent(String sentence) {
         String[] words = sentence.split(" ");
         if (words.length < 3) return sentence; // Ensure sentence is long enough for present continuous

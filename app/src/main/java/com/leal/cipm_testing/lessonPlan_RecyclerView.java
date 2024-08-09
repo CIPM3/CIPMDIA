@@ -29,7 +29,7 @@ public class lessonPlan_RecyclerView extends AppCompatActivity {
     }
     public void loadLesson(){
         lessonPlanItems.add(new LessonPlanItem("Aprende a usar las palabras mas básicas de una oración", "Function Words", "aprende a usar las palabras mas frequentes y funcionales del inglés,relacionan ideas dentro de la oración", "Lesson 1", "Nivel Muy Basico",0));
-        lessonPlanItems.add(new LessonPlanItem("Responde a la pregunta: Que pasa?", "Present Simple", "Aprende a hablar de habitos y rutinas en inglés", "Lesson 2", "Nivel Basico",1));
+        lessonPlanItems.add(new LessonPlanItem("Que pasa?", "Present Simple", "Aprende a hablar de habitos y rutinas en inglés", "Lesson 2", "Nivel Basico",1));
         lessonPlanItems.add(new LessonPlanItem("Que está pasando?", "Present Continuous", "Aprende a hablar de cosas que estan sucediendo ahora mismo", "Lesson 3", "Nivel Basico",1));
         lessonPlanItems.add(new LessonPlanItem("Que ha pasado?", "Present Perfect", "Aprende a hablar de cosas que sucedieron en pasado pero que aún tienen relevancia en el presente", "Lesson 4", "Nivel Basico",1));
         lessonPlanItems.add(new LessonPlanItem("Que ha estado pasado?", "Present Perfect Continuous", "Aprende a hablar de lo que ha estado ocurriendo", "Lesson 5", "Nivel Basico",1));
