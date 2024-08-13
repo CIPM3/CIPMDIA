@@ -62,6 +62,8 @@
             >
 
             <LinearLayout
+                android:id="@+id/btn_playExample"
+                android:orientation="horizontal"
                 android:visibility="visible"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -85,6 +87,8 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/btn_reload"
+                android:orientation="horizontal"
                 android:visibility="invisible"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
@@ -94,37 +98,45 @@
                 />
         </LinearLayout>
 
+        <LinearLayout
+        android:id="@+id/content_expli"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/textViewTranslation2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1132d8"
+            android:text="The car - El carro"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="40dp"
+            />
+
+        <TextView
+            android:id="@+id/descriptiondelapalabra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=
+                "Descripción del tema, se usa de esta mane-
+                ra y xd hola que tal, toy aprendiendo mu-
+                cho inglés con la app"
+            android:layout_marginLeft="65dp"
+            android:layout_marginRight="40dp"
+            android:textColor="@color/gray"
+            />
+    </LinearLayout>
+
         <!--    EJEMPLO FIELD   -->
         <LinearLayout
             android:id="@+id/content_ejemplo"
-            android:visibility="visible"
+            android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             >
-
-            <TextView
-                android:id="@+id/textViewTranslation2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#1132d8"
-                android:text="The car - El carro"
-                android:layout_marginLeft="65dp"
-                android:layout_marginRight="40dp"
-                />
-
-            <TextView
-                android:id="@+id/descriptiondelapalabra"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=
-                    "Descripción del tema, se usa de esta mane-
-                ra y xd hola que tal, toy aprendiendo mu-
-                cho inglés con la app"
-                android:layout_marginLeft="65dp"
-                android:layout_marginRight="40dp"
-                android:textColor="@color/gray"
-                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -138,7 +150,6 @@
                     android:layout_marginHorizontal="40dp"
                     android:text="¿Cómo dirías?: "
                     android:textColor="@color/gray"
-                    android:layout_marginTop="20dp"
                     />
 
                 <TextView
@@ -161,6 +172,7 @@
                 android:paddingHorizontal="20dp"
                 android:paddingVertical="10dp"
                 android:orientation="horizontal"
+                android:gravity="center_vertical"
                 >
 
                 <EditText
@@ -177,13 +189,15 @@
 
                 <LinearLayout
                     android:id="@+id/imageButtonSubmit"
-                    android:layout_width="17dp"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_weight="12"
+                    android:layout_height="25dp"
                     android:background="@drawable/ic_microfono"
                     android:orientation="horizontal" />
             </LinearLayout>
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="40dp"
@@ -212,35 +226,40 @@
                     android:layout_weight="1"/>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                >
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="40dp"
-                    android:text="La respuesta correcta es: "
-                    android:textColor="@color/gray"
-                    />
 
-                <TextView
-                    android:id="@+id/resultadotext"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="40dp"
-                    android:text="Lorem ipsum dolor"
-                    android:textColor="#1132d8"
-                    />
-            </LinearLayout>
 
         </LinearLayout>
 
+        <LinearLayout
+        android:id="@+id/failAns"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="La respuesta correcta es: "
+            android:textColor="@color/gray"
+            />
+
+        <TextView
+            android:id="@+id/resultadotext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:text="Lorem ipsum dolor"
+            android:textColor="#1132d8"
+            />
+    </LinearLayout>
+
         <!--    BTNS    -->
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="40dp"
